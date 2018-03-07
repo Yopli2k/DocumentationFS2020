@@ -1,6 +1,9 @@
-==========================
+.. title:: EditController
+.. highlight:: rst
+
+##########################
 Controlador EditController
-==========================
+##########################
 
 Es un **controlador universal** para vistas que desean mostrar los datos
 completos de un registro de datos de un modelo, en formato “ficha” o
@@ -12,11 +15,12 @@ que acelera el aprendizaje y adaptación a **Facturascripts**.
 
 Para el uso de este controlador es necesario crear las vistas en formato
 XML, tal y como se describe en el documento
-`XMLViews <https://github.com/ArtexTrading/facturascripts/blob/master/Documentation/XMLViews_ES.md>`__,
+`XMLViews <XMLViews>`__,
 incluido en la documentación de **Facturascripts**.
 
+************************
 Cómo usar el controlador
-========================
+************************
 
 Para utilizar *EditController* debemos crearnos una nueva clase PHP que
 herede o extienda de EditController, estableciendo en el constructor de
