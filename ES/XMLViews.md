@@ -1,5 +1,5 @@
 .. title:: Vistas
-.. highlight:: md
+.. highlight:: rst
 
 Vistas
 ======

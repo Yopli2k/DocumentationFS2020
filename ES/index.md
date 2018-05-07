@@ -1,4 +1,5 @@
 .. title:: Inicio
+.. highlight:: rst
 
 Facturascripts
 ==============
