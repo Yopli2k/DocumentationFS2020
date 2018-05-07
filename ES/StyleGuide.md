@@ -1,10 +1,5 @@
-::: {.title}
-Guía de Estilo
-:::
-
-::: {.highlight}
-rst
-:::
+.. title:: Guía de Estilo
+.. highlight:: md
 
 Guía de Estilo
 ==============
@@ -137,20 +132,12 @@ cada icono o botón) ubicado en la parte superior de la sección que está
 escribiendo,    y luego explica las características en el orden en que
 aparecen en la imagen.
 
-> ::: {.note}
-> ::: {.admonition-title}
-> Note
-> :::
->
+> .. note
 > Es importante que el manual pueda mantenerse a largo plazo.
-> :::
+> La interfaz de usuario y las opciones de herramienta cambian, así que trate de evitar
+> tener muchas imágenes (cuando no son especialmente necesarias).
 >
-> >  La interfaz de usuario y las opciones de herramienta cambian, así que trate de evitar
-> >
-> > :   tener muchas imágenes (cuando no son especialmente necesarias).
-> >
-> >  De lo contrario, esto se convierte en una gran carga de
-> > mantenimiento.
+> De lo contrario, esto se convierte en una gran carga de mantenimiento.
 
 Vídeos
 ------

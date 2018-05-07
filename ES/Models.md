@@ -1,10 +1,5 @@
-::: {.title}
-Models
-:::
-
-::: {.highlight}
-rst
-:::
+.. title:: Modelos
+.. highlight:: md
 
 Modelos
 =======

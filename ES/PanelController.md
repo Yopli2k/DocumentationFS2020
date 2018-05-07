@@ -1,10 +1,5 @@
-::: {.title}
-PanelController
-:::
-
-::: {.highlight}
-rst
-:::
+.. title:: PanelController
+.. highlight:: md
 
 Controlador PanelController
 ===========================

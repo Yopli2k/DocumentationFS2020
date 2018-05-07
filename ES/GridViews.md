@@ -1,10 +1,5 @@
-::: {.title}
-GridViews
-:::
-
-::: {.highlight}
-rst
-:::
+.. title:: GridViews
+.. highlight:: md
 
 Vistas GridViews
 ================
@@ -16,15 +11,10 @@ visualización permite al usuario moverse libremente por los datos,
 cambiar el orden de las filas, así como poder crear nuevas líneas,
 eliminarlas e incluso copiar/cortar y pegar.
 
-::: {.note}
-::: {.admonition-title}
-Note
-:::
-
+  .. note::
 Sólo es posible tener una vista Grid dentro de un PanelController. Para
 el correcto renderizado de estás vistas es necesario usar la plantilla
 GridController en vez de la usada normalmente por PanelController.
-:::
 
 Cómo utilizar la vista
 ----------------------

@@ -1,10 +1,5 @@
-::: {.title}
-Traducciones
-:::
-
-::: {.highlight}
-rst
-:::
+.. title:: Traducciones
+.. highlight:: md
 
 Traducciones
 ============

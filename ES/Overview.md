@@ -1,10 +1,5 @@
-::: {.title}
-Overview
-:::
-
-::: {.highlight}
-rst
-:::
+.. title:: Overview
+.. highlight:: md
 
 Overview
 ========
@@ -14,13 +9,13 @@ Requerimientos
 
 Para instalación y uso
 
-:   1.  Servidor web Apache2 Server or similar
+    1.  Servidor web Apache2 Server or similar
     2.  PHP 7.0
     3.  Motor de bases de datos MySql, MariaDB o Postgresql
 
 Para desarrollo
 
-:   1.  Requerimientos de uso
+    1.  Requerimientos de uso
     2.  Entorno de desarrollo PHP: NetBeens, PHPStorm o similar
     3.  Composer y NPM: Para la instalación de requerimientos.
 
@@ -89,17 +84,17 @@ documentación y el chat para programadores en nuestra página web:
 
 ### Directrices
 
-1.  Facturascripts utiliza PSR-1 y PSR-2.
+1. Facturascripts utiliza PSR-1 y PSR-2.
 
-2\. Facturascripts está diseñado para utilizar las menos dependencias y
+2. Facturascripts está diseñado para utilizar las menos dependencias y
 mayor simplicidad posibles. Esto significa que no todas las solicitudes
 de funciones serán aceptadas.
 
-3\. Facturascripts tiene un requisito de versión PHP mínimo de 7.0. Las
+3. Facturascripts tiene un requisito de versión PHP mínimo de 7.0. Las
 solicitudes de PR deben respetar este requerimiento. Se negará la
 integración con otros requerimientos de versión de PHP.
 
-4\. Todas las solicitudes de PR deben incluir pruebas unitarias para
+4. Todas las solicitudes de PR deben incluir pruebas unitarias para
 garantizar que el cambio funcione como esperado y para evitar
 regresiones.
 
@@ -122,15 +117,15 @@ Contenido
 
 Documentación
 
-:   La documentación es algo que nos resulta imprescindible a todos para
-    entender mejor como utilizar el código realizado por otros, o
-    incluso para entender que hicimos nosotros mismos hace algún tiempo.
+La documentación es algo que nos resulta imprescindible a todos para
+entender mejor como utilizar el código realizado por otros, o
+incluso para entender que hicimos nosotros mismos hace algún tiempo.
 
 #### Escribiendo un Pull Request
 
 Título
 
-:   Idealmente, un Pull Request debe referirse a sólo un objetivo, así
+Idealmente, un Pull Request debe referirse a sólo un objetivo, así
     los cambios independendientes se pueden combinar con rapidez. Si
     quieres por ejemplo, corregir un error tipográfico y mejorar el
     rendimiento de un proceso, debes intentar en lo posible hacerlo en
@@ -145,7 +140,7 @@ Título
 
 Registro de cambios
 
-:   Por cada PR, se debe proporcionar un registro de cambios. En las
+Por cada PR, se debe proporcionar un registro de cambios. En las
     notas se pueden utilizar las siguientes secciones:
 
     1.  `Añadido` para nuevas características.

@@ -1,10 +1,5 @@
-::: {.title}
-Vistas
-:::
-
-::: {.highlight}
-rst
-:::
+.. title:: Vistas
+.. highlight:: md
 
 Vistas
 ======

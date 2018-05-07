@@ -1,10 +1,5 @@
-::: {.title}
-ListController
-:::
-
-::: {.highlight}
-rst
-:::
+.. title:: ListController
+.. highlight:: md
 
 Controlador ListController
 ==========================

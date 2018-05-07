@@ -1,10 +1,5 @@
-::: {.title}
-EditController
-:::
-
-::: {.highlight}
-rst
-:::
+.. title:: EditController
+.. highlight:: md
 
 Controlador EditController
 ==========================
