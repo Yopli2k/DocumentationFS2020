@@ -1,8 +1,9 @@
 .. title:: Inicio
 .. highlight:: rst
 
+##############
 Facturascripts
-==============
+##############
 
 .. image:: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
    :target: https://github.com/NeorazorX/facturascripts/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue
@@ -20,12 +21,12 @@ Facturascripts
    :target: https://waffle.io/NeoRazorX/facturascripts/metrics/throughput
    :alt: Throughput Graph
 
-Software de facturación y contabilidad para PYMES, fácil, libre y con
-actualizaciones constantes. Es compatible con FacturaLux, Abanq y
-Eneboo. Es software libre bajo licencia GNU/LGPL.
+Software de facturación y contabilidad para PYMES, fácil, libre y con actualizaciones constantes. Es compatible con FacturaLux, Abanq y Eneboo.
+Es software libre bajo licencia GNU/LGPL.
+
 
 Tabla de Contenidos
--------------------
+===================
 
 .. toctree::
    :maxdepth: 2
