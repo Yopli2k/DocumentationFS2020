@@ -24,7 +24,7 @@ Encabezados
 
 El encabezado de "Título de documento" debe ser usado para páginas de contenido o índices.
 
-Cada uno de los archivos ``.rst`` deben contener un encabezado ``*``.
+Cada uno de los archivos ``.rst`` deben contener un encabezado ``#``.
 
 .. code-block:: rst
 
@@ -129,7 +129,7 @@ Guía de uso
    ubicado en la parte superior de la sección que está escribiendo,
    y luego explica las características en el orden en que aparecen en la imagen.
 
-  .. note::
+.. note::
 
      Es importante que el manual pueda mantenerse a largo plazo.
      La interfaz de usuario y las opciones de herramienta cambian, así que trate de evitar

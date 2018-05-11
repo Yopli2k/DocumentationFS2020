@@ -1,21 +1,24 @@
-.. title:: Vistas
+.. title:: XML Views
 .. highlight:: rst
 
-######
-Vistas
-######
+##########
+Vistas XML
+##########
+
+Tipos y estructura
+==================
 
 Las vistas, en *Facturascripts 2018* están clasificadas según su representación
 en pantalla tanto en la forma de visualizar como en número de registros de datos.
 
--  **List** : Vistas que muestran una lista de datos en formato de filas y columnas
+-  **ListView** : Vistas que muestran una lista de datos en formato de filas y columnas
    pudiendo navegar, buscar y/o filtrar por los datos pero donde los datos son de
    sólo lectura, es decir no se permite su edición.
 
--  **Edit** : Vistas que muestran un formulario de edición de un único registro de
+-  **EditView** : Vistas que muestran un formulario de edición de un único registro de
    datos, pudiendo estar estos datos agrupados.
 
--  **EditList** : Vista resultante de la "unión" de los tipos anteriores. Es decir,
+-  **EditListView** : Vista resultante de la "unión" de los tipos anteriores. Es decir,
    una lista de registros visualizados en filas y columnas pero donde cada uno de las
    filas es un formulario de edición que nos permite editar los datos de dicho registro.
    Esta vista contiene dos modos de visionado. Un sistema básico a modo de columnas, cuando
@@ -31,11 +34,6 @@ en pantalla tanto en la forma de visualizar como en número de registros de dato
 El nombrado de las vistas, cuando las creamos, sigue la siguiente regla: *List* o *Edit* seguido
 del *nombre del modelo*. Esto se cumple aún cuando la vista sea del tipo *EditList* o **GridView** en cuyo caso
 se nombrará como si fuera del tipo *Edit*.
-
-
-**********
-Vistas XML
-**********
 
 Para crear las vistas usaremos un archivo con estructura **XML** y, como se ha indicado
 anteriormente, con el nombre del tipo de vista y el modelo, donde estableceremos la
@@ -54,8 +52,8 @@ etiquetas a modo de grupo:
    mediante la interacción con un botón definido en la vista.
 
 
-COLUMNS
-=======
+Etiqueta columns
+================
 
 Permite definir mediante la etiqueta *<column>* cada uno de los campos
 que se visualizarán en la vista pudiendo, en las vistas *Edit*, agrupar
@@ -389,8 +387,8 @@ mediante los siguientes atributos:
    que tenga definido el grupo.
 
 
-ROWS
-====
+Etiqueta rows
+=============
 
 Este grupo permite añadir funcionalidad a cada una de las filas o añadir
 filas con procesos especiales. Así mediante la etiqueta *<row>* podemos
@@ -513,8 +511,8 @@ Ejemplo: (Pie de vista)
         </row>
 
 
-MODALS
-======
+Etiqueta modals
+===============
 
 Los formularios modales son vistas complementarias a la vista principal, que permanecen
 ocultas hasta que son necesarias para la realización de una tarea específica. Estos formularios

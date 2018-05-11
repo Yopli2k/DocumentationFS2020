@@ -18,9 +18,8 @@ XML, tal y como se describe en el documento
 `XMLViews <XMLViews>`__,
 incluido en la documentación de **Facturascripts**.
 
-************************
 Cómo usar el controlador
-************************
+========================
 
 Para utilizar *ListController* debemos crearnos una nueva clase PHP que
 herede o extienda de ListController, debiendo implementar los siguientes
@@ -33,8 +32,42 @@ métodos:
    etc) para la vista principal (la primera que añadimos en
    *createViews*).
 
+Declaración del controlador
+===========================
+
+getPageData
+-----------
+
+Este método es el encargado de devolver un array con los datos para la
+instalación y configuración del controlador dentro del entorno de
+**Facturascripts**. Como norma hay que llamar al *parent* del
+controlador para inicializar los valores por defecto y asegurar un
+correcto funcionamiento de nuestro controlador en el entorno de
+Facturascripts.
+
+Los valores que se pueden configurar son: \* title : Título de la vista
+\* icon : Icono de la fuente de texto *fontawesome* \* menu : Nombre del
+menú donde se introducirá el controlador \* submenu : (opcional) Segundo
+nivel del menú donde se introduciría el controlador \* orden : Podemos
+alterar el orden natural del sistema de menú para colocar nuestro
+controlador más arriba o abajo
+
+.. code:: php
+
+       public function getPageData()
+       {
+           $pagedata = parent::getPageData();
+           $pagedata['title'] = 'Agentes';
+           $pagedata['icon'] = 'fa-user-circle-o';
+           $pagedata['menu'] = 'admin';
+           return $pagedata;
+       }
+
+Añadir y configurar las vistas
+==============================
+
 createViews
-===========
+-----------
 
 Dentro de este método, en nuestra nueva clase, debemos ir creando las
 distintas vistas que se visualizarán, y para cada vista debemos indicar
@@ -171,31 +204,3 @@ Ejemplos de filtros
         $this->addFilterSelect('ListEpigrafe', 'codepigrafe', 'co_epigrafes', '', 'descripcion');
         $this->addFilterCheckbox('ListCliente', 'debaja', 'De baja');
         $this->addFilterDatePicker(ListArticulo, 'fecha', 'Fec. Alta');
-
-getPageData
-===========
-
-Este método es el encargado de devolver un array con los datos para la
-instalación y configuración del controlador dentro del entorno de
-**Facturascripts**. Como norma hay que llamar al *parent* del
-controlador para inicializar los valores por defecto y asegurar un
-correcto funcionamiento de nuestro controlador en el entorno de
-Facturascripts.
-
-Los valores que se pueden configurar son: \* title : Título de la vista
-\* icon : Icono de la fuente de texto *fontawesome* \* menu : Nombre del
-menú donde se introducirá el controlador \* submenu : (opcional) Segundo
-nivel del menú donde se introduciría el controlador \* orden : Podemos
-alterar el orden natural del sistema de menú para colocar nuestro
-controlador más arriba o abajo
-
-.. code:: php
-
-        public function getPageData()
-        {
-            $pagedata = parent::getPageData();
-            $pagedata['title'] = 'Agentes';
-            $pagedata['icon'] = 'fa-user-circle-o';
-            $pagedata['menu'] = 'admin';
-            return $pagedata;
-        }

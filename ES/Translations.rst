@@ -5,8 +5,7 @@
 Traducciones
 ############
 
-Las traducciones van a estar centralizadas desde
-http://i18n.facturascripts.com.
+Las traducciones van a estar centralizadas desde http://i18n.facturascripts.com.
 
 El formato escogido es un archivo JSON, con estilo “key”: “value”, donde
 **key** es la referéncia a la traducción y el **value** su traducción.
@@ -32,9 +31,8 @@ En la barra de depuración, se ha añadido una nueva pestaña
 **Translations** que muestra un listado de las traducciones utilizadas y
 que no han podido ser traducidas al idioma seleccionado.
 
-**********************
 Archivos de traducción
-**********************
+======================
 
 Para facilitar la interacción con los archivos de traducción a otros
 idiomas, se usará una plataforma web, donde cada usuario interesado
@@ -44,9 +42,8 @@ Se desaconseja completamente añadir frases nuevas en otros idiomas, ya
 que eso se centraliza en la web para evitar posibles conflictos
 posteriores.
 
-********************
 Como traducir frases
-********************
+====================
 
 Para traducir frases desde PHP sólo es necesario hacer:
 

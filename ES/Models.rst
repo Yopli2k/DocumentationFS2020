@@ -1,9 +1,9 @@
 .. title:: Models
 .. highlight:: rst
 
-#######
-Modelos
-#######
+##########################
+Modelos de tablas de datos
+##########################
 
 Los modelos son los encargados de gestionar el acceso a cada una de las tablas de
 la base de datos donde se persisten los datos con los que se trabajan.
@@ -18,13 +18,9 @@ denominado *ModelTrait* agrupando así las operaciones más comunes
 y generales de los modelos, simplificando tanto el código como el tratamiento de
 los mismos, delegando a estos sólo las características específicas de cada uno.
 
-**************************
-Modelos de tablas de datos
-**************************
-
-Como se ha comentado en la introducción, cada tabla de datos tiene un modelo encargado
-de la gestión de su lectura, escritura y borrado. A la hora de declarar el modelo,
-debemos crear una nueva clase que hereda de ModelClass y en la que incluiremos el uso del ModelTrait
+Así cada tabla de datos tiene un modelo encargado de la gestión de su lectura,
+escritura y borrado. A la hora de declarar el modelo, debemos crear una nueva
+clase que hereda de ModelClass y en la que incluiremos el uso del ModelTrait
 junto con la lista de campos disponibles de la tabla declarados como públicos.
 
 .. code:: php
@@ -207,7 +203,7 @@ de datos.
 
 
 Método url
-==========
+----------
 
 Los controladores utilizan el método url para conocer las distintas urls de navegación
 entre ventanas. El ModelTrait dispone de un método url que establece de manera genérica
@@ -232,9 +228,9 @@ Ejemplo:
     }
 
 
-***********
+
 Model Trait
-***********
+===========
 
 Desde su versión 5.4.0, PHP implementa una metodología de reutilización de código
 llamada Traits (Rasgos). En *Facturascripts 2018* hacemos uso de esta metodología
@@ -255,7 +251,7 @@ Al crear un nuevo modelo, debemos incluir la instrucción de uso del ModelTrait:
 
 
 Métodos comunes
-===============
+---------------
 
 -  **primaryColumnValue** : Devuelve el valor del campo clave (Primary Key).
 
@@ -279,7 +275,7 @@ Métodos comunes
 
 
 Colisiones
-==========
+----------
 
 En ocasiones se necesita sobrescribir métodos definidos en ModelTrait, pero los
 Traits no es una clase de la cual heredemos sino más bien es una clase que "usamos"
@@ -309,9 +305,8 @@ al "alias" que hemos creado.
     }
 
 
-******************
 Modelos especiales
-******************
+==================
 
 Existen varios modelos que no tienen una correspondencia con tablas físicas en la
 base de datos, por lo que no pueden ser usados para grabación o borrado de datos.
@@ -320,7 +315,7 @@ para realizar operaciones especiales de lectura de información, de manera globa
 evitando así tener que crear métodos repetidos en distintos modelos.
 
 CodeModel
-=========
+---------
 
 Este modelo se utiliza en los casos que nos interesa obtener una lista registros
 de alguna tabla, pero sólo un campo código o identificativo y su descripción.
@@ -341,7 +336,7 @@ al principio del array que se devuelve con los datos, inserte un CodeModel en bl
 
 
 TotalModel
-==========
+----------
 
 Este modelo está especialmente pensado para cálculos estadísticos *(SUM, AVG, COUNT, MAX, MIN, etc)*.
 Aunque no es obligatorio, podemos ejecutar los cálculos con agrupación por un campo "código".

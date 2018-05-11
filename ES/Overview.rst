@@ -9,53 +9,55 @@ Requerimientos
 ==============
 
 Para instalación y uso
-    1. Servidor web Apache2 Server or similar
-    2. PHP 7.0
-    3. Motor de bases de datos MySql, MariaDB o Postgresql
+    1. **MySql 5.5** o **Postgresql 8.0** o versiones superiores
+    2. **Apache** u otro servidor web compatible con PHP.
+    3. **PHP 7.0.8** o superior.
+      Además de la extensión PHP de conexión a la base de datos instalada
+      se necesitan las extensiones:
+        - bcmath
+        - curl
+        - simplexml
+        - openssl
+        - zip
 
 Para desarrollo
     1. Requerimientos de uso
     2. Entorno de desarrollo PHP: NetBeens, PHPStorm o similar
     3. Composer y NPM: Para la instalación de requerimientos.
 
-
-.. _instalación:
-
 Instalación
 ===========
+
+Instalación desde archivo ZIP
+-----------------------------
+
 Acceder al sitio web de `FacturaScripts 2018 <http://https://beta.facturascripts.com/descargar>`_,
 descargar la beta y descomprime el archivo en tu hosting o en la carpeta de Apache o XAMP de tu PC.
 A continuación abre el navegador y escribe la url oportuna, es decir, el dominio
-de tu web o http://localhost/facturascripts si lo has instalado en local.
+de tu web o http://localhost/facturascripts si lo has instalado en local,
+y complete el formulario de instalación.
 
+Instalación desde github
+------------------------
 
-Instalación para desarrollo
-===========================
-
-Para instalar un entorno de desarrollo, los pasos a seguir pueden variar según el sistema operativo
-donde desee trabajar. A continuación se detallan un método genérico.
+Puede realizar la instalación descargando el archivo `ZIP <https://github.com/NeoRazorX/facturascripts/archive/master.zip>`_
+directamente del proyecto en github y realizar una instalación desde archivo ZIP.
+También puede realizar la instalación mediante una consola una vez tenga instaladas
+las herramientas git, composer y npm. Este tipo de instalación está más
+recomendada para desarrolladores.
 
 .. code-block:: bash
 
-        # Instalando Facturascripts
         git clone https://github.com/NeoRazorX/facturascripts.git
         cd facturascripts
         composer install
         npm install
 
-En caso de no instalarse correctamente el paquete Composer, podemos instalarlo manualmente
 
-.. code-block:: bash
+Licencia
+========
 
-      # Install Composer
-      curl -sS https://getcomposer.org/installer | php
-
-
-
-License
-=======
-
-Licensed using the `MIT license <http://opensource.org/licenses/MIT>`_.
+Licenciado bajo `licencia MIT <http://opensource.org/licenses/MIT>`_.
 
     Copyright (C) 2013-2018  Carlos Garcia Gomez  <carlos@facturascripts.com>
 
@@ -73,10 +75,8 @@ Licensed using the `MIT license <http://opensource.org/licenses/MIT>`_.
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
-.. _contribuir:
-
 Contribuir
-============
+==========
 
 Este proyecto es software libre y todos los desarrolladores son bienvenidos.
 Puedes consultar la lista de tareas a realizar, la documentación y el chat para programadores

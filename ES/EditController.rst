@@ -18,9 +18,8 @@ XML, tal y como se describe en el documento
 `XMLViews <XMLViews>`__,
 incluido en la documentación de **Facturascripts**.
 
-************************
 Cómo usar el controlador
-************************
+========================
 
 Para utilizar *EditController* debemos crearnos una nueva clase PHP que
 herede o extienda de EditController, estableciendo en el constructor de
@@ -45,8 +44,11 @@ igual que la nueva clase que hemos creado. También existen métodos
 generales que podemos sobreescribir para personalizar la pantalla, (ver
 más abajo).
 
+Declaración del controlador
+===========================
+
 getPageData
-===========
+-----------
 
 Este método es el encargado de devolver un array con los datos para la
 instalación y configuración del controlador dentro del entorno de
@@ -74,8 +76,8 @@ o abajo
             return $pagedata;
         }
 
-Personalización
-===============
+Personalizar cabecera y pie
+===========================
 Existen dos métodos que nos permiten personalizar los datos a visualizar en la cabecera y pie de la ficha de datos.
 
 .. code:: php

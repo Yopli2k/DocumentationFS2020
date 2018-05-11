@@ -18,9 +18,8 @@ Para el uso de este controlador es necesario crear las vistas en formato
 XML, tal y como se describe en el documento
 `XMLViews <XMLViews>`__, incluido en la documentación de **Facturascripts**.
 
-************************
 Cómo usar el controlador
-************************
+========================
 
 Para utilizar *PanelController* debemos crearnos una nueva clase PHP que
 herede o extienda de PanelController, debiendo implementar los
@@ -36,8 +35,43 @@ siguientes métodos:
    etc) para la vista principal (la primera que añadimos en
    *createViews*).
 
+Declaración del controlador
+===========================
+
+getPageData
+-----------
+
+Este método es el encargado de devolver un array con los datos para la
+instalación y configuración del controlador dentro del entorno de
+**Facturascripts**. Como norma hay que llamar al *parent* del
+controlador para inicializar los valores por defecto y asegurar un
+correcto funcionamiento de nuestro controlador en el entorno de
+Facturascripts.
+
+Los valores que se pueden configurar son: \* **title**: Referencia de
+traducción del título de la vista \* **icon**: Icono de la fuente de
+texto *fontawesome* \* **menu**: Nombre del menú donde se introducirá el
+controlador \* **submenu**: (opcional) Segundo nivel del menú donde se
+introduciría el controlador \* **orden**: Podemos alterar el orden
+natural del sistema de menú para colocar nuestro controlador más arriba
+o abajo
+
+.. code:: php
+
+        public function getPageData()
+        {
+            $pagedata = parent::getPageData();
+            $pagedata['title'] = 'agents';
+            $pagedata['icon'] = 'fa-user-circle-o';
+            $pagedata['menu'] = 'admin';
+            return $pagedata;
+        }
+
+Añadir y configurar las vistas
+==============================
+
 createViews
-===========
+-----------
 
 Dentro de este método, en nuestra nueva clase, debemos ir creando las
 distintas vistas que se visualizarán, debiendo usar distintos métodos
@@ -67,7 +101,7 @@ plugins pueden ir extendiendo nuestra clase y añadir nuevas vistas, o
 modificar las existentes.
 
 loadData
-========
+--------
 
 Este método es llamado por cada una de las vistas para que podamos
 cargar los datos específicos de la misma. En la llamada se nos informa
@@ -106,7 +140,7 @@ Ejemplo de carga de datos para distintos tipos de vistas.
         }
 
 setTabsPosition
-===============
+---------------
 
 Este método permite poner las pestaña a la izquierda (left), abajo
 (bottom) o arriba (top). Por defecto están colocadas a la izquierda.
@@ -151,32 +185,3 @@ Ejemplo.
     $this->addEditView('FacturaScripts\Core\Model\Asiento', 'EditAsiento', 'accounting-entries', 'fa-balance-scale');
     $this->addListView('FacturaScripts\Core\Model\Partida', 'ListPartida', 'accounting-items', 'fa-book');
     $this->setTabsPosition('top');
-
-getPageData
-===========
-
-Este método es el encargado de devolver un array con los datos para la
-instalación y configuración del controlador dentro del entorno de
-**Facturascripts**. Como norma hay que llamar al *parent* del
-controlador para inicializar los valores por defecto y asegurar un
-correcto funcionamiento de nuestro controlador en el entorno de
-Facturascripts.
-
-Los valores que se pueden configurar son: \* **title**: Referencia de
-traducción del título de la vista \* **icon**: Icono de la fuente de
-texto *fontawesome* \* **menu**: Nombre del menú donde se introducirá el
-controlador \* **submenu**: (opcional) Segundo nivel del menú donde se
-introduciría el controlador \* **orden**: Podemos alterar el orden
-natural del sistema de menú para colocar nuestro controlador más arriba
-o abajo
-
-.. code:: php
-
-        public function getPageData()
-        {
-            $pagedata = parent::getPageData();
-            $pagedata['title'] = 'agents';
-            $pagedata['icon'] = 'fa-user-circle-o';
-            $pagedata['menu'] = 'admin';
-            return $pagedata;
-        }

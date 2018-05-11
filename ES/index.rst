@@ -28,17 +28,92 @@ Es software libre bajo licencia GNU/LGPL.
 Tabla de Contenidos
 ===================
 
+.. raw:: html
+
+   <table style="width:100%;">
+     <tr>
+       <td>
+
 .. toctree::
-   :maxdepth: 2
+  :maxdepth: 2
 
-   Overview
-   StyleGuide
+  Overview
 
-   Translations
+.. raw:: html
 
-   Models
-   XMLViews
+       </td>
+       <td>
 
-   ListController
-   EditController
-   PanelController
+.. toctree::
+  :maxdepth: 1
+
+  StyleGuide
+  Translations
+  Development
+  Database
+
+.. raw:: html
+
+       </td>
+     </tr>
+   </table>
+
+   <hr>
+   &nbsp;
+
+En detalle
+==========
+
+.. raw:: html
+
+  <table style="width:100%;">
+    <tr>
+      <td>
+
+1. Base de Datos
+----------------
+
+.. toctree::
+  :maxdepth: 3
+
+  Database
+
+2. Modelos
+----------
+
+.. toctree::
+  :maxdepth: 3
+
+  Models
+  ModelView
+
+.. raw:: html
+
+      </td>
+      <td>
+
+3. Vistas
+---------
+
+.. toctree::
+  :maxdepth: 3
+
+  Views
+  XMLViews
+
+
+4. Controladores
+----------------
+
+.. toctree::
+  :maxdepth: 2
+
+  ListController
+  EditController
+  PanelController
+
+.. raw:: html
+
+      </td>
+    </tr>
+  </table>
