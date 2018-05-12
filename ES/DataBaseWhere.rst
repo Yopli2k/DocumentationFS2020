@@ -25,9 +25,9 @@ Al crear la instancia debemos informar de los parámetros:
 
 -  **value** : Valor por el cual se filtra.
 
--  **operator** : (opcional)('=' por defecto) operador aritmético a aplicar: '=', '<', '>', '<=', '>=', '<>', 'IN', 'IS', 'IS NOT', 'LIKE', 'REGEXP'
+-  **operator** : (opcional)('=' por defecto) operador aritmético a aplicar. **['=', '<', '>', '<=', '>=', '<>', 'IN', 'IS', 'IS NOT', 'LIKE', 'REGEXP']**
 
--  **operation** : (opcional)('AND' por defecto) Indica el operador lógico a aplicar: 'AND', 'OR'
+-  **operation** : (opcional)('AND' por defecto) Indica el operador lógico a aplicar. **['AND', 'OR']**
 
 
 Ejemplos:
