@@ -21,12 +21,14 @@ siendo cada una de las condiciones una instancia de la clase *DataBaseWhere*.
 
 Al crear la instancia debemos informar de los parámetros:
 
-fields        Nombre de campo o lista separada por '|' a los que se aplicará el valor.
-value         Valor por el cual se filtra.
-operator      (opcional)('=' por defecto) operador aritmético a aplicar:
-              '=', '<', '>', '<=', '>=', '<>', 'IN', 'IS', 'IS NOT', 'LIKE', 'REGEXP'
-operation     (opcional)('AND' por defecto) Indica el operador lógico a aplicar:
-              'AND', 'OR'
+-  **fields** : Nombre de campo o lista separada por '|' a los que se aplicará el valor.
+
+-  **value** : Valor por el cual se filtra.
+
+-  **operator** : (opcional)('=' por defecto) operador aritmético a aplicar: '=', '<', '>', '<=', '>=', '<>', 'IN', 'IS', 'IS NOT', 'LIKE', 'REGEXP'
+
+-  **operation** : (opcional)('AND' por defecto) Indica el operador lógico a aplicar: 'AND', 'OR'
+
 
 Ejemplos:
 
