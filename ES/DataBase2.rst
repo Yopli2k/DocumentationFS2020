@@ -8,7 +8,7 @@ Base de Datos
 La clase *DataBase* es la encargada de controlar la conexión con la base de datos y
 todas las tareas relacionadas con la misma. Actualmente se soportan conexiones a los
 motores `PostgreSql <https://www.postgresql.org>`_ y `MySQL <https://www.mysql.com>`_
-(junto con homóloga `MariaDB <https://mariadb.org`_).
+(junto con homóloga `MariaDB <https://mariadb.org>`_).
 
 Internamente se subdivide en varias clases que se engloban en función de su uso y necesidad,
 pero que al estar incorporadas en el núcleo del *Facturascripts* son "transparentes" para el
