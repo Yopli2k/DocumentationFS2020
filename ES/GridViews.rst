@@ -5,7 +5,7 @@
 Vistas GridViews
 ################
 
-Estas vistas son vistas que dependen de otra vista padre de tipo *EditView*
+Este tipo son vistas que dependen de otra vista padre de tipo *EditView*
 y en la que los datos "hijos" se visualizarán dentro de un tabla de filas y
 columnas similar a una hoja de cálculo. Este tipo de visualización permite
 al usuario moverse libremente por los datos, cambiar el orden de las filas,
@@ -132,4 +132,3 @@ PanelController no use el proceso de grabación normal sino el proceso de GridVi
                 addEvent('afterSelection', data_afterSelection);
             }
         });
-

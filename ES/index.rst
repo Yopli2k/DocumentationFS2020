@@ -50,7 +50,6 @@ Tabla de Contenidos
   StyleGuide
   Translations
   Development
-  Database
 
 .. raw:: html
 
@@ -70,18 +69,15 @@ En detalle
     <tr>
       <td>
 
-1. Base de Datos
-----------------
-
 .. toctree::
+  :caption: 1. Base de Datos
   :maxdepth: 3
 
-  Database
-
-2. Modelos
-----------
+  DataBase
+  DataBaseWhere
 
 .. toctree::
+  :caption: 2. Modelos
   :maxdepth: 3
 
   Models
@@ -92,20 +88,16 @@ En detalle
       </td>
       <td>
 
-3. Vistas
----------
-
 .. toctree::
+  :caption: 3. Vistas
   :maxdepth: 3
 
   Views
   XMLViews
 
 
-4. Controladores
-----------------
-
 .. toctree::
+  :caption: 4. Controladores
   :maxdepth: 2
 
   ListController
