@@ -1,6 +1,12 @@
 .. title:: Traducciones
 .. highlight:: rst
 
+.. title:: Facturascripts traducción de cadenas y textos
+.. meta::
+   :description: Traducciones de cadenas y textos
+   :keywords: facturascripts, multidioma, traduccion, i18n
+
+
 ############
 Traducciones
 ############

@@ -1,6 +1,12 @@
 .. title:: GridViews
 .. highlight:: rst
 
+.. title:: Facturascripts, vistas master - detalle
+.. meta::
+   :description: Creacion de vistas con detalle en hoja de calculo (spreedsheet)
+   :keywords: facturascripts, documentacion, desarrollo, vista, hoja de calculo
+
+
 ################
 Vistas GridViews
 ################

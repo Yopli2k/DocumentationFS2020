@@ -1,6 +1,12 @@
 .. title:: Views
 .. highlight:: rst
 
+.. title:: Facturascripts desarrollo de vistas
+.. meta::
+   :description: Diseño de vistas mediante plantilla TWIG
+   :keywords: facturascripts, diseño, vista, twig, herencia, desarrollo
+
+
 ######
 Vistas
 ######

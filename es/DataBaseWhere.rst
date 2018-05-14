@@ -1,6 +1,12 @@
 .. title:: DataBaseWhere
 .. highlight:: rst
 
+.. title:: Facturascripts, la clase DataBaseWhere
+.. meta::
+   :description: Filtrado where de los datos. Uso de SQL, operadores y operaciones
+   :keywords: facturascripts, documentacion, base de datos, where, filtro, condiciones
+
+
 #############
 Filtros Where
 #############

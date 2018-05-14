@@ -126,9 +126,9 @@ Guía de uso
   y proporcionar la mejor distribución en diferentes tamaños de pantalla.
 
 - Al documentar un panel o sección de la IU, es mejor usar una sola imagen que muestre todas las áreas
-  relevantes (en lugar de varias imágenes para cada icono o botón)
-  ubicado en la parte superior de la sección que está escribiendo,
-  y luego explica las características en el orden en que aparecen en la imagen.
+  relevantes (en lugar de varias imágenes para cada icono o botón) ubicado en la parte superior de la
+  sección que está escribiendo, y luego explica las características en el orden en que aparecen en la imagen.
+
 
 .. note::
 
@@ -141,7 +141,7 @@ Guía de uso
 Vídeos
 ======
 
-Los vídeos con origen en YouTube\ :sup:`â„¢` y Vimeo\ :sup:`â„¢` pueden ser incluidos usando las directrices::
+Los vídeos con origen en YouTube y Vimeo pueden ser incluidos usando las directrices::
 
    .. youtube:: ID
 
@@ -149,8 +149,9 @@ Los vídeos con origen en YouTube\ :sup:`â„¢` y Vimeo\ :sup:`â„¢` pueden
 
 El identificador o ``ID`` del vídeo se puede encontrar dentro de la URL:
 
-- El ID para ``https://www.youtube.com/watch?v=Ge2Kwy5EGE0`` is ``Ge2Kwy5EGE0``
-- El ID para ``https://vimeo.com/15837189`` is ``15837189``
+- El ID para ``https://www.youtube.com/watch?v=Ge2Kwy5EGE0`` es ``Ge2Kwy5EGE0``
+
+- El ID para ``https://vimeo.com/15837189`` es ``15837189``
 
 
 Guía de uso
@@ -159,8 +160,8 @@ Guía de uso
 - Evite agregar videos que dependen de la voz, ya que es difícil de traducir.
 
 - No incruste videos tutoriales como medio para explicar una característica,
-la escritura misma debe explicarla adecuadamente (aunque puede incluir un enlace
-al video en la parte inferior de la página, bajo el encabezado ``Tutoriales``).
+  la escritura misma debe explicarla adecuadamente (aunque puede incluir un enlace
+  al video en la parte inferior de la página, bajo el encabezado ``Tutoriales``).
 
 
 Referencias cruzadas y vinculación

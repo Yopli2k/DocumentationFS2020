@@ -1,6 +1,12 @@
 .. title:: DataBase
 .. highlight:: rst
 
+.. title:: Facturascripts, la clase DataBase y su uso
+.. meta::
+   :description: Acceso y uso de la base de datos. Leer, modificar y borrar
+   :keywords: facturascripts, documentacion, base de datos, postgresql, mysql
+
+
 #############
 Base de Datos
 #############

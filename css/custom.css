@@ -5,5 +5,11 @@ Description: This is a theme personalization.
 */
 
 /************************ Search division ****************************/
+.wy-side-nav-search {
+  background-color: #2980B9;
+}
 
+.wy-menu-vertical p.caption {
+  color: dodgerblue;
+}
 /************************ Toc Tree division ****************************/

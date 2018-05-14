@@ -1,6 +1,12 @@
 .. title:: ListController
 .. highlight:: rst
 
+.. title:: Facturascripts Extended Controller (controlador avanzado)
+.. meta::
+   :description: Controlador multi panel, nuevo sistema de desarrollo simple
+   :keywords: facturascripts, desarrollo, simple, sencillo, paneles, controlador
+
+
 ##########################
 Controlador ListController
 ##########################

@@ -1,6 +1,12 @@
 .. title:: Models
 .. highlight:: rst
 
+.. title:: Facturascripts Modelos de datos
+.. meta::
+   :description: Modelo de datos. Muestra los datos de una tabla
+   :keywords: facturascripts, desarrollo, modelo, tabla
+
+
 ##########################
 Modelos de tablas de datos
 ##########################
