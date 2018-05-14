@@ -12,13 +12,13 @@ Para instalación y uso
     1. **MySql 5.5** o **Postgresql 8.0** o versiones superiores
     2. **Apache** u otro servidor web compatible con PHP.
     3. **PHP 7.0.8** o superior.
-      Además de la extensión PHP de conexión a la base de datos instalada
-      se necesitan las extensiones:
-        - bcmath
-        - curl
-        - simplexml
-        - openssl
-        - zip
+
+    Además de la extensión PHP de conexión a la base de datos instalada se necesitan las extensiones:
+      - bcmath
+      - curl
+      - simplexml
+      - openssl
+      - zip
 
 Para desarrollo
     1. Requerimientos de uso

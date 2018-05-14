@@ -248,13 +248,18 @@ Ejemplos:
       utilizará una sóla etiqueta *<values>* indicando los atributos:
 
           -  *source*: Indica el nombre de la tabla origen de los datos
+
           -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
+
           -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
 
       Para el caso de valores por definición de rango una sóla etiqueta *<values>*
       indicando los atributos:
+
           -  *start*: Indica el valor inicial (numérico o alfabético)
+
           -  *end*: Indica el valor final (numérico o alfabético)
+
           -  *step*: Indica el valor del incremento (numérico)
 
    -  **radio**: Lista de valores donde podemos seleccionar una de ellas.

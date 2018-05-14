@@ -123,11 +123,12 @@ Guía de uso
 -----------
 
 - Evite especificar la resolución de la imagen o su alineación, para que el sitio web pueda manejar las imágenes de forma coherente,
-   y proporcionar la mejor distribución en diferentes tamaños de pantalla.
+  y proporcionar la mejor distribución en diferentes tamaños de pantalla.
+
 - Al documentar un panel o sección de la IU, es mejor usar una sola imagen que muestre todas las áreas
-   relevantes (en lugar de varias imágenes para cada icono o botón)
-   ubicado en la parte superior de la sección que está escribiendo,
-   y luego explica las características en el orden en que aparecen en la imagen.
+  relevantes (en lugar de varias imágenes para cada icono o botón)
+  ubicado en la parte superior de la sección que está escribiendo,
+  y luego explica las características en el orden en que aparecen en la imagen.
 
 .. note::
 
@@ -156,6 +157,7 @@ Guía de uso
 -----------
 
 - Evite agregar videos que dependen de la voz, ya que es difícil de traducir.
+
 - No incruste videos tutoriales como medio para explicar una característica,
 la escritura misma debe explicarla adecuadamente (aunque puede incluir un enlace
 al video en la parte inferior de la página, bajo el encabezado ``Tutoriales``).
