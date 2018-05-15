@@ -1,14 +1,10 @@
-.. title:: Facturascripts
-.. meta::
-   :description: Documentación de usuario y ayuda para el desarrollo de Facturascripts 2018
-   :keywords: facturascripts, documentacion, desarrollo, plugin
-
+.. title:: Inicio
 
 ==============
 Facturascripts
 ==============
 
-.. image:: ../prs-welcome.png
+.. image:: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
    :target: https://github.com/NeorazorX/facturascripts/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue
    :alt: PRs Welcome
 

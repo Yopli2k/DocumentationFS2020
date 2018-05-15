@@ -499,21 +499,12 @@ y/o el pie con atributos:
 
 -  **footer** : indica un texto para el pie del panel.
 
--  **html** : incluye una plantilla twig en el contenido del card.
-
 Ejemplo: (Cabecera de vista)
 
 .. code:: xml
 
         <row type="header">
             <group name="footer1" footer="specials-actions" label="Esto es una muestra de botones en un 'bootstrap card'">
-                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
-                <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Ejecuta el controlador con action=process1" />
-            </group>
-        </row>
-
-        <row type="footer">
-            <group name="footer2" footer="aditional-text" html="Block/Info.html.twig">
                 <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
                 <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Ejecuta el controlador con action=process1" />
             </group>

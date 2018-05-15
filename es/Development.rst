@@ -38,28 +38,3 @@ a las vistas tradicionales de *FS2015* un nuevo concepto, las vistas XML.
 
 - `Controladores <Controllers>`_: **Realizan las tareas solicitadas por el usuario**, haciendo de intermediario
     entre la vista o interface del usuario y los datos almacenados en la base de datos.
-
-
-Conceptos Generales
-===================
-
-Antes de que empiece a programar o modificar el código de FacturaScripts, es necesario
-que establecer algunos conceptos.
-
-- **Sus personalizaciones van en plugins**:
-  No deben realizarse cambios en los archivos del Core o Kernel de *Facturascripts*.
-  Esto es así por dos motivos principales. Cualquier cambio se perderá al actualizar
-  y porque es muy importante poder mantener la instalación actualizada.
-  Coloque sus personalizaciones a modo de plugin dentro de la carpeta *Plugins*.
-
-- **Nomenclatura de archivos y clases**:
-  Para nombrar tanto los archivos como las clases que se declaran se utiliza el sistema
-  `UpperCamelCase <https://es.wikipedia.org/wiki/CamelCase>`. Es decir, todo en minúsculas
-  con la excepción de la primera letra de cada palabra y sin separador entre palabras.
-  El nombre del archivo debe ser en singular, y debe coincidir con el nombre de la clase
-  que declara, declarando una única clase por archivo.
-
-- **Espacios de nombres**:
-  Cada clase debe estar en el espacio de nombre correspondiente a su carpeta. De la misma
-  manera, cada plugin tiene su espacio de nombre reservado que se corresponde con
-  *FacturaScripts/Plugins/{Nombre del Plugin}*
