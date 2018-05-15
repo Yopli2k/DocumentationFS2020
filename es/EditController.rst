@@ -32,8 +32,10 @@ herede o extienda de EditController, estableciendo en el constructor de
 nuestra nueva clase el modelo sobre el que trabajaremos y debiendo
 implementar el siguiente método:
 
--  **getPageData**: Establece los datos generales (título, icono, menú,
-   etc) para la vista
+-  **getPageData**: Establece los datos generales (título, icono, menú, etc)
+   para la vista principal (la primera que añadimos en *createViews*).
+   Este método se vió en el apartado :ref:`Controlador <getpagedata>` y
+   es obligatorio en todos los controladores.
 
 .. code:: php
 
@@ -50,37 +52,6 @@ igual que la nueva clase que hemos creado. También existen métodos
 generales que podemos sobreescribir para personalizar la pantalla, (ver
 más abajo).
 
-Declaración del controlador
-===========================
-
-getPageData
------------
-
-Este método es el encargado de devolver un array con los datos para la
-instalación y configuración del controlador dentro del entorno de
-**Facturascripts**. Como norma hay que llamar al *parent* del
-controlador para inicializar los valores por defecto y asegurar un
-correcto funcionamiento de nuestro controlador en el entorno de
-Facturascripts.
-
-Los valores que se pueden configurar son: \* **title**: Referencia de
-traducción del título de la vista \* **icon**: Icono de la fuente de
-texto *fontawesome* \* **menu**: Nombre del menú donde se introducirá el
-controlador \* **submenu**: (opcional) Segundo nivel del menú donde se
-introduciría el controlador \* **orden**: Podemos alterar el orden
-natural del sistema de menú para colocar nuestro controlador más arriba
-o abajo
-
-.. code:: php
-
-        public function getPageData()
-        {
-            $pagedata = parent::getPageData();
-            $pagedata['title'] = 'agents';
-            $pagedata['icon'] = 'fa-user-circle-o';
-            $pagedata['menu'] = 'admin';
-            return $pagedata;
-        }
 
 Personalizar cabecera y pie
 ===========================

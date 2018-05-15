@@ -104,6 +104,7 @@ En detalle
   :caption: 4. Controladores
   :maxdepth: 2
 
+  Controllers
   ListController
   EditController
   PanelController
