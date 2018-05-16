@@ -1,6 +1,4 @@
-.. title:: Development
 .. highlight:: rst
-
 .. title:: Facturascripts, desarrollar nuevos plugins, adaptaciones y personalizaciones
 .. meta::
    :description: Documentación de usuario y ayuda para el desarrollo de Facturascripts 2018

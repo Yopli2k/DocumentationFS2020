@@ -1,6 +1,4 @@
-.. title:: Development
 .. highlight:: rst
-
 .. title:: Facturascripts los controladores de acciones y procesos
 .. meta::
    :description: Clase controladora de los procesos. Parte del modelo MVC.
@@ -46,7 +44,7 @@ A la hora de crear un controlador nuevo debemos seguir las siguientes normas:
 
 - **Deben heredar de *FacturaScripts/Core/Base/Controller*** o de un controlador extendido.
 
-- Las propiedades y métodos **deben usar nomenclatura `lowerCamelCase <https://es.wikipedia.org/wiki/CamelCase>`_**
+- Las propiedades y métodos **deben usar nomenclatura** `lowerCamelCase <https://es.wikipedia.org/wiki/CamelCase>`_
 
 Ejemplo: *archivo MyNewPlugin.php*
 
@@ -76,17 +74,14 @@ Ejemplo: *archivo MyNewPlugin.php*
     }
 
 
-Métodos obligatorios
-====================
-
 .. _getpagedata:
 
-getPageData
------------
+Método getPageData
+==================
 
-Este método es ejecutado por el núcleo de *FacturaScripts* cada vez que se ejecuta el controlador,
-al activar o actualizar el plugin. Debe devolver un array con los datos para la instalación
-y configuración del controlador dentro del entorno de *Facturascripts*.
+Este método **obligatorio** es ejecutado por el núcleo de *FacturaScripts* cada vez que se
+ejecuta el controlador, al activar o actualizar el plugin. Debe devolver un array con
+los datos para la instalación y configuración del controlador dentro del entorno de *Facturascripts*.
 Como norma hay que llamar al *parent* del controlador para inicializar los valores por
 defecto y asegurar un correcto funcionamiento de nuestro controlador.
 
@@ -110,13 +105,93 @@ Los valores que se pueden configurar son:
        }
 
 
-privateCore
------------
+Acceso privado y público
+========================
 
+*FacturaScripts* no solamente sirve para que usted y sus empleados gestionen su empresa,
+también permite que pueda ofrecer servicio a sus clientes. Esto significa que no sólo
+personas autorizadas intenten acceder al controlador. Para gestionar las peticiones
+el controlador dispone de dos métodos: *privateCore* y *publicCore*
 
 publicCore
 ----------
 
+Se ejecuta este método de entrada al controlador cuando no existe una identificación
+autorizada por parte del usuario. Ver `Usuarios <Users>`_ para más información.
+Este método es opcional, cuando estamos desarrollando un nuevo controlador, pues se muestra
+la pantalla de *inicio de sesión* por defecto. Sólo debemos implementarlo cuando deseemos
+implementar algo distinto.
 
-Controladores Extendidos
-========================
+privateCore
+-----------
+
+Se ejecuta este método de entrada al controlador cuando el usuario está correctamente
+identificado y tiene permisos para la ejecución de dicho controlador. Como norma establecida
+en *Facturascripts 2018* el método de trabajo dentro del *privateCore* es:
+
+#. Recepción de los parámetros enviados por la vista, normalmente por post.
+#. Ejecutar las tareas previas a la carga de datos. (método *execPreviousAction*)
+#. Cargar los datos de los modelos. (método *loadData*)
+#. Ejecutar las tareas posteriores a la carga de datos. (método *execAfterAction*)
+
+.. warning::
+    Los cambios realizados en los datos de un modelo tras la carga de datos no se verán reflejados en la vista
+
+Esta manera de trabajar simplifica el entendimiento y seguimiento del código del controlador,
+y aunque no todos los controladores se ajustan a este patrón se anima a mantenerlo de cara
+a futuros mantenimientos del código.
+
+Ejemplo:
+
+.. code:: php
+
+    public function privateCore(&$response, $user, $permissions)
+    {
+        parent::privateCore($response, $user, $permissions);
+
+        $action = $this->request->get('action', '');
+        if (!$this->execPreviousAction($action)) {
+            return;
+        }
+
+        $this->loadData();
+        $this->execAfterAction($action);
+    }
+
+
+Comunicación con la vista
+=========================
+
+Obtener parámetros
+------------------
+
+La comunicación entre la vista (o usuario) y el controlador se recoge mediante los métodos
+implementados en la clase base de *Controller* y gracias al componente http-foundation de
+Symfony.
+
+:getFormData:  Retorna un array asociativo con la lista de parámetros enviados al controlador.
+:request->get:  Recoge el valor del parámetro con el nombre indicado. Se puede establecer, mediante un segundo parámetro, un valor por defecto por si no está definido el parámetro solicitado.
+:request->getClientIp:  Obtiene la IP del equipo que solicita la vista.
+
+.. note::
+
+    El parámetro **action** indica al controlador la tarea solicitada.
+
+
+Uso de Cookies
+--------------
+
+Es posible leer y escribir cookies para la sesión actual del usuario. Para ello realizaremos
+una llamada al método *cookies* del objeto *request* incluido en el controlador.
+Para la escritura de una cookie es necesario declarar el uso del namespace *Symfony/Component/HttpFoundation/Cookie*.
+
+:cookies->get: Obtiene el valor de la cookie con el nombre que indiquemos.
+:cookies->set: Establece el valor de la cookie con el nombre que indiquemos. Podemos indicar el tiempo de expiración.
+
+.. code:: php
+
+    use Symfony\Component\HttpFoundation\Cookie;
+
+    $expire = time() + 3600; /// +1 hora
+    $this->response->headers->setCookie(new Cookie('MyCook', 'value', $expire));
+    $this->request->cookies->get('MyCook');

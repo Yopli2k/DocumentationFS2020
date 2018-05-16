@@ -1,0 +1,18 @@
+.. highlight:: rst
+.. title:: Facturascripts controladores extendidos
+.. meta::
+   :description: Los controladores extendidos, la novedad de FS 2018. Desarrollo fácil y rápido.
+   :keywords: facturascripts, documentacion, desarrollo, controlador, novedad, desarrollo facil, desarrollo rapido
+
+########################
+Controladores Extendidos
+########################
+
+.. admonition:: Tema pendiente
+
+    Este tema está está pendiente. Por favor vuelve pasado un tiempo.
+
+
+(método *execPreviousAction*)
+
+(método *execAfterAction*)

@@ -24,6 +24,9 @@ Facturascripts
    :target: #
    :alt: Version de PHP
 
+.. image:: https://graphs.waffle.io/NeoRazorX/facturascripts/throughput.svg
+  :target: https://waffle.io/NeoRazorX/facturascripts/metrics/throughput
+  :alt: Throughput Graph
 
 Software de facturación y contabilidad para PYMES, fácil, libre y con actualizaciones constantes. Es compatible con FacturaLux, Abanq y Eneboo.
 Es software libre bajo licencia GNU/LGPL.
@@ -52,6 +55,7 @@ Tabla de Contenidos
   :maxdepth: 1
 
   StyleGuide
+  Users
   Translations
   Development
 
@@ -64,8 +68,8 @@ Tabla de Contenidos
    <hr>
    &nbsp;
 
-En detalle
-==========
+Desarrollar (en detalle)
+========================
 
 .. raw:: html
 
@@ -105,6 +109,7 @@ En detalle
   :maxdepth: 2
 
   Controllers
+  ExtendedControllers
   ListController
   EditController
   PanelController
