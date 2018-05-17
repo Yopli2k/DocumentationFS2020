@@ -160,6 +160,36 @@ Ejemplo:
     }
 
 
+El usuario y sus permisos
+-------------------------
+
+Podemos acceder a los datos del usuario identificado mediante la propiedad *user* y a sus
+permisos con la propiedad *permissions*.
+
+La propiedad *user* es una instancia del modelo User, permitiéndonos saber:
+
+:nick: Nombre o alias del usuario
+:email: Cuenta de correo para comunicaciones
+:admin: Indica si la cuenta del usuario es de tipo administrador
+:level: Nivel de seguridad hasta el cual tiene acceso
+:homepage: Indica la página de inicio preferida por el usuario
+:langcode: Indica el idioma seleccionado por el usuario
+
+La propiedad *permissions* es una instancia de la clase ControllerPermissions con las propiedades:
+
+:allowAccess: Indica si el usuario tiene permiso para leer/acceder al controlador
+:allowDelete: Indica si el usuario tiene permiso para eliminar información desde el controlador
+:allowUpdate: Indica si el usuario tiene permiso para modificar información desde el controlador
+
+.. code:: php
+
+    $user = $this->user->nick;
+    $email = $this->user->email;
+    if ($this->permissions->allowDelete) {
+      [ ... ]
+    }
+
+
 Comunicación con la vista
 =========================
 
