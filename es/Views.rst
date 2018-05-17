@@ -5,7 +5,7 @@
 .. meta::
    :description: Diseño de vistas mediante plantilla TWIG
    :keywords: facturascripts, diseño, vista, twig, herencia, desarrollo
-
+   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Views.rst
 
 ######
 Vistas
@@ -91,7 +91,7 @@ Para acceder de manera rápida y sencilla a los valores de configuración o pref
 Uso de TWIG
 ===========
 
-Puede encontrar toda la documentación en la página oficial de `TWIG <https://twig.symfony.com/doc/2.x>`_.
+Puede encontrar toda la documentación en la `página oficial de TWIG <https://twig.symfony.com/doc/2.x>`_.
 
 
 Condicional IF

@@ -3,6 +3,7 @@
 .. meta::
    :description: Documentación de usuario y ayuda para el desarrollo de Facturascripts 2018
    :keywords: facturascripts, documentacion, desarrollo, plugin, adaptaciones, personalizaciones
+   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Development.rst
 
 
 ##########

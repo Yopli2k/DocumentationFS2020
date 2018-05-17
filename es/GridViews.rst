@@ -1,10 +1,9 @@
-.. title:: GridViews
 .. highlight:: rst
-
 .. title:: Facturascripts, vistas master - detalle
 .. meta::
    :description: Creacion de vistas con detalle en hoja de calculo (spreedsheet)
    :keywords: facturascripts, documentacion, desarrollo, vista, hoja de calculo
+   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/GridViews.rst
 
 
 ################

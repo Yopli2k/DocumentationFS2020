@@ -5,6 +5,7 @@
 .. meta::
    :description: Acceso y uso de la base de datos. Leer, modificar y borrar
    :keywords: facturascripts, documentacion, base de datos, postgresql, mysql
+   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/DataBase.rst
 
 
 #############

@@ -5,11 +5,17 @@
 .. meta::
    :description: Nuevo sistema para diseño de vistas mediante XML
    :keywords: facturascripts, documentacion, diseño, vista, xml, desarrollo
+   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/XMLViews.rst
 
 
 ##########
 Vistas XML
 ##########
+
+.. important::
+
+    El uso de este tipo de vista es exclusivo de los controladores extendidos.
+
 
 Tipos y estructura
 ==================

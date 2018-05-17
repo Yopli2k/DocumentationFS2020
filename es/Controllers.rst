@@ -3,6 +3,7 @@
 .. meta::
    :description: Clase controladora de los procesos. Parte del modelo MVC.
    :keywords: facturascripts, documentacion, desarrollo, mvc, controlador, patron mvc
+   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Controllers.rst
 
 
 ###########

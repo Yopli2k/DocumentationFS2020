@@ -3,12 +3,14 @@
 .. meta::
    :description: Los controladores extendidos, la novedad de FS 2018. Desarrollo fácil y rápido.
    :keywords: facturascripts, documentacion, desarrollo, controlador, novedad, desarrollo facil, desarrollo rapido
+   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/ExtendedControllers.rst
+
 
 ########################
 Controladores Extendidos
 ########################
 
-.. admonition:: Tema pendiente
+.. note::
 
     Este tema está está pendiente. Por favor vuelve pasado un tiempo.
 

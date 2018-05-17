@@ -1,10 +1,9 @@
-.. title:: ModelView
 .. highlight:: rst
-
 .. title:: Facturascripts Modelos solo lectura
 .. meta::
    :description: Modelo de datos, solo lectura. Muestra los datos de multiples tablas
    :keywords: facturascripts, desarrollo, modelo, multiples, tablas
+   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/ModelView.rst
 
 
 #########################
