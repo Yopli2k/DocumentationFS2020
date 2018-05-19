@@ -12,7 +12,7 @@ Controladores Extendidos
 
 .. note::
 
-    Este tema está está pendiente. Por favor vuelve pasado un tiempo.
+    Este tema está pendiente. Por favor vuelve pasado un tiempo.
 
 
 (método *execPreviousAction*)

@@ -7,4 +7,6 @@ Es software libre bajo licencia GNU/LGPL.
 
 # Documentación
 
-Este proyecto contiene la documentación de usuario y ayuda para el desarrollo de Facturascripts 2018.
+Este proyecto contiene la documentación de usuario y ayuda para el desarrollo de Facturascripts 2018. Está formada en rst y compilada con sphinex.
+
+Puede consultarla en http://docs.artextrading.com

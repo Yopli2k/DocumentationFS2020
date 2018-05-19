@@ -12,4 +12,8 @@ Description: This is a theme personalization.
 .wy-menu-vertical p.caption {
   color: dodgerblue;
 }
-/************************ Toc Tree division ****************************/
+
+/************************ highlight code ****************************/
+.highlight {
+  background: #f3f6f6;
+}
