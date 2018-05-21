@@ -1,9 +1,11 @@
 .. highlight:: rst
 .. title:: Facturascripts Modelos de datos
 .. meta::
-   :description: Modelo de datos. Muestra los datos de una tabla
-   :keywords: facturascripts, desarrollo, modelo, tabla
-   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Models.rst
+  :http-equiv=Content-Type: text/html; charset=UTF-8
+  :generator: FacturaScripts Documentacion
+  :description: Modelo de datos. Muestra los datos de una tabla
+  :keywords: facturascripts, desarrollo, modelo, tabla
+  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Models.rst
 
 
 ##########################

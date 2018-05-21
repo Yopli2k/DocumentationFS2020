@@ -1,9 +1,11 @@
 .. highlight:: rst
 .. title:: Facturascripts los controladores de acciones y procesos
 .. meta::
-   :description: Clase controladora de los procesos. Parte del modelo MVC.
-   :keywords: facturascripts, documentacion, desarrollo, mvc, controlador, patron mvc
-   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Controllers.rst
+  :http-equiv=Content-Type: text/html; charset=UTF-8
+  :generator: FacturaScripts Documentacion
+  :description: Clase controladora de los procesos. Parte del modelo MVC.
+  :keywords: facturascripts, documentacion, desarrollo, mvc, controlador, patron mvc
+  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Controllers.rst
 
 
 ###########

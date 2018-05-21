@@ -1,9 +1,11 @@
 .. highlight:: rst
 .. title:: Facturascripts requisitos para instalación
 .. meta::
-   :description: Software de facturación y contabilidad para pymes, fácil, libre
-   :keywords: facturascripts, requisitos, instalar, facturacion, contabilidad
-   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Overview.rst
+  :http-equiv=Content-Type: text/html; charset=UTF-8
+  :generator: FacturaScripts Documentacion
+  :description: Software de facturación y contabilidad para pymes, fácil, libre
+  :keywords: facturascripts, requisitos, instalar, facturacion, contabilidad
+  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Overview.rst
 
 
 ########

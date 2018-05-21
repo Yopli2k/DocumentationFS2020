@@ -3,9 +3,11 @@
 
 .. title:: Facturascripts desarrollo de vistas
 .. meta::
-   :description: Nuevo sistema para diseño de vistas mediante XML
-   :keywords: facturascripts, documentacion, diseño, vista, xml, desarrollo
-   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/XMLViews.rst
+  :http-equiv=Content-Type: text/html; charset=UTF-8
+  :generator: FacturaScripts Documentacion
+  :description: Nuevo sistema para diseño de vistas mediante XML
+  :keywords: facturascripts, documentacion, diseño, vista, xml, desarrollo
+  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/XMLViews.rst
 
 
 ##########

@@ -1,9 +1,11 @@
 .. highlight:: rst
 .. title:: Guía de Estilo
 .. meta::
-   :description: Convenciones escritura y el uso de la sintaxis reStructuredText (RST)
-   :keywords: facturascripts, desarrollo, simple, sencillo, paneles, controlador
-   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/StyleGuide.rst
+  :http-equiv=Content-Type: text/html; charset=UTF-8
+  :generator: FacturaScripts Documentacion
+  :description: Convenciones escritura y el uso de la sintaxis reStructuredText (RST)
+  :keywords: facturascripts, desarrollo, simple, sencillo, paneles, controlador
+  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/StyleGuide.rst
 
 
 ##############

@@ -1,9 +1,11 @@
 .. highlight:: rst
 .. title:: Facturascripts gestión de usuarios, permisos y seguridad
 .. meta::
-   :description: La gestión de usuario nos permite establecer permisos lectura, modificación y borrado.
-   :keywords: facturascripts, documentacion, usuario, seguridad, permisos, niveles
-   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Users.rst
+  :http-equiv=Content-Type: text/html; charset=UTF-8
+  :generator: FacturaScripts Documentacion
+  :description: La gestión de usuario nos permite establecer permisos lectura, modificación y borrado.
+  :keywords: facturascripts, documentacion, usuario, seguridad, permisos, niveles
+  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Users.rst
 
 
 ###################

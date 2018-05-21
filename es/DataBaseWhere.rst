@@ -3,9 +3,11 @@
 
 .. title:: Facturascripts, la clase DataBaseWhere
 .. meta::
-   :description: Filtrado where de los datos. Uso de SQL, operadores y operaciones
-   :keywords: facturascripts, documentacion, base de datos, where, filtro, condiciones
-   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/DataBaseWhere.rst
+  :http-equiv=Content-Type: text/html; charset=UTF-8
+  :generator: FacturaScripts Documentacion
+  :description: Filtrado where de los datos. Uso de SQL, operadores y operaciones
+  :keywords: facturascripts, documentacion, base de datos, where, filtro, condiciones
+  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/DataBaseWhere.rst
 
 
 #############
