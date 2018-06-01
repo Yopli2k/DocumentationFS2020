@@ -32,9 +32,10 @@ Al crear la instancia debemos informar de los parámetros:
 
 -  **fields** : Nombre de campo o lista separada por '|' a los que se aplicará el valor.
 
--  **value** : Valor por el cual se filtra.
+-  **value** : Valor por el cual se filtra. Permite usar carácter comodín *%* (ver operador LIKE).
 
--  **operator** : (opcional)('=' por defecto) operador aritmético a aplicar. **['=', '<', '>', '<=', '>=', '<>', 'IN', 'IS', 'IS NOT', 'LIKE', 'REGEXP']**
+-  **operator** : (opcional)('=' por defecto) operador aritmético a aplicar.
+      **['=', '<', '>', '<=', '>=', '<>', 'IN', 'IS', 'IS NOT', 'LIKE', 'REGEXP']**
 
 -  **operation** : (opcional)('AND' por defecto) Indica el operador lógico a aplicar. **['AND', 'OR']**
 
@@ -57,10 +58,10 @@ Ejemplos:
     $where[] = new DataBaseWhere('codcliente', '181432');
     $where[] = new DataBaseWhere('estado', 'Pagado', '<>');
 
-    /// where name = 'MyView' and nick is null
+    /// where name = 'MyView' and nick is null and date is null
     $where = [
         new DataBaseWhere('name', 'MyView'),
-        new DataBaseWhere('nick', 'null', 'IS')
+        new DataBaseWhere('nick|date', 'null', 'IS')
     ];
 
     /// where codejercicio = '2018' and codcuentaesp in ('IVAREX','IVAREP','IVARRE')
@@ -68,6 +69,26 @@ Ejemplos:
         new DataBaseWhere('codejercicio', '2018'),
         new DataBaseWhere('codcuentaesp', 'IVAREX,IVAREP,IVARRE', 'IN')
     ];
+
+
+Operador LIKE
+-------------
+
+Este operador permite un uso avanzado, como el uso del carácter comodín **%** para indicar si
+el valor a buscar está *contenido en*, *comienza por* o *termina en*. Si no se incluye ningún comodín
+en el valor a buscar se entiende que se busca un valor *contenido en*.
+
+También es posible buscar por más de un valor. Para ello debemos informar en el parámetro *value*
+varios valores separados por espacio, y cada valor puede de manera opcional incluir comodines.
+
+Ejemplos:
+
+.. code:: php
+
+    /// where ((nombre LIKE '%sanchez%' OR nombre LIKE '%martinez')
+    ///     OR (nombrecomercial LIKE '%sanchez%' OR nombrecomercial LIKE '%martinez'))
+    $where = [new DataBaseWhere('nombre|nombrecomercial', 'sanchez martinez', 'LIKE')];
+
 
 Obtener sentencia WHERE
 =======================

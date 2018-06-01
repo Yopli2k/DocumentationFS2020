@@ -91,36 +91,44 @@ Ejemplo de creación y adición de campos para búsqueda
 addOrderBy
 ----------
 
-Podemos añadir todos los campos de ordenación, no confundir con los
-campos de búsqueda, realizando distintas llamadas al método *addOrderBy*
-e indicando el nombre de la vista a la que añadimos la ordenación, la
-expresión de ordenación (cualquier expresión aceptada por la clausula
+Podemos añadir todos los campos de ordenación, no confundir con los campos de búsqueda, realizando
+distintas llamadas al método *addOrderBy* e indicando el nombre de la vista a la que añadimos
+la ordenación, una o varias expresiones de ordenación (cualquier expresión aceptada por la cláusula
 ORDER BY de SQL), texto a visualizar al usuario y el indicativo de orden
 por defecto.
 
-Consideraciones: \* si no se indica texto a visualizar, se empleará el
-valor informado en la expresión de ordenación (aplicando el sistema de
-traducciones) \* si no se indica valor de ordenación por defecto, se
-entiende que no hay una ordenación por defecto y se aplicará el primer
-orden añadido \* al añadir una ordenación **siempre** se añaden dos
-opciones de ordenación, una ascendente y otra descendente \* para
-establecer una ordenación por defecto, al añadir la ordenación podemos
-indicar como valores 1 para la ascendente y 2 para la descendente
+Consideraciones:
 
-Ejemplo de adición de ordenación (siguiendo el ejemplo anterior) con
-ordenación por código descendente
+- Si se indica una única expresión de ordenación usaremos la expresión entre comillas a modo de cadena de texto.
+
+- Si se indican múltiples expresiones de ordenación usaremos un array de cadenas de texto.
+
+- Si no se indica texto a visualizar, se empleará el valor informado en la expresión de
+  ordenación (aplicando el sistema de traducciones). Se recomienda informar este texto
+  para evitar traducciones erróneas.
+
+- Si no se indica valor de ordenación por defecto, se entiende que no hay una ordenación por defecto
+  y se aplicará el primer orden añadido.
+
+- Al añadir una ordenación **siempre** se añaden dos opciones de ordenación, una ascendente y otra descendente.
+
+- Para establecer una ordenación por defecto, al añadir la ordenación podemos indicar como valores 1 para la ascendente y 2 para la descendente.
+
+
+Ejemplo de adición de ordenación (siguiendo el ejemplo anterior) con ordenación por código descendente
 
 .. code:: php
 
         /* Epigrafes */
         $this->addOrderBy('ListEpigrafe', 'descripcion', 'description');
-        $this->addOrderBy('ListEpigrafe', 'codepigrafe||codejercicio', 'code', 2);
+        $this->addOrderBy('ListEpigrafe', 'CONCAT(codepigrafe, codejercicio)', 'code', 2);
         $this->addOrderBy('ListEpigrafe', 'codejercicio');
 
         /* Clientes */
         $this->addOrderBy('ListCliente', 'codcliente', 'code');
         $this->addOrderBy('ListCliente', 'nombre', 'name', 1);
         $this->addOrderBy('ListCliente', 'fecha', 'date');
+        $this->addOrderBy('ListCliente', ['codgrupo', 'codcliente'], 'group');
 
         /* Grupos */
         $this->addOrderBy('ListGrupoClientes', 'codgrupo', 'code');
