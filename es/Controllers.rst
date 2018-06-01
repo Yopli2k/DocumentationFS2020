@@ -206,7 +206,7 @@ Symfony.
 :request->get:  Recoge el valor del parámetro con el nombre indicado. Se puede establecer, mediante un segundo parámetro, un valor por defecto por si no está definido el parámetro solicitado.
 :request->getClientIp:  Obtiene la IP del equipo que solicita la vista.
 
-.. note::
+.. important::
 
     El parámetro **action** indica al controlador la tarea solicitada.
 

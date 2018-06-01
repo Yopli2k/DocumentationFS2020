@@ -267,6 +267,8 @@ Ejemplos:
 
           -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
 
+          -  *translate*: (Opcional) Indica si hay que traducir los títulos obtenidos. **[translate=“true”]**
+
       Para el caso de valores por definición de rango una sóla etiqueta *<values>*
       indicando los atributos:
 

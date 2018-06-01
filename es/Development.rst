@@ -1,5 +1,5 @@
 .. highlight:: rst
-.. title:: Facturascripts, desarrollar nuevos plugins, adaptaciones y personalizaciones
+.. title:: Facturascripts, desarrollo de adaptaciones y personalizaciones
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
@@ -17,7 +17,7 @@ el proceso personalización de la aplicación. Las tareas de creación de nuevas
 y desarrollos son realmente sencillas y no requieren de grandes conocimientos en
 programación ni diseño HTML gracias a los controladores extendidos.
 
-.. note::
+.. important::
 
   Debido al gran cambio en la metodología de creación de personalizaciones, es muy
   importante familiarizarse con el sistema antes de iniciar cualquier nuevo plugin.

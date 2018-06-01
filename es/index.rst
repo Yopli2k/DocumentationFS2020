@@ -58,8 +58,8 @@ Tabla de Contenidos
 
   StyleGuide
   Users
-  Translations
   Development
+  Translations
 
 .. raw:: html
 

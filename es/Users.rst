@@ -1,5 +1,5 @@
 .. highlight:: rst
-.. title:: Facturascripts gestión de usuarios, permisos y seguridad
+.. title:: Facturascripts gestión de usuarios, grupos y permisos
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
@@ -8,9 +8,9 @@
   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Users.rst
 
 
-###################
-Usuarios y permisos
-###################
+###########################
+Usuarios, Grupos y Permisos
+###########################
 
 El control de acceso en *Facturascripts* viene dado por la combinación de una lista de usuarios,
 roles o grupos que los agrupan y un conjunto de reglas que determinan los permisos que aplican
@@ -56,17 +56,35 @@ pulsando sobre la pestaña lateral izquierda con el texto :guilabel:`Roles`, don
 podemos añadir, modificar o eliminar a la lista.
 
 
-Roles
-=====
+Grupos
+======
 
-.. note::
+Un grupo nos permite crear un conjunto de usuario que compartirán permisos o reglas.
+Un usuario puede pertenecer a distintos grupos. Podemos acceder a la lista de grupos
+mediante la opción del menú :guilabel:`Administrador -> Usuarios`, en la pestaña :guilabel:`Grupos`.
+Haciendo click sobre uno de los grupos de la lista podemos acceder a ver la información completa
+o pulsaldo el botón de nuevo dar de alta un nuevo grupo.
 
-    Este tema está pendiente. Por favor vuelve pasado un tiempo.
+.. image:: ../images/es/roles-card.png
+   :alt: Ficha de grupos de usuario
 
 
-Reglas
-------
+Permisos
+--------
 
-.. note::
+Dentro de la ficha de cada grupo, podemos indicar los permisos o reglas que se aplicarán
+a cada uno de los usuarios que pertenezcan al grupo. Los permisos son aplicados a cada
+una de las páginas u opciones que tiene la aplicación y los usuarios sólo podrán ver las
+páginas indicadas. Es decir, si no está la página en la lista de permisos, los usuarios
+del grupo no tendrán la página en el menú de la aplicación (a menos que pertenezcan a
+otro grupo que si la disponga)
 
-    Este tema está pendiente. Por favor vuelve pasado un tiempo.
+.. image:: ../images/es/rules-card.png
+   :alt: Ficha de permisos de usuario
+
+:Permitir actualizar: Permite al usuario modificar los datos de la vista que está editando.
+:Permitir eliminar: Permite al usuario eliminar registros de datos de la vista.
+
+Estos permisos se complementan con el control de nivel del usuario. Si un usuario no tiene
+el nivel necesario para ver una página, aunque esté en la lista de permisos, el usuario no
+la tendrá disponible en el menú de la aplicación.
