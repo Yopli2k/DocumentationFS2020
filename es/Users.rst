@@ -13,20 +13,19 @@ Usuarios, Grupos y Permisos
 ###########################
 
 El control de acceso en *Facturascripts* viene dado por la combinación de una lista de usuarios,
-roles o grupos que los agrupan y un conjunto de reglas que determinan los permisos que aplican
-a cada una de las páginas para cada rol. Es decir, un usuario tiene asignado uno o varios roles,
-y cada rol tiene asignado las páginas y lo que puede hacer en cada una de ellas.
+grupos que los agrupan y un conjunto de reglas que determinan los permisos que aplican
+a cada una de las páginas para cada grupo. Es decir, un usuario tiene asignado uno o varios grupos,
+y cada grupo tiene asignado las páginas y lo que puede hacer en cada una de ellas.
 
 Además de indicar a que páginas el usuario tiene acceso y sus permisos, *Facturascripts* implementa
-un sistema de nivel por página que nos permite indicar a cada una de las páginas que
+un sistema de **nivel por página** que nos permite indicar a cada una de las páginas que
 nivel de seguridad se requiere para poder acceder a ella. Así de manera sencilla podemos tener
-dentro de un mismo grupo de usuario o rol, usuarios que accedan a una página y usuarios
-que no podrían acceder.
+dentro de un mismo grupo de usuario, usuarios que accedan a una página y usuarios que no podrían acceder.
 
 .. warning::
 
-    Los usuarios sólo pueden acceder a las páginas asignadas a los roles que pertenece.
-    Los usuarios administradores pueden acceder a todas las páginas sin importar los roles.
+    Los usuarios sólo pueden acceder a las páginas asignadas a los grupos que pertenece.
+    Los usuarios administradores pueden acceder a todas las páginas sin importar los grupos.
 
 
 Usuarios
@@ -51,8 +50,8 @@ o pulsaldo el botón de nuevo dar de alta un nuevo usuario.
 :Últ. conexión: Fecha y hora del último login realizado.
 :Última IP: Idendificación de red desde donde se ha realizado la conexión.
 
-Dentro de la ficha del usuario podemos acceder a la lista de roles o grupos a los que pertenece
-pulsando sobre la pestaña lateral izquierda con el texto :guilabel:`Roles`, donde
+Dentro de la ficha del usuario podemos acceder a la lista de grupos a los que pertenece
+pulsando sobre la pestaña lateral izquierda con el texto :guilabel:`Grupos`, donde
 podemos añadir, modificar o eliminar a la lista.
 
 
