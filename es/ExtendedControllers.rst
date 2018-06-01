@@ -117,3 +117,35 @@ Algunas de las tareas que actualmente gestiona:
                 parent::execAfterAction($action);
         }
     }
+
+
+Personalización de la vista: Settings
+=====================================
+
+Los controladores extendidos disponen de la propiedad *Settings* accesible mediante los métodos
+**getSettings** y **setSettings** que nos permiten leer y añadir/modificar los valores, respectivamente.
+Esta propiedad permite pasar configuraciones propias del controlador a la plantilla de la vista
+de manera que estarán disponibles en el código html.twig y en las funciones JavaScripts que
+implementemos en la vista.
+
+La manera de añadir valores de configuración sería, una vez create la vista normalmente en el método
+*createViews*, llamando al método *setSettings* indicando la vista, la propiedad y el valor.
+
+.. code:: php
+
+    $this->setSettings('MyView', 'myconfig', value);
+
+
+La manera de usar estos valores sería:
+
+.. code:: html
+
+    <!-- Desde Plantilla TWIG -->
+    {% if fsc.getSettings('MyView', 'myconfig') == value %}
+        <span>Se cumple la configuración</span>
+    {% endif %}
+
+    <!-- Desde JavaScripts -->
+    if (Settings['MyView'].myconfig == value) {
+        [ ... ]
+    }
