@@ -228,58 +228,54 @@ Ejemplos:
 
 -  **type** : (obligatorio) Indica el tipo de widget a utilizar.
 
-   -  **text**: Campos varchar o de texto.
-   -  **number**: Campos de tipo numérico. Para este tipo se puede
-      indicar el atributo *decimal* para configurar la precisión a
-      visualizar. El atributo *step* para indicar el aumento o
-      decremento al realizar un “paso” mediante el control de
-      avance/retroceso. Los atributos *min* y *max* para indicar los
-      valores mínimo y máximo.
-   -  **money**: Campos de tipo float para importes. Para este tipo se
-      puede indicar el atributo *decimal* para configurar la precisión a
-      visualizar en vez de los de la moneda.
-   -  **checkbox**: Valores booleanos que se visualizan mediante el
-      icono de un check (true) o un guión (false) respectivamente.
-   -  **datepicker**: Campos de tipo fecha, que incorporan un
-      desplegable para elegir la misma.
-   -  **color**: Para la selección de colores.
-   -  **filechooser**: Permite seleccionar y subir un archivo.
-   -  **autocomplete**: Lista de valores que se cargan de manera dinámica de un modelo
-      en función del texto introdicido por el usuario. Se utilizará una sóla
+:text, textarea: Campos de texto o áreas de texto multilínea.
+
+:html: Texto que representa un código html o representación web.
+
+:url: Texto que representa la dirección o link de una página web.
+
+:number: Campos de tipo numérico. Para este tipo se puede indicar el atributo *decimal* para configurar la precisión a
+      visualizar. El atributo *step* para indicar el aumento o decremento al realizar un “paso” mediante el control de
+      avance/retroceso. Los atributos *min* y *max* para indicar los valores mínimo y máximo.
+
+:money: Campos de tipo float para importes. Para este tipo se puede indicar el atributo *decimal* para configurar la precisión a visualizar en vez de los de la moneda.
+
+:checkbox: Valores booleanos que se visualizan mediante el icono de un check (true) o un guión (false) respectivamente.
+
+:datepicker: Campos de tipo fecha, que incorporan un desplegable para elegir la misma.
+
+:color: Para la selección de colores.
+
+:filechooser: Permite seleccionar y subir un archivo de nuestro equipo local al servidor.
+
+:file: Alias para *filechooser*.
+
+:autocomplete: Lista de valores que se cargan de manera dinámica de un modelo en función del texto introdicido por el usuario. Se utilizará una sóla
       etiqueta *<values>* indicando los atributos:
 
-          -  *source*: Indica el nombre de la tabla origen de los datos
-          -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
-          -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
+      -  *source*: Indica el nombre de la tabla origen de los datos
+      -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
+      -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
 
-   -  **select**: Lista de valores establecidos por un conjunto de
-      etiquetas *<values>* descritas dentro del grupo *<widget>*. Los
-      valores podrán ser fijos, incluyendo tantos *<values>* como
-      necesitemos e indicando el atributo *title* y asignando un valor,
-      como dinámicos, ya sea calculados en base al contenido de los
-      registros de una tabla de la base de datos o mediante la
-      definición de un rango. Para el caso de valores de una tabla se
-      utilizará una sóla etiqueta *<values>* indicando los atributos:
+:select: Lista de valores establecidos por un conjunto de etiquetas *<values>* descritas dentro del grupo *<widget>*.
+      Los valores podrán ser fijos, incluyendo tantos *<values>* como necesitemos e indicando el atributo *title* y asignando un valor,
+      como dinámicos, ya sea calculados en base al contenido de los registros de una tabla de la base de datos o mediante la
+      definición de un rango.
+      Para el caso de valores de una tabla se utilizará una sóla etiqueta *<values>* indicando los atributos:
 
-          -  *source*: Indica el nombre de la tabla origen de los datos
-
-          -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
-
-          -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
-
-          -  *translate*: (Opcional) Indica si hay que traducir los títulos obtenidos. **[translate=“true”]**
+      -  *source*: Indica el nombre de la tabla origen de los datos
+      -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
+      -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
+      -  *translate*: (Opcional) Indica si hay que traducir los títulos obtenidos. **[translate=“true”]**
 
       Para el caso de valores por definición de rango una sóla etiqueta *<values>*
       indicando los atributos:
 
-          -  *start*: Indica el valor inicial (numérico o alfabético)
+      -  *start*: Indica el valor inicial (numérico o alfabético)
+      -  *end*: Indica el valor final (numérico o alfabético)
+      -  *step*: Indica el valor del incremento (numérico)
 
-          -  *end*: Indica el valor final (numérico o alfabético)
-
-          -  *step*: Indica el valor del incremento (numérico)
-
-   -  **radio**: Lista de valores donde podemos seleccionar una de ellas.
-      Se indican las distintas opciones mediante sistema de etiquetas
+:radio: Lista de valores donde podemos seleccionar una de ellas. Se indican las distintas opciones mediante sistema de etiquetas
       *<values>* descritas dentro del grupo *<widget>*, al estilo del tipo *select*.
 
 .. code:: xml
