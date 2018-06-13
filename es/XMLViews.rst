@@ -329,35 +329,32 @@ Ejemplos:
 button
 ------
 
-Este elemento visual está disponible sólo en vistas de tipo *Edit* y *EditList* y
-como su nombre indica permite incluir un botón en una de las columnas de edición.
-Existen tres tipos de botones declarados mediante el atributo ``type`` y con funciones
-distintas:
+Este elemento visual está disponible sólo en vistas de tipo *Edit* y *EditList* y en
+las fichas de información que se definen en el grupo *rows*. Como su nombre indica permite
+incluir un botón en una de las columnas de edición. Existen tres tipos de botones declarados
+mediante el atributo ``type`` y con funciones distintas:
 
-*  *calculate* : Botón para mostrar un cálculo estadístico.
-*  *action* : Botón para ejecutar una acción en el controlador.
-*  *modal* : Botón para mostrar un formulario modal.
-*  *js* : Botón para ejecutar una función JavaScript.
+-  **calculate** : Botón para mostrar un cálculo estadístico. Es exclusivo del grupo *<rows>* y se detalla más adelante.
 
-El botón de tipo *calculate* es exclusivo del grupo *<rows>* y se detalla más adelante.
-Para los botones *action* y *modal* podemos personalizarlos mediante los atributos:
+-  **action** : Botón para ejecutar una acción en el controlador o una función JavaScript.
 
--  **type** : indica el tipo de botón.
+-  **modal** : Botón para mostrar un formulario modal.
 
--  **icon** : icono que se visualizará a la izquierda de la etiqueta.
+Podemos personalizarlos mediante los atributos:
 
--  **label** : texto o etiqueta que se visualizará en el botón.
-
--  **color** : indica el color del botón, según los colores de Bootstrap para botones.
-
--  **hint** : ayuda que se muestra al usuario al poner el puntero del ratón sobre el botón.
-   Esta opción sólo está disponible para botones del tipo ``action``.
-
--  **action** : esta propiedad varía según el tipo. Para botones ``action`` indica la acción
-   que se envía al controlador, para que éste realice algún tipo de proceso especial.
-   Para botones de tipo ``modal`` indica el formulario modal que se debe mostrar al usuario.
-   Para botones de tipo ``js`` indica el nombre de la función a ejecutar.
-
+:type: indica el tipo de botón.
+:id: identificador html para poder selecionarlo desde JavaScript.
+:icon: icono que se visualizará a la izquierda de la etiqueta.
+:label: texto o etiqueta que se visualizará en el botón.
+:color: indica el color del botón, según los colores de Bootstrap para botones.
+:hint: ayuda que se muestra al usuario al poner el puntero del ratón sobre el botón.
+    Esta opción sólo está disponible para botones del tipo ``action``.
+:action: esta propiedad varía según el tipo. Para botones ``action`` indica la acción
+    que se envía al controlador, para que éste realice algún tipo de proceso especial.
+    Para botones de tipo ``modal`` indica el formulario modal que se debe mostrar al usuario.
+:onclick: Para el tipo ``action`` permite establecer el método JavaScript que se llamará al hacer click.
+    Para el tipo ``calculate`` permite establecer la URL de llamada al hacer click.
+:function: (Sólo para botones ``calculate``) Establece el método del controlador PHP que calcula el contenido del botón.
 
 Ejemplo:
 
@@ -440,18 +437,16 @@ statistics
 ----------
 
 Permite definir una lista de botones estadísticos y relacionales con otros modelos
-que dan información al usuario y le permite consultar al hacer click.
-Cada uno de los botones se definen mediante la etiqueta *<button>* seguido de las propiedades:
+que dan información al usuario y le permite consultar al hacer click. La declaración de
+los botones se realiza de manera similar a lo descripto en el apartado `button`_ con la salvedad
+de que no es necesaria la etiqueta *column*. A modo de resumen de las propiedades:
 
--  **type** : para este caso siempre contiene el valor ``calculate``.
-
--  **icon** : icono que se visualizará a la izquierda de la etiqueta.
-
--  **label** : texto o etiqueta que se visualizará en el botón.
-
--  **calculateby** : nombre de la función del controlador que se ejecuta para calcular el importe a visualizar.
-
--  **onclick** : URL destino, donde se redigirá al usuario al hacer click sobre el botón.
+:type: para este caso siempre contiene el valor ``calculate``.
+:id: identificador html para poder selecionarlo desde JavaScript.
+:icon: icono que se visualizará a la izquierda de la etiqueta.
+:label: texto o etiqueta que se visualizará en el botón.
+:function: nombre de la función del controlador que se ejecuta para calcular el importe a visualizar.
+:onclick: URL destino, donde se redigirá al usuario al hacer click sobre el botón.
 
 
 Ejemplo:
@@ -460,8 +455,8 @@ Ejemplo:
 
         <rows>
             <row type="statistics">
-                <button icon="fa-files-o" label="Alb. Pdtes:" calculateby="nombre_function" onclick="#url"></option>
-                <button icon="fa-files-o" label="Pdte Cobro:" calculateby="nombre_function" onclick="#url"></option>
+                <button icon="fa-files-o" label="Alb. Pdtes:" function="nombre_function" onclick="#url"></option>
+                <button icon="fa-files-o" label="Pdte Cobro:" function="nombre_function" onclick="#url"></option>
             </row>
         </rows>
 
@@ -473,7 +468,17 @@ Permite definir un grupo de botones de tipos *action* y *modal* que se visualiza
 en el pié del formulario de edición, entre los botones de eliminar y grabar. Este *row*
 es específico de las vistas *Edit*. La declaración de los botones se realiza de manera
 similar a lo descripto en el apartado `button`_ con la salvedad de que no es necesaria
-la etiqueta *column*.
+la etiqueta *column*. A modo de resumen de las propiedades:
+
+:type: para este caso siempre contiene el valor ``action``.
+:id: identificador html para poder selecionarlo desde JavaScript.
+:icon: icono que se visualizará a la izquierda de la etiqueta.
+:label: texto o etiqueta que se visualizará en el botón.
+:color: indica el color del botón, según los colores de Bootstrap para botones.
+:hint: ayuda que se muestra al usuario al poner el puntero del ratón sobre el botón.
+:action: indica la acción que se envía al controlador o a la función JavaScript.
+:onclick: permite establecer el método JavaScript que se llamará al hacer click en vez de llamar al controlador PHP.
+
 
 Ejemplo:
 
@@ -481,8 +486,9 @@ Ejemplo:
 
         <rows>
             <row type="actions">
+                <button type="action" id="vat-register-btn" label="vat-register" color="info" action="VAT-register" onclick="showVatRegister" hint="hint-vat-register" icon="fa-book" />
+                <button type="action" id="clone-btn" label="clone" color="info" action="clone" hint="clone-account-entry" icon="fa-clone" />
                 <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
-                <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Ejecuta el controlador con action=process1" />
             </row>
         </rows>
 
@@ -491,21 +497,19 @@ header y footer
 ---------------
 
 Permite añadir información adicional a visualizar al usuario en la cabecera y/o el pie de la vista.
-La información se muestra en forma de paneles ("cards" de Bootstrap) donde podemos
+La información se muestra en forma de paneles o fichas ("cards" de Bootstrap) donde podemos
 incluir mensajes y botones tanto de acción como modales. Para declarar un panel usaremos
 la etiqueta *<group>* en la que incluiremos etiquetas *button* (si los necesitamos).
 Podemos personalizar cada uno de los apartado del panel como la cabecera, el cuerpo
 y/o el pie con atributos:
 
--  **name** : establece el identificador para el panel.
+:name: establece el identificador para el panel.
+:class: añade las clases CSS indicadas al panel.
+:title: indica un texto para la cabecera del panel.
+:label: indica un texto para el cuerpo del panel.
+:footer: indica un texto para el pie del panel.
+:html: incluye una plantilla twig en el contenido del card.
 
--  **title** : indica un texto para la cabecera del panel.
-
--  **label** : indica un texto para el cuerpo del panel.
-
--  **footer** : indica un texto para el pie del panel.
-
--  **html** : incluye una plantilla twig en el contenido del card.
 
 Ejemplo: (Cabecera de vista)
 
@@ -518,16 +522,23 @@ Ejemplo: (Cabecera de vista)
             </group>
         </row>
 
-        <row type="footer">
-            <group name="footer2" footer="aditional-text" html="Block/Info.html.twig">
-                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
-                <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Ejecuta el controlador con action=process1" />
-            </group>
-        </row>
 
 Ejemplo: (Pie de vista)
 
 .. code:: xml
+
+        <row type="footer">
+            <group name="actions">
+                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
+                <button type="action" label="create-accounting-entry"
+                        color="danger" action="create-accounting-entry"
+                        hint="hint-create-accounting-entry" icon="fa-balance-scale" />
+            </group>
+
+            <group name="help" class="collapse show" html="Block/Info.html.twig"></group>
+
+            <group name="summary" html="Block/Resumen.html.twig"></group>
+        </row>
 
         <row type="footer">
             <group name="footer1" footer="specials-actions" label="Esto es una muestra de botones en un 'bootstrap card'">
