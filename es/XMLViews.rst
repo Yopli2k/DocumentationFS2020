@@ -191,7 +191,7 @@ en la etiqueta *<option>*:
 
 Ejemplos:
 
-*Pintar de color rojo cuando el valor del campo ``pendiente`` es cero*
+*Pintar de color rojo cuando el valor del campo* ``pendiente`` *es cero*
 
 .. code:: xml
 
@@ -199,8 +199,8 @@ Ejemplos:
             <option color="red">0</option>
         </widget>
 
-*Pintar de color rojo y negrita cuando el valor del campo ``estado`` es ``ABIERTO``*
-*Pintar de color azul cuando el valor del campo ``estado`` es ``CERRADO``*
+*Pintar de color rojo y negrita cuando el valor del campo* ``estado`` *es* ``ABIERTO``
+*Pintar de color azul cuando el valor del campo* ``estado`` *es* ``CERRADO``
 
 .. code:: xml
 
@@ -209,7 +209,7 @@ Ejemplos:
             <option color="blue">CERRADO</option>
         </widget>
 
-*Pintar de color rojo cuando el valor del campo ``cantidad`` es menor de 0*
+*Pintar de color rojo cuando el valor del campo* ``cantidad`` *es menor de 0*
 
 .. code:: xml
 
@@ -217,7 +217,7 @@ Ejemplos:
             <option color="red">&lt;0</option>
         </widget>
 
-*Pintar de color rojo cuando el valor del campo ``importe`` es mayor de treinta mil*
+*Pintar de color rojo cuando el valor del campo* ``importe`` *es mayor de treinta mil*
 
 .. code:: xml
 
@@ -226,7 +226,12 @@ Ejemplos:
         </widget>
 
 
--  **type** : (obligatorio) Indica el tipo de widget a utilizar.
+Atributos Obligatorios
+^^^^^^^^^^^^^^^^^^^^^^
+
+-  **fieldname** : Nombre del campo que contiene la información.
+
+-  **type** : Indica el tipo de widget a utilizar.
 
 :text, textarea: Campos de texto o áreas de texto multilínea.
 
@@ -250,40 +255,60 @@ Ejemplos:
 
 :file: Alias para *filechooser*.
 
-:autocomplete: Lista de valores que se cargan de manera dinámica de un modelo en función del texto introdicido por el usuario. Se utilizará una sóla
-      etiqueta *<values>* indicando los atributos:
+:autocomplete: Visualiza una lista de valores a modo de "ayuda" cuando el usuario introduce el valor.
+      Lista de valores se pueden cargar de manera dinámica de un modelo o mediante una lista fija de valores
+      indicados en el archivo XML de la vista. Para definir los valores se utilizarán etiquetas *<values>*
+      descritas dentro del grupo *<widget>*.
 
-      -  *source*: Indica el nombre de la tabla origen de los datos
-      -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
-      -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
+      * Para la carga de valores fijos se indicará para cada etiqueta *<values>* el atributo *title* y asignándole un valor.
 
-:select: Lista de valores establecidos por un conjunto de etiquetas *<values>* descritas dentro del grupo *<widget>*.
-      Los valores podrán ser fijos, incluyendo tantos *<values>* como necesitemos e indicando el atributo *title* y asignando un valor,
-      como dinámicos, ya sea calculados en base al contenido de los registros de una tabla de la base de datos o mediante la
-      definición de un rango.
-      Para el caso de valores de una tabla se utilizará una sóla etiqueta *<values>* indicando los atributos:
+      * Para la carga dinámica de los valores se utilizará una sóla etiqueta *<values>* indicando los atributos:
 
-      -  *source*: Indica el nombre de la tabla origen de los datos
-      -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
-      -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
-      -  *translate*: (Opcional) Indica si hay que traducir los títulos obtenidos. **[translate=“true”]**
+          -  *source*: Indica el nombre de la tabla origen de los datos
+          -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
+          -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
 
-      Para el caso de valores por definición de rango una sóla etiqueta *<values>*
-      indicando los atributos:
+:select: Permite al usuario seleccionar una opción de entre una lista de valores preestablecidos.
+      Los valores podrán ser fijos indicando la lista en el XML de la vista o dinámicos, ya sea
+      calculados en base al contenido de los registros de una tabla de la base de datos o mediante la
+      definición de un rango de valores. Para definir los valores se utilizarán etiquetas *<values>*
+      descritas dentro del grupo *<widget>*.
 
-      -  *start*: Indica el valor inicial (numérico o alfabético)
-      -  *end*: Indica el valor final (numérico o alfabético)
-      -  *step*: Indica el valor del incremento (numérico)
+      * Para la carga de valores fijos se indicará para cada etiqueta *<values>* el atributo *title* y asignándole un valor.
+
+      * Para el caso de valores de una tabla se utilizará una sóla etiqueta *<values>* indicando los atributos:
+
+          -  *source*: Indica el nombre de la tabla origen de los datos
+          -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
+          -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
+          -  *translate*: (Opcional) Indica si hay que traducir los títulos obtenidos. **[translate=“true”]**
+
+      * Para el caso de valores por definición de rango una sóla etiqueta *<values>* indicando los atributos:
+
+          -  *start*: Indica el valor inicial (numérico o alfabético)
+          -  *end*: Indica el valor final (numérico o alfabético)
+          -  *step*: Indica el valor del incremento (numérico)
 
 :radio: Lista de valores donde podemos seleccionar una de ellas. Se indican las distintas opciones mediante sistema de etiquetas
       *<values>* descritas dentro del grupo *<widget>*, al estilo del tipo *select*.
 
+
+**Ejemplos:**
+
 .. code:: xml
+
+        <!--- AUTOCOMPLETE -->
+        <widget type="autocomplete" fieldname="codsubcuenta" required="true">
+            <values title="title-to-translate1">Value1</values>
+            <values title="title-to-translate2">Value2</values>
+            <values title="title-to-translate3">Value3</values>
+        </widget>
 
         <widget type="autocomplete" fieldname="referencia">
             <values source="articulos" fieldcode="referencia" fieldtitle="descripcion"></values>
         </widget>
 
+        <!--- SELECT -->
         <widget type="select" fieldname="documentacion">
             <values title="Pasaporte">PASAPORTE</values>
             <values title="D.N.I.">DNI</values>
@@ -298,32 +323,27 @@ Ejemplos:
             <values start="0" end="6" step="1"></values>
         </widget>
 
+        <!--- RADIO -->
         <widget type="radio" fieldname="regimeniva">
             <values title="general">General</values>
             <values title="exempt">Exento</values>
         </widget>
 
--  **fieldname** : (obligatorio) Nombre del campo que contiene la
-   información.
 
--  **onclick** : (opcional) Nombre del controlador al que llamará y se
-   pasará el valor del campo al hacer click sobre el valor de la
-   columna.
+Otras configuraciones
+^^^^^^^^^^^^^^^^^^^^^
 
--  **required** : Atributo opcional para indicar que la columna debe
-   tener un valor en el momento de persistir los datos en la base de
-   datos. **[required=“true”]**
+-  **onclick** : Nombre del controlador al que llamará y se pasará el valor del campo al hacer click sobre el valor de la columna.
 
--  **readonly** : Atributo opcional para indicar que la columna no es
-   editable. **[readonly=“true”]**
+-  **required** : Atributo opcional para indicar que la columna debe tener un valor en el momento de persistir los datos en la base de datos. **[required=“true”]**
+
+-  **readonly** : Atributo opcional para indicar que la columna no es editable. **[readonly=“true”]**
 
 -  **maxlength** : Número máximo de carácteres que permite la campo.
 
--  **icon** : (opcional) Si se indica se visualizará el icono a la
-   izquierda del campo.
+-  **icon** : Si se indica se visualizará el icono a la izquierda del campo.
 
--  **hint** : (opcional) Texto explicativo que se visualiza al colocar
-   el ratón sobre el título en el controlador Edit.
+-  **hint** : Texto explicativo que se visualiza al colocar el ratón sobre el título en el controlador Edit.
 
 
 button
@@ -420,8 +440,9 @@ bootstrap para paneles que deseamos para la fila.
 
 Ejemplo:
 
-*pinta la fila de color “info” si el campo ``estado`` es ``Pendiente``*
-*pinta la fila de color “warning” si el campo ``estado`` es ``Parcial``*
+- *Pinta la fila de color "info" si el campo* ``estado`` *es* ``Pendiente``
+
+- *Pinta la fila de color "warning" si el campo* ``estado`` *es* ``Parcial``
 
 .. code:: xml
 

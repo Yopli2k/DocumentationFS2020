@@ -91,10 +91,31 @@ appSettings
 Para acceder de manera rápida y sencilla a los valores de configuración o preferencias de la aplicación.
 
 
+controllerName
+--------------
+
+Contiene el nombre del controlador que se está ejecutando.
+
+
+template
+--------
+
+Contiene el nombre de la plantilla cargada.
+
+
 Uso de TWIG
 ===========
 
 Puede encontrar toda la documentación en la `página oficial de TWIG <https://twig.symfony.com/doc/2.x>`_.
+
+Acceso a métodos y variables
+----------------------------
+
+.. code:: php
+
+    {{ fsc.url() }}   /// url de la página que se ejecuta
+
+    {{ fsc.user.nick }}   /// nombre del usuario
 
 
 Condicional IF
