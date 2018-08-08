@@ -5,7 +5,6 @@
   :generator: FacturaScripts Documentacion
   :description: La gestión de usuario nos permite establecer permisos lectura, modificación y borrado.
   :keywords: facturascripts, documentacion, usuario, seguridad, permisos, niveles
-  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Users.rst
 
 
 ###########################
@@ -35,7 +34,7 @@ Podemos acceder a la lista de usuarios mediante la opción del menú :guilabel:`
 Haciendo click sobre un usuario de la lista podemos acceder a ver la información completa
 o pulsaldo el botón de nuevo dar de alta un nuevo usuario.
 
-.. image:: ../images/es/users-card.png
+.. image:: images/es/users-card.png
    :alt: Ficha de usuario
 
 :Código: Es el identificador o "nick" del usuario.
@@ -64,7 +63,7 @@ mediante la opción del menú :guilabel:`Administrador -> Usuarios`, en la pesta
 Haciendo click sobre uno de los grupos de la lista podemos acceder a ver la información completa
 o pulsaldo el botón de nuevo dar de alta un nuevo grupo.
 
-.. image:: ../images/es/roles-card.png
+.. image:: images/es/roles-card.png
    :alt: Ficha de grupos de usuario
 
 
@@ -78,7 +77,7 @@ páginas indicadas. Es decir, si no está la página en la lista de permisos, lo
 del grupo no tendrán la página en el menú de la aplicación (a menos que pertenezcan a
 otro grupo que si la disponga)
 
-.. image:: ../images/es/rules-card.png
+.. image:: images/es/rules-card.png
    :alt: Ficha de permisos de usuario
 
 :Permitir actualizar: Permite al usuario modificar los datos de la vista que está editando.

@@ -1,33 +1,22 @@
 .. highlight:: rst
-.. title:: Facturascripts, desarrollo de adaptaciones y personalizaciones
+.. title:: Facturascripts, conceptos generales para el desarrollo
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Documentación de usuario y ayuda para el desarrollo de Facturascripts 2018
-  :keywords: facturascripts, documentacion, desarrollo, plugin, adaptaciones, personalizaciones
-  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Development.rst
+  :description: Documentación de ayuda para el desarrollo de Facturascripts 2018
+  :keywords: facturascripts, documentacion, desarrollo, plugin, conceptos
 
 
-##########
-Desarrollo
-##########
+###################
+Conceptos Generales
+###################
 
-En *Facturascripts 2018* se ha realizado un gran esfuerzo para simplificar todo
-el proceso personalización de la aplicación. Las tareas de creación de nuevas opciones
-y desarrollos son realmente sencillas y no requieren de grandes conocimientos en
-programación ni diseño HTML gracias a los controladores extendidos.
-
-.. important::
-
-  Debido al gran cambio en la metodología de creación de personalizaciones, es muy
-  importante familiarizarse con el sistema antes de iniciar cualquier nuevo plugin.
-  Esto nos evitará problemas y errores de diseño que pueden llevar a una mala experiencia
-  a la hora de desarrollar.
-
-Continuando con el patrón MVC (Modelo, Vista y Controlador) iniciado por la versión
-anterior de *FacturaScripts* los controladores extendidos añaden la posibilidad
-de definir nuestros modelos y controladores de manera sencilla, incluyendo,
-a las vistas tradicionales de *FS2015* un nuevo concepto, las vistas XML.
+Antes de que empiece a programar o modificar el código de FacturaScripts, es necesario
+que establecer algunos conceptos. Continuando con el patrón MVC (Modelo, Vista y
+Controlador) iniciado por la versión anterior de *FacturaScripts* los controladores
+extendidos añaden la posibilidad de definir nuestros modelos y controladores de manera
+sencilla, incluyendo, a las vistas tradicionales de *FS2015* un nuevo concepto,
+las vistas XML.
 
 `Modelos <Models>`_:
     **Son los encargados de gestionar los datos**, estableciendo la estructura básica
@@ -42,11 +31,8 @@ a las vistas tradicionales de *FS2015* un nuevo concepto, las vistas XML.
     entre la vista o interface del usuario y los datos almacenados en la base de datos.
 
 
-Conceptos Generales
-===================
-
-Antes de que empiece a programar o modificar el código de FacturaScripts, es necesario
-que establecer algunos conceptos.
+Normas de aplicación
+====================
 
 - **Sus personalizaciones van en plugins**:
     No deben realizarse cambios en los archivos del Core o Kernel de *Facturascripts*.

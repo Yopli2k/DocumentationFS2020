@@ -26,16 +26,12 @@ Facturascripts
    :target: #
    :alt: Version de PHP
 
-.. image:: https://graphs.waffle.io/NeoRazorX/facturascripts/throughput.svg
-  :target: https://waffle.io/NeoRazorX/facturascripts/metrics/throughput
-  :alt: Throughput Graph
-
 Software de facturación y contabilidad para PYMES, fácil, libre y con actualizaciones constantes. Es compatible con FacturaLux, Abanq y Eneboo.
 Es software libre bajo licencia GNU/LGPL.
 
 
-Tabla de Contenidos
-===================
+Generalidades
+=============
 
 .. raw:: html
 
@@ -54,12 +50,9 @@ Tabla de Contenidos
        <td>
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
 
   StyleGuide
-  Users
-  Development
-  Translations
 
 .. raw:: html
 
@@ -70,54 +63,51 @@ Tabla de Contenidos
    <hr>
    &nbsp;
 
-Desarrollar (en detalle)
-========================
-
-.. raw:: html
-
-  <table style="width:100%;">
-    <tr>
-      <td>
+   <table style="width:100%;">
+     <tr>
+       <td style="width:50%;">
 
 .. toctree::
-  :caption: 1. Base de Datos
-  :maxdepth: 3
+  :caption: Guía de Usuario
+  :titlesonly:
+  :includehidden:
 
-  DataBase
-  DataBaseWhere
-
-.. toctree::
-  :caption: 2. Modelos
-  :maxdepth: 3
-
-  Models
-  ModelView
+  UserGuide/index
 
 .. raw:: html
 
       </td>
       <td>
+        <em>
+          Aprende o resuelve tus dudas sobre el manejo del ERP FS2018.
+          Guías paso a paso sobre el uso correcto de todas las funciones de los apartados de la aplicación.
+        </em>
+      </td>
+      </tr>
+    </table>
+
+     <hr>
+     &nbsp;
+
+  <table style="width:100%;">
+    <tr>
+      <td style="width:50%;">
 
 .. toctree::
-  :caption: 3. Vistas
-  :maxdepth: 3
+  :caption: Guía para el Desarrollo
+  :titlesonly:
 
-  Views
-  XMLViews
+  Developer/index
 
-
-.. toctree::
-  :caption: 4. Controladores
-  :maxdepth: 2
-
-  Controllers
-  ExtendedControllers
-  ListController
-  EditController
-  PanelController
 
 .. raw:: html
 
+      </td>
+      <td>
+        <em>
+          Aprende los conceptos básicos y todas las novedades incluidas en esta versión, para poder desarrollar sin problemas.
+          Crea tus propios Plugins y personalizaciones, ajustando a tus requisitos el aplicativo y mejorando la experiencia de uso.
+        </em>
       </td>
     </tr>
   </table>
