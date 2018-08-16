@@ -7,7 +7,6 @@
   :generator: FacturaScripts Documentacion
   :description: Diseño de vistas mediante plantilla TWIG
   :keywords: facturascripts, diseño, vista, twig, herencia, desarrollo
-  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Views.rst
 
 
 ######

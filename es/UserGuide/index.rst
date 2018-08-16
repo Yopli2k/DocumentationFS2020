@@ -10,6 +10,11 @@
 Tabla de Contenidos
 ###################
 
+.. note::
+
+  Esta opción está en desarrollo. Si estás interesado en colaborar contacta mediante
+  correo electrónico: informatica@artextrading.com
+
 .. raw:: html
 
   <hr>
@@ -19,6 +24,7 @@ Tabla de Contenidos
       <td>
 
 .. toctree::
+  :caption: Administración
   :maxdepth: 1
 
   Users

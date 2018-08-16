@@ -7,7 +7,6 @@
   :generator: FacturaScripts Documentacion
   :description: Nuevo sistema para diseño de vistas mediante XML
   :keywords: facturascripts, documentacion, diseño, vista, xml, desarrollo
-  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/XMLViews.rst
 
 
 ##########
@@ -525,6 +524,7 @@ Podemos personalizar cada uno de los apartado del panel como la cabecera, el cue
 y/o el pie con atributos:
 
 :name: establece el identificador para el panel.
+:numcolumns: establece el tamaño del card. Si no se indica se aplicará tamaño automático.
 :class: añade las clases CSS indicadas al panel.
 :title: indica un texto para la cabecera del panel.
 :label: indica un texto para el cuerpo del panel.

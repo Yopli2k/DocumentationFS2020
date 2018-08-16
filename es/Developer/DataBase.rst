@@ -1,13 +1,10 @@
-.. title:: DataBase
 .. highlight:: rst
-
 .. title:: Facturascripts, la clase DataBase y su uso
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
   :description: Acceso y uso de la base de datos. Leer, modificar y borrar
   :keywords: facturascripts, documentacion, base de datos, postgresql, mysql
-  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/DataBase.rst
 
 
 #############

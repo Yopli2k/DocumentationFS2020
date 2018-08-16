@@ -70,9 +70,8 @@ Generalidades
 .. toctree::
   :caption: Guía de Usuario
   :titlesonly:
-  :includehidden:
 
-  UserGuide/index
+  UserGuide/Users
 
 .. raw:: html
 
@@ -95,10 +94,23 @@ Generalidades
 
 .. toctree::
   :caption: Guía para el Desarrollo
+  :includehidden:
   :titlesonly:
 
-  Developer/index
-
+  Developer/Development
+  Developer/DataBase
+  Developer/DataBaseWhere
+  Developer/Tables
+  Developer/Models
+  Developer/ModelView
+  Developer/Views
+  Developer/XMLViews
+  Developer/Controllers
+  Developer/ExtendedControllers
+  Developer/ListController
+  Developer/EditController
+  Developer/PanelController
+  Developer/InteractWithViews
 
 .. raw:: html
 

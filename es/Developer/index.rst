@@ -11,19 +11,6 @@
 Tabla de Contenidos
 ###################
 
-En *Facturascripts 2018* se ha realizado un gran esfuerzo para simplificar todo
-el proceso personalización de la aplicación. Las tareas de creación de nuevas opciones
-y desarrollos son realmente sencillas y no requieren de grandes conocimientos en
-programación ni diseño HTML gracias a los controladores extendidos.
-
-.. important::
-
-  Debido al gran cambio en la metodología de creación de personalizaciones, es muy
-  importante familiarizarse con el sistema antes de iniciar cualquier nuevo plugin.
-  Esto nos evitará problemas y errores de diseño que pueden llevar a una mala experiencia
-  a la hora de desarrollar.
-
-
 .. raw:: html
 
   <hr>
@@ -52,6 +39,7 @@ programación ni diseño HTML gracias a los controladores extendidos.
   :caption: 2. Modelos
   :maxdepth: 3
 
+  Tables
   Models
   ModelView
 
@@ -77,6 +65,7 @@ programación ni diseño HTML gracias a los controladores extendidos.
   ListController
   EditController
   PanelController
+  InteractWithViews
 
 .. raw:: html
 

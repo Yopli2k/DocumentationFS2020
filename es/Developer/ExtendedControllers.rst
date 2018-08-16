@@ -5,7 +5,6 @@
   :generator: FacturaScripts Documentacion
   :description: Los controladores extendidos, la novedad de FS 2018. Desarrollo fácil y rápido.
   :keywords: facturascripts, documentacion, desarrollo, controlador, novedad, desarrollo facil, desarrollo rapido
-  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/ExtendedControllers.rst
 
 
 ########################
@@ -128,15 +127,30 @@ Esta propiedad permite pasar configuraciones propias del controlador a la planti
 de manera que estarán disponibles en el código html.twig y en las funciones JavaScripts que
 implementemos en la vista.
 
+Existen algunos valores ya utilizados por los propios controladores extendidos:
+
+:active: Indica si la vista está activa o apagada (*disabled*).
+:icon: Establece el icono para la vista.
+:insert: Indica si la vista permite inserción de datos.
+:megasearch: Indica si la vista está incluida cuando se realiza una búsqueda global.
+
+
 La manera de añadir valores de configuración sería, una vez create la vista normalmente en el método
 *createViews*, llamando al método *setSettings* indicando la vista, la propiedad y el valor.
 
 .. code:: php
 
     $this->setSettings('MyView', 'myconfig', value);
+    $this->setSettings('MyView', 'megasearch', false);
+    $this->setSettings('MyView', 'insert', false);
 
 
 La manera de usar estos valores sería:
+
+.. code:: php
+
+    $active = $this->getSettings('MyView', 'active');
+
 
 .. code:: html
 

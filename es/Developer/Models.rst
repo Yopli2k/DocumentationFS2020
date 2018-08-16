@@ -5,7 +5,6 @@
   :generator: FacturaScripts Documentacion
   :description: Modelo de datos. Muestra los datos de una tabla
   :keywords: facturascripts, desarrollo, modelo, tabla
-  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Models.rst
 
 
 ##########################

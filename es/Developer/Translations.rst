@@ -5,9 +5,8 @@
   :generator: FacturaScripts Documentacion
   :description: Traducciones de cadenas y textos
   :keywords: facturascripts, multidioma, traduccion, i18n
-  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Translations.rst
 
-
+  
 ############
 Traducciones
 ############

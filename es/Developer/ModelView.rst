@@ -5,7 +5,6 @@
   :generator: FacturaScripts Documentacion
   :description: Modelo de datos, solo lectura. Muestra los datos de multiples tablas
   :keywords: facturascripts, desarrollo, modelo, multiples, tablas
-  :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/ModelView.rst
 
 
 #########################

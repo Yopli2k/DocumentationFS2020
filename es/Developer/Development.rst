@@ -1,15 +1,27 @@
 .. highlight:: rst
-.. title:: Facturascripts, conceptos generales para el desarrollo
+.. title:: Facturascripts, desarrollo de adaptaciones y personalizaciones
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
   :description: Documentación de ayuda para el desarrollo de Facturascripts 2018
-  :keywords: facturascripts, documentacion, desarrollo, plugin, conceptos
+  :keywords: facturascripts, documentacion, desarrollo, plugin, adaptaciones, personalizaciones
 
 
 ###################
 Conceptos Generales
 ###################
+
+En *Facturascripts 2018* se ha realizado un gran esfuerzo para simplificar todo
+el proceso personalización de la aplicación. Las tareas de creación de nuevas opciones
+y desarrollos son realmente sencillas y no requieren de grandes conocimientos en
+programación ni diseño HTML gracias a los controladores extendidos.
+
+.. important::
+
+  Debido al gran cambio en la metodología de creación de personalizaciones, es muy
+  importante familiarizarse con el sistema antes de iniciar cualquier nuevo plugin.
+  Esto nos evitará problemas y errores de diseño que pueden llevar a una mala experiencia
+  a la hora de desarrollar.
 
 Antes de que empiece a programar o modificar el código de FacturaScripts, es necesario
 que establecer algunos conceptos. Continuando con el patrón MVC (Modelo, Vista y
