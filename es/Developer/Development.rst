@@ -89,6 +89,8 @@ personalización. La carpeta del plugin debe tener la siguiente estructura de di
 
   - **facturascripts.ini**: Archivo de declaración y configuración del plugin.
 
+  - **Init.php**: Archivo opcional donde se definen procesos automáticos.
+
 
 Archivo facturascripts.ini
 --------------------------
@@ -112,3 +114,31 @@ Ejemplo: *plugin Community, versión 1 y requiere FS2018 con webportal*
     version = 1
     min_version = 2018
     require = 'webportal'
+
+
+Archivo Init.php
+----------------
+
+Los plugins pueden contener este archivo, con la declaración de la clase **Init** que debe
+heredar de la clase base *InitClass*, en el que se definen procesos a ejecutar cada vez que
+carga FacturaScripts, cuando se instala o cuando se actualiza el plugin.
+
+.. code:: php
+
+    namespace FacturaScripts\Plugins\MyNewPlugin;
+
+    use FacturaScripts\Core\Base\InitClass;
+
+    class Init extends InitClass
+    {
+
+            public function init()
+            {
+                // Se ejecuta cada vez que carga FacturaScripts (si este plugin está activado).
+            }
+
+            public function update()
+            {
+                // Se ejecuta cada vez que se instala o actualiza el plugin
+            }
+    }

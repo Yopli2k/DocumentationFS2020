@@ -12,11 +12,15 @@ Modelos de tablas de datos
 ##########################
 
 Los modelos son los encargados de gestionar el acceso a cada una de las tablas de
-la base de datos donde se persisten los datos con los que se trabajan.
+la base de datos donde se persisten los datos con los que se trabajan y contienen
+métodos que nos permiten obtener y filtrar objetos de la misma clase.
 Así para cada tabla que usemos en la aplicación deberá existir su modelo, encargado
 de la lectura, escritura y borrado de los datos contenidos en dicha tabla.
-La estructura de la tabla se define en un archivo XML ubicado en la carpeta *Table*
-y con el nombre que el modelo retorna en el método público *tableName*.
+
+La estructura de la tabla se define en un archivo XML ubicado en la carpeta *Table*,
+como se describe en el apartado `Tablas de datos <Tables>`__, mientras que el modelo
+o la clase php que lo define debe ir en la carpeta **Model** con el mismo nombre de
+la tabla pero en singular y respetando la nomenclatura `UpperCamelCase <https://es.wikipedia.org/wiki/CamelCase>`_ para nombres de clases.
 
 En la versión *Facturascripts 2018* se ha reestructurado el uso de los modelos,
 heredando de la clase ModelClass y complementandose en un Trait (Rasgos)
@@ -24,14 +28,20 @@ denominado *ModelTrait* agrupando así las operaciones más comunes
 y generales de los modelos, simplificando tanto el código como el tratamiento de
 los mismos, delegando a estos sólo las características específicas de cada uno.
 
-Así cada tabla de datos tiene un modelo encargado de la gestión de su lectura,
-escritura y borrado. A la hora de declarar el modelo, debemos crear una nueva
-clase que hereda de ModelClass y en la que incluiremos el uso del ModelTrait
-junto con la lista de campos disponibles de la tabla declarados como públicos.
+Así a la hora de declarar el modelo debemos:
+    - crear una nueva clase que hereda de *ModelClass*
+    - incluir el uso del *ModelTrait*
+    - definir el *namespace* correspondiente respecto a nuestro plugin
+    - declarar la lista de campos disponibles de la tabla declarados como públicos
+    - declarar los métodos obligatorios
 
 .. code:: php
 
-    class Agente
+    namespace FacturaScripts\Plugins\MyPlugin\Model;
+
+    use FacturaScripts\Core\Model\Base;
+
+    class Agente extends Base\ModelClass
     {
         use Base\ModelTrait;
 
@@ -39,7 +49,25 @@ junto con la lista de campos disponibles de la tabla declarados como públicos.
         public $dnicif;
         public $nombre;
         public $apellidos;
+
+        public static function primaryColumn()
+        {
+            return 'codagente';
+        }
+
+        public static function tableName()
+        {
+            return 'agentes';
+        }
     }
+
+
+.. Note::
+    **Buenas prácticas para los nombres**
+        El nombre de la clase del modelo debe ser siempre en singular y el de la tabla en plural.
+
+    **Nombres de columna conflictivos**
+        FS2018 utiliza algunos nombres reservados. Evite usar en sus columnas nombres como: *active*, *action* y *code*.
 
 
 Métodos obligatorios
