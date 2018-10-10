@@ -87,6 +87,8 @@ personalización. La carpeta del plugin debe tener la siguiente estructura de di
 
   - **XMLView**: Archivos con las definiciones de las vistas xml (*ExtendedControllers*).
 
+  - **Lib**: Archivos con para procesos especiales o librerías de agrupación de código/utilidades.
+
   - **facturascripts.ini**: Archivo de declaración y configuración del plugin.
 
   - **Init.php**: Archivo opcional donde se definen procesos automáticos.

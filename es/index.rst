@@ -105,6 +105,10 @@ Generalidades
   Developer/ModelView
   Developer/Views
   Developer/XMLViews
+  Developer/XMLColumns
+  Developer/XMLButtons
+  Developer/XMLRows
+  Developer/XMLModals
   Developer/Controllers
   Developer/ExtendedControllers
   Developer/ListController
