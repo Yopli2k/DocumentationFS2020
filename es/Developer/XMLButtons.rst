@@ -15,34 +15,63 @@ Vistas XML: Buttons
 
 
 button
-------
+======
 
-Este elemento visual está disponible sólo en vistas de tipo *Edit* y *EditList* y en
-las fichas de información que se definen en el grupo *rows*. Como su nombre indica permite
-incluir un botón en una de las columnas de edición. Existen tres tipos de botones declarados
-mediante el atributo ``type`` y con funciones distintas:
+Como su nombre indica permite incluir un botón en una de columna de edición, en la
+zona de acciones del formulario de edición o en paneles informativos (tanto de cabecera
+como de pie de las vistas). Existen varios tipos de botones declarados mediante el
+atributo ``type`` según la función que realizará el botón al hacer click o seleccionarlo:
 
--  **calculate** : Botón para mostrar un cálculo estadístico. Es exclusivo del grupo *<rows>* y se detalla más adelante.
+-  **action** : Botón para ejecutar una acción en el controlador. Al hacer clic se
+    recargará la página ejecutando el action indicado en el valor del atributo action.
+    Este action deberá estar implementado y gestionado en el controlador.
 
--  **action** : Botón para ejecutar una acción en el controlador o una función JavaScript.
+-  **modal** : Botón para mostrar un formulario modal. Al hacer clic mostrará el formulario
+    modal con el nombre indicado en el valor del atributo action.
 
--  **modal** : Botón para mostrar un formulario modal.
+-  **js** : Botón para ejecutar un método/código JavaScript. Al hacer clic ejecutará
+    lo indicado en el valor del atributo action.
+
+
+Relación de Colores
+-------------------
+Para la selección o aplicación del color se utilizan los colores para botones de bootstrap.
+
+.. sidebar:: Colores (Buttons)
+
+    .. image:: images/es/buttons-colors.png
+
+:primary: azul
+:secundary: gris
+:success: verde
+:danger: rojo
+:warning: amarillo
+:info: verde-azul
+:light: gris claro
+:dark: negro
+:link: sólo texto
+
+
+Atributos y Personalización
+---------------------------
 
 Podemos personalizarlos mediante los atributos:
 
-:type: indica el tipo de botón.
+:type: indica el tipo de botón (según lo descrito anteriormente).
 :id: identificador html para poder selecionarlo desde JavaScript.
 :icon: icono que se visualizará a la izquierda de la etiqueta.
 :label: texto o etiqueta que se visualizará en el botón.
 :color: indica el color del botón, según los colores de Bootstrap para botones.
 :hint: ayuda que se muestra al usuario al poner el puntero del ratón sobre el botón.
-  Esta opción sólo está disponible para botones del tipo ``action``.
-:action: esta propiedad varía según el tipo. Para botones ``action`` indica la acción
-  que se envía al controlador, para que éste realice algún tipo de proceso especial.
-  Para botones de tipo ``modal`` indica el formulario modal que se debe mostrar al usuario.
-:onclick: Para el tipo ``action`` permite establecer el método JavaScript que se llamará al hacer click.
-  Para el tipo ``calculate`` permite establecer la URL de llamada al hacer click.
-:function: (Sólo para botones ``calculate``) Establece el método del controlador PHP que calcula el contenido del botón.
+:function: (Sólo para botones estadísticos) Establece el método del controlador PHP que calcula el contenido del botón.
+:action: esta propiedad varía según el tipo.
+
+    - Para botones ``action`` indica la acción que se envía al controlador.
+
+    - Para botones de tipo ``modal`` indica el nombre del formulario modal que se debe mostrar al usuario.
+
+    - Para botones de tipo ``js`` indica el código o función JavaScript que se debe ejecutar.
+
 
 Ejemplo:
 

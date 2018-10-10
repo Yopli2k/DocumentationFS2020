@@ -32,12 +32,18 @@ Relación de Colores
 -------------------
 Para la selección o aplicación del color se utilizan los colores para tablas de bootstrap.
 
-:info: azul
+.. sidebar:: Colores (Rows)
+
+    .. image:: images/es/rows-colors.png
+
+:primary: azul
+:secundary: gris
 :success: verde
-:warning: amarillo
 :danger: rojo
-:light: gris claro
-:secondary: negro
+:warning: amarillo
+:info: verde-azul
+:light: gris claro (muy claro)
+:dark: gris oscuro
 
 
 status

@@ -1,4 +1,4 @@
-.. title:: XML Columns
+.. title:: XML Modals
 .. highlight:: rst
 
 .. title:: Facturascripts desarrollo de vistas. Formularios modales
@@ -18,7 +18,7 @@ Etiqueta modals
 
 Los formularios modales son vistas complementarias a la vista principal, que permanecen
 ocultas hasta que son necesarias para la realización de una tarea específica. Estos formularios
-se declaran de manera muy similar a lo detallado en la sección `Etiqueta columns`_.
+se declaran de manera muy similar a lo detallado en la sección `columnas <XMLColumns>`__.
 
 Para crear un formulario modal, debemos incluir una etiqueta *group* con un identificador *name* único.
 Dentro de este grupo podemos definir y personalizar las columnas que necesitemos, pero no se pueden crear
