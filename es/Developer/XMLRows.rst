@@ -21,7 +21,7 @@ filas con procesos especiales. Así mediante la etiqueta *<row>* podemos
 ir añadiendo las funcionalidades, de manera única y mediante el atributo *type*
 indicar la acción que realiza, teniendo cada tipo unos requerimientos propios.
 
-.. important::
+.. warning::
 
   El tipo (*type*) del row se utiliza como clave de identificación por lo que no
   podemos incluir dos veces el mismo tipo. En caso de indicar el mismo tipo más
