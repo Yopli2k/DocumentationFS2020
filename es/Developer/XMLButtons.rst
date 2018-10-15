@@ -73,6 +73,13 @@ Podemos personalizarlos mediante los atributos:
     - Para botones de tipo ``js`` indica el código o función JavaScript que se debe ejecutar.
 
 
+.. important::
+
+  El atributo **id** debe tener un valor único para todo el html de la página.
+  Es responsabilidad del desarrollador cumplir con las normas de HTML5 en referencia
+  a los identificadores únicos.
+
+
 Ejemplo:
 
 .. code:: xml

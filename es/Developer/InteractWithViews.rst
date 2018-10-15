@@ -141,36 +141,22 @@ Seleccionar filtros en ListController
 =====================================
 
 Para controladores que heredan de ListController y que tienen posibilidad de aplicar filtros,
-es posible personalizar o alterar los filtros añadidos. Para estos casos debemos seleccionar
-el filtro que queremos modificar o consultar de manera similar a la selección de columnas
-con los métodos *getFilters* o *getFilter* dependiendo de si queremos un array con todos
-los filtros o un filtro en concreto.
-
-Podemos utilizar el método *hasValue* para saber si el filtro tiene un valor asignado por el
-usuario.
+es posible personalizar o alterar los filtros añadidos a una vista. Para estos casos
+debemos seleccionar primero la vista y luego seleccionar el filtro consultando la propiedad
+:guilabel:`filters` que contiene un array con cada uno de los filtros definidos. Para seleccionar
+el filtro utilizaremos el nombre que indicamos como *key* al añadirlo a la vista.
 
 .. code:: php
 
-    // Ejemplo de carga de valores en filtros de tipo select
-    foreach ($this->views['ListEmployee']->getFilters() as $key => $filter) {
-        switch ($key) {
-            case 'company':
-                $filter->options['values'] = $this->codeModel->all('empresas', 'idempresa', 'nombre');
-                break;
+    // Ejemplo de carga manual de valores en filtros de tipo select
+    $companyFilter = $this->views['ListEmployee']->filters['company'];
+    $companyFilter->options['values'] = $this->codeModel->all('empresas', 'idempresa', 'nombre');
 
-            case 'department':
-                $filter->options['values'] = $this->codeModel->all('departments', 'id', 'name');
-                break;
-        }
-    }
+    $departmentsFilter = $this->views['ListEmployee']->filters['company'];
+    $departmentsFilter->options['values'] = $this->codeModel->all('departments', 'id', 'name');
 
-    // Ejemplo de forzado de filtro en carga de datos
-    protected function getWhere()
-    {
-        $where = parent::getWhere();
-        $filter = $this->views['ListEmployee']->getFilter('dismissed');
-        if (!$filter->hasValue()) {
-            $where[] = new DataBaseWhere('dischargedate', 'NULL', 'IS');
-        }
-        return $where;
+    // Ejemplo de captura del valor del filtro
+    $companyFilter = $this->views['ListEmployee']->filters['company'];
+    if ($companyFilter->value !== '') {
+        [ ... custom php code ... ]
     }

@@ -145,6 +145,13 @@ A modo de resumen de las propiedades:
 :link: URL destino o función JavaScript, donde se redigirá al usuario al hacer click sobre el botón. (Opcional)
 
 
+.. important:
+
+  El atributo **id** debe tener un valor único para todo el html de la página.
+  Es responsabilidad del desarrollador cumplir con las normas de HTML5 en referencia
+  a los identificadores únicos.
+
+
 Ejemplo:
 
 .. code:: xml
@@ -184,6 +191,13 @@ A modo de resumen de las propiedades:
 :color: indica el color del botón, según las relación de colores antes indicada.
 :hint: ayuda que se muestra al usuario al poner el puntero del ratón sobre el botón.
 :action: indica la acción que se envía al controlador o a la función JavaScript.
+
+
+.. important::
+
+  El atributo **id** debe tener un valor único para todo el html de la página.
+  Es responsabilidad del desarrollador cumplir con las normas de HTML5 en referencia
+  a los identificadores únicos.
 
 
 Ejemplo:

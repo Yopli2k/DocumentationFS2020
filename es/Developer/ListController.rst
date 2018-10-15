@@ -5,7 +5,7 @@
   :generator: FacturaScripts Documentacion
   :description: Controlador multi panel, nuevo sistema de desarrollo simple
   :keywords: facturascripts, desarrollo, simple, sencillo, paneles, controlador
-  
+
 
 ##########################
 Controlador ListController
@@ -154,6 +154,22 @@ a la que lo añadimos, y entre los tipos de filtros disponibles están:
    -  field : Nombre del campo que se visualiza en la lista desplegable.
       Si no se informa se muestra el campo key.
 
+
+-  **addFilterSelectWhere** : Filtro tipo selección de una lista de valores.
+
+    -  key : Es el nombre interno del filtro.
+    -  values : Es un array con las opciones y condiciones que se aplicarán.
+       Ejemplo de estructura de *values*:
+
+.. code:: php
+
+        [
+         ['label' => 'only-active', 'where' => [ new DataBaseWhere('suspended', 'FALSE') ]],
+         ['label' => 'only-suspended', 'where' => [ new DataBaseWhere('suspended', 'TRUE') ]],
+         ['label' => 'all', 'where' => []]
+        ]
+
+
 -  **addFilterCheckbox** : Filtro tipo checkbox o de selección booleana.
 
    -  key : Es el nombre interno del filtro.
@@ -163,16 +179,19 @@ a la que lo añadimos, y entre los tipos de filtros disponibles están:
       no se indica se usa el valor de key.
    -  inverse : Permite comprobar el valor inverso.
    -  matchValue : Permite especificar el valor a comprobar.
+   -  default : Permite especificar una condicion `where <DataBaseWhere>`__ que se aplicará cuando el filtro no esté seleccionado.
+
 
 -  **addFilterDatePicker** : Filtro de tipo fecha.
+
 -  **addFilterText** : Filtro de tipo alfanumérico o texto libre.
+
 -  **addFilterNumber** : Filtro de tipo numérico y/o importes.
 
    -  key : Es el nombre interno del filtro.
-   -  label : Es la descripción a visualizar y que indica al usuario la
-      función del filtro.
-   -  field : Nombre del campo del modelo donde se aplica el filtro. Si
-      no se indica se usa el valor de key.
+   -  label : Es la descripción a visualizar y que indica al usuario la función del filtro.
+   -  field : Nombre del campo del modelo donde se aplica el filtro. Si no se indica se usa el valor de key.
+
 
 Estos últimos filtros, al ser añadidos, insertan dos campos de filtrado
 en la misma columna, junto con unos botones que permiten seleccionar el

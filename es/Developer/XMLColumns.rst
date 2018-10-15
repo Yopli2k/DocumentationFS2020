@@ -113,6 +113,13 @@ mediante las siguientes propiedades:
     aplicando el sistema de tamaño automático de Bootstrap.
 
 
+.. important::
+
+    El atributo **id** debe tener un valor único para todo el html de la página.
+    Es responsabilidad del desarrollador cumplir con las normas de HTML5 en referencia
+    a los identificadores únicos.
+
+
 widget
 ------
 
