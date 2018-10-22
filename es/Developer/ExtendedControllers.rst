@@ -129,11 +129,16 @@ implementemos en la vista.
 
 Existen algunos valores ya utilizados por los propios controladores extendidos:
 
-:active: Indica si la vista está activa o apagada (*disabled*).
+:active: Indica si la vista (pestaña/tab) está activa o apagada (*disabled*).
 :icon: Establece el icono para la vista.
-:insert: Indica si la vista permite inserción de datos.
+:btnNew: Oculta el botón de nuevo.
+:btnDelete: Oculta el botón de eliminar.
+:btnPrint: Oculta el botón de imprimir.
 :megasearch: Indica si la vista está incluida cuando se realiza una búsqueda global.
 
+
+Establecer Settings
+-------------------
 
 La manera de añadir valores de configuración sería, una vez create la vista normalmente en el método
 *createViews*, llamando al método *setSettings* indicando la vista, la propiedad y el valor.
@@ -142,14 +147,18 @@ La manera de añadir valores de configuración sería, una vez create la vista n
 
     $this->setSettings('MyView', 'myconfig', value);
     $this->setSettings('MyView', 'megasearch', false);
-    $this->setSettings('MyView', 'insert', false);
+    $this->setSettings('MyView', 'btnNew', false);
 
+
+Leer Settings
+-------------
 
 La manera de usar estos valores sería:
 
 .. code:: php
 
     $active = $this->getSettings('MyView', 'active');
+    $myconfig = $this->getSettings('MyView', 'myconfig');
 
 
 .. code:: html

@@ -66,6 +66,7 @@ Tabla de Contenidos
   EditController
   PanelController
   InteractWithViews
+  AppSettings
 
 .. raw:: html
 

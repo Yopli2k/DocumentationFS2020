@@ -45,6 +45,7 @@ Para la selección o aplicación del color se utilizan los colores para tablas d
 :light: gris claro (muy claro)
 :dark: gris oscuro
 
+.. _Rows-status:
 
 status
 ======
@@ -129,6 +130,8 @@ Ejemplos:
         </rows>
 
 
+.. _Rows-statistics:
+
 statistics
 ==========
 
@@ -163,6 +166,8 @@ Ejemplo:
             </row>
         </rows>
 
+
+.. _Rows-actions:
 
 actions
 =======
@@ -212,6 +217,8 @@ Ejemplo:
             </row>
         </rows>
 
+
+.. Rows-header-footer:
 
 header y footer
 ===============

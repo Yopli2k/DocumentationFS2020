@@ -26,6 +26,8 @@ atributo ``type`` según la función que realizará el botón al hacer click o s
     recargará la página ejecutando el action indicado en el valor del atributo action.
     Este action deberá estar implementado y gestionado en el controlador.
 
+-  **link** : Botón para abrir una url, normalmente externa a la aplicación.
+
 -  **modal** : Botón para mostrar un formulario modal. Al hacer clic mostrará el formulario
     modal con el nombre indicado en el valor del atributo action.
 
@@ -67,6 +69,8 @@ Podemos personalizarlos mediante los atributos:
 :action: esta propiedad varía según el tipo.
 
     - Para botones ``action`` indica la acción que se envía al controlador.
+
+    - Para botones de tipo ``link`` indica la url destino.
 
     - Para botones de tipo ``modal`` indica el nombre del formulario modal que se debe mostrar al usuario.
 

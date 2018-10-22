@@ -115,6 +115,7 @@ Generalidades
   Developer/EditController
   Developer/PanelController
   Developer/InteractWithViews
+  Developer/AppSettings
 
 .. raw:: html
 

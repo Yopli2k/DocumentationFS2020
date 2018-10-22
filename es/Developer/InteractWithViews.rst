@@ -72,6 +72,21 @@ deseamos que esté o no en *disabled*.
     $this->views['Nombre_de_Vista']->disableColumn('codcliente', true);
 
 
+Añadir botones de acción
+========================
+También puede añadir botones de acción en el área asignada para ese efecto (:ref:`Rows Actions <Rows-actions>`)
+simplemente usando el método **addButton()**.
+
+.. code:: php
+
+    $newButton = [
+    	'action' => 'EditProducto',
+    	'icon' => 'fas fa-plus',
+    	'label' => 'new',
+    	'type' => 'link',
+    ];
+    $this->addButton('ListProducto', $newButton);
+
 
 Cargar datos en Input select
 ============================
@@ -143,8 +158,9 @@ Seleccionar filtros en ListController
 Para controladores que heredan de ListController y que tienen posibilidad de aplicar filtros,
 es posible personalizar o alterar los filtros añadidos a una vista. Para estos casos
 debemos seleccionar primero la vista y luego seleccionar el filtro consultando la propiedad
-:guilabel:`filters` que contiene un array con cada uno de los filtros definidos. Para seleccionar
-el filtro utilizaremos el nombre que indicamos como *key* al añadirlo a la vista.
+:guilabel:`filters` que contiene un array con cada uno de los filtros definidos (un array de
+objetos :guilabel:`BaseFilter`). Para seleccionar el filtro utilizaremos el nombre que indicamos
+como *key* al añadirlo a la vista.
 
 .. code:: php
 
