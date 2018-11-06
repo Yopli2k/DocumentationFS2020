@@ -51,10 +51,20 @@ el tratamiento de los settings de nuestro plugin.
 
 
 Al definir el archivo settings de la vista XML usaremos las normas de columnas y grupos
-como se vió en el apartado `columnas <XMLColumns>`__, pudiendo añadir botones de accion para acciones
-especiales y footers y/o headers si fuera necesario (`rows <XMLRows>`__). Para el caso de añadir botones de acciones
-necesitaríamos crear un controlador dentro de nuestro plugin heredando de EditSettings donde
-implementaremos las acciones especiales deseadas.
+como se vió en el apartado `columnas <XMLColumns>`__ y **siempre debemos incluir** una columna
+oculta denominada **'name'** necesaria como identificador interno.
+
+.. code:: xml
+
+    <column name="name" display="none" order="0">
+        <widget type="text" fieldname="name" readonly="true" required="true" />
+    </column>
+
+
+También podemos añadir botones de accion para acciones especiales y footers y/o headers si
+fuera necesario (`rows <XMLRows>`__). Para el caso de añadir botones de acciones necesitaríamos
+crear un controlador dentro de nuestro plugin heredando de EditSettings donde implementaremos las
+acciones especiales deseadas.
 
 .. code:: php
 
@@ -115,7 +125,7 @@ por lo conviene indicar correctamente el nombre del grupo.
     la misma clase, en caso contrario el nuevo valor se perderá al cargar otras páginas.
 
 
-Acceso desde vista TWig
+Acceso desde vista Twig
 =======================
 Para acceder a los valores por defecto desde una plantilla o vista de Twig simplemente usaremos
 la variable **appSettings** que es un objeto de la clase AppSettings. Eso significa que tenemos

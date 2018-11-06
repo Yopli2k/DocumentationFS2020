@@ -34,7 +34,7 @@ Para la selección o aplicación del color se utilizan los colores para tablas d
 
 .. sidebar:: Colores (Rows)
 
-    .. image:: images/es/rows-colors.png
+    .. image:: images/rows-colors.png
 
 :primary: azul
 :secundary: gris

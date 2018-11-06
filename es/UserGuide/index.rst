@@ -27,6 +27,7 @@ Tabla de Contenidos
   :caption: Administración
   :maxdepth: 1
 
+  AppSettings
   Users
 
 .. raw:: html

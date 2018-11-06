@@ -28,6 +28,12 @@ Entre muchas características incluidas están:
   - integración con el sistema de traducción
 
 
+La filosofía de diseño de interfaces de usuario en *Facturascripts 2018* es: **primero listar**,
+**depués editar**. Así el usuario primero debe ver un listado con la información sobre la
+que puede interactuar (buscar y/o filtrar) y al seleccionar un registro el usuario podrá
+editar ese registro de datos.
+
+
 Uso del controlador
 ===================
 
@@ -45,6 +51,7 @@ En lugar de extender la clase *Controller*, en función del uso, lo haremos de l
 Debemos recordar que cada uno de estos controladores ya incluyen los métodos *execPreviousAction* y
 *execAfterAction* encargados de controlar y ejecutar las acciones solicitadas por el usuario
 mediante la vista. Podemos sobrescribir los métodos para añadir nuevas acciones a controlar.
+
 
 execPreviousAction
 ------------------
@@ -121,11 +128,12 @@ Algunas de las tareas que actualmente gestiona:
 Personalización de la vista: Settings
 =====================================
 
-Los controladores extendidos disponen de la propiedad *Settings* accesible mediante los métodos
-**getSettings** y **setSettings** que nos permiten leer y añadir/modificar los valores, respectivamente.
-Esta propiedad permite pasar configuraciones propias del controlador a la plantilla de la vista
+Las vistas usadas en los controladores extendidos disponen de la propiedad *settings*
+accesible mediante los métodos del controlador **getSettings** y **setSettings** que nos
+permiten leer y añadir/modificar los valores, respectivamente, personalizando la vista.
+Esta propiedad permite también pasar configuraciones propias de la vista a la plantilla
 de manera que estarán disponibles en el código html.twig y en las funciones JavaScripts que
-implementemos en la vista.
+implementemos.
 
 Existen algunos valores ya utilizados por los propios controladores extendidos:
 
@@ -140,23 +148,27 @@ Existen algunos valores ya utilizados por los propios controladores extendidos:
 Establecer Settings
 -------------------
 
-La manera de añadir valores de configuración sería, una vez create la vista normalmente en el método
-*createViews*, llamando al método *setSettings* indicando la vista, la propiedad y el valor.
+La manera de añadir valores de configuración sería, una vez creada la vista, normalmente en el método
+*createViews*, llamando al método *setSettings* desde el controlador e indicando la vista, la propiedad y el valor.
 
 .. code:: php
 
-    $this->setSettings('MyView', 'myconfig', value);
+    // Configuración: No responder al megabuscador y no mostrar botón de nuevo
     $this->setSettings('MyView', 'megasearch', false);
     $this->setSettings('MyView', 'btnNew', false);
+
+    // Este es un valor nuevo creado por el desarrollador para algún proposito especial
+    $this->setSettings('MyView', 'myconfig', value);
 
 
 Leer Settings
 -------------
 
-La manera de usar estos valores sería:
+La manera de usar o recoger estos valores sería:
 
 .. code:: php
 
+    // Desde PHP
     $active = $this->getSettings('MyView', 'active');
     $myconfig = $this->getSettings('MyView', 'myconfig');
 

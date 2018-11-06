@@ -142,65 +142,98 @@ se presentan al usuario. Cada tipo de filtro requiere de una
 parametrización propia para su funcionamiento como el nombre de la vista
 a la que lo añadimos, y entre los tipos de filtros disponibles están:
 
--  **addFilterSelect** : Filtro tipo selección de una lista de valores.
+:addFilterAutocomplete:
+    Filtro tipo texto donde al escribir el usuario se realiza una consulta al servidor
+    recibiendo una lista de datos que contienen el texto introducido por el usuario.
 
-   -  key : Es el nombre interno del filtro y debe coincidir con el
-      nombre del campo del modelo que se está visualizando y por el que
-      se quiere filtrar.
-   -  table : Nombre de la tabla de donde se leerán las opciones para la
-      lista desplegable.
-   -  where : Cláusula WHERE a pasar en la selección de datos de la
-      tabla origen de la lista.
-   -  field : Nombre del campo que se visualiza en la lista desplegable.
-      Si no se informa se muestra el campo key.
+    - viewName: Nombre de la vista donde se añade el filtro.
+    - key : Es el nombre interno del filtro. Debe ser único para la vista.
+    - label: Etiqueta informativa para el usuario. Se traduce automáticamente.
+    - field: Nombre del campo donde se aplica el filtro. Si no se indica se usa el valor de key.
+    - table: Nombre de la tabla o modelo donde se realizará la búsqueda de datos.
+    - fieldcode: Nombre del campo PK de la tabla indicada en *table*. Opcional.
+    - fieldtitle: Nombre del campo con la descripción. Opcional.
+    - where: Filtro `DataBaseWhere <DataBaseWhere>`__ que se aplicará adicionalmente a la tabla indicada.
 
 
--  **addFilterSelectWhere** : Filtro tipo selección de una lista de valores.
+:addFilterCheckbox:
+    Filtro tipo checkbox o de selección booleana.
 
-    -  key : Es el nombre interno del filtro.
-    -  values : Es un array con las opciones y condiciones que se aplicarán.
-       Ejemplo de estructura de *values*:
+    - viewName: Nombre de la vista donde se añade el filtro.
+    - key: Es el nombre interno del filtro. Debe ser único para la vista.
+    - label: Etiqueta informativa para el usuario. Se traduce automáticamente.
+    - field: Nombre del campo donde se aplica el filtro. Si no se indica se usa el valor de key.
+    - operation: Operador lógico que se aplicará a la condición de filtrado. Por defecto '='.
+    - matchValue: Permite especificar el valor a comprobar. Por defecto un valor verdadero.
+    - default: Filtro `DataBaseWhere <DataBaseWhere>`__ que se aplicará cuando el filtro no esté seleccionado.
 
-.. code:: php
+
+:addFilterDatePicker:
+    Filtro de tipo fecha que permite seleccionar de un calendario que se despliega al seleccionarse el filtro.
+
+    - viewName: Nombre de la vista donde se añade el filtro.
+    - key: Es el nombre interno del filtro. Debe ser único para la vista.
+    - label: Etiqueta informativa para el usuario. Se traduce automáticamente.
+    - field: Nombre del campo donde se aplica el filtro. Si no se indica se usa el valor de key.
+    - operation: Operador lógico que se aplicará a la condición de filtrado. Por defecto '>='.
+
+
+:addFilterNumber:
+    Filtro de tipo numérico y/o importes.
+
+    - viewName: Nombre de la vista donde se añade el filtro.
+    - key: Es el nombre interno del filtro. Debe ser único para la vista.
+    - label: Etiqueta informativa para el usuario. Se traduce automáticamente.
+    - field: Nombre del campo donde se aplica el filtro. Si no se indica se usa el valor de key.
+    - operation: Operador lógico que se aplicará a la condición de filtrado. Por defecto '>='.
+
+
+:addFilterPeriod:
+    Filtro para seleccionar periodo de fechas mediante la selección de un periodo de una lista
+    o por la introdución de la fecha de inicio y fin. Este filtro al ser añadido añade un filtro
+    de tipo *Select* y dos filtros de tipo *DatePicker* ocupando 3 columnas. Esto es importante
+    a la hora de su posicionamiento en la vista si deseamos que no queden cortadas las columnas
+    en distintas lineas.
+
+    - viewName: Nombre de la vista donde se añade el filtro.
+    - key: Es el nombre interno del filtro. Debe ser único para la vista.
+    - label: Etiqueta informativa para el usuario. Se traduce automáticamente.
+    - field: Nombre del campo donde se aplica el filtro. Si no se indica se usa el valor de key.
+
+
+:addFilterSelect:
+    Filtro tipo selección de una lista de valores.
+
+    - viewName: Nombre de la vista donde se añade el filtro.
+    - key: Es el nombre interno del filtro. Debe ser único para la vista.
+    - label: Etiqueta informativa para el usuario. Se traduce automáticamente.
+    - field: Nombre del campo donde se aplica el filtro. Si no se indica se usa el valor de key.
+    - values: Lista de valores a visualizar. Debe ser un array con la estructura:
+
+    .. code:: php
+
+        [ 'key1' => 'value1', 'key2' => 'value2', 'keyN' => 'valueN']
+
+
+
+:addFilterSelectWhere:
+    Filtro tipo selección de una lista de valores.
+
+    - viewName: Nombre de la vista donde se añade el filtro.
+    - key: Es el nombre interno del filtro. Debe ser único para la vista.
+    - values: Es un array con las opciones y condiciones que se aplicarán. Debe ser un array con la estructura:
+
+    .. code:: php
 
         [
-         ['label' => 'only-active', 'where' => [ new DataBaseWhere('suspended', 'FALSE') ]],
-         ['label' => 'only-suspended', 'where' => [ new DataBaseWhere('suspended', 'TRUE') ]],
-         ['label' => 'all', 'where' => []]
+          ['label' => 'only-active', 'where' => [ new DataBaseWhere('suspended', 'FALSE') ]],
+          ['label' => 'only-suspended', 'where' => [ new DataBaseWhere('suspended', 'TRUE') ]],
+          ['label' => 'all', 'where' => []]
         ]
 
 
--  **addFilterCheckbox** : Filtro tipo checkbox o de selección booleana.
-
-   -  key : Es el nombre interno del filtro.
-   -  label : Es la descripción a visualizar y que indica al usuario la
-      función del filtro.
-   -  field : Nombre del campo del modelo donde se aplica el filtro. Si
-      no se indica se usa el valor de key.
-   -  inverse : Permite comprobar el valor inverso.
-   -  matchValue : Permite especificar el valor a comprobar.
-   -  default : Permite especificar una condicion `where <DataBaseWhere>`__ que se aplicará cuando el filtro no esté seleccionado.
-
-
--  **addFilterDatePicker** : Filtro de tipo fecha.
-
--  **addFilterText** : Filtro de tipo alfanumérico o texto libre.
-
--  **addFilterNumber** : Filtro de tipo numérico y/o importes.
-
-   -  key : Es el nombre interno del filtro.
-   -  label : Es la descripción a visualizar y que indica al usuario la función del filtro.
-   -  field : Nombre del campo del modelo donde se aplica el filtro. Si no se indica se usa el valor de key.
-
-
-Estos últimos filtros, al ser añadidos, insertan dos campos de filtrado
-en la misma columna, junto con unos botones que permiten seleccionar el
-tipo de operador [Igual, Mayor o Igual, Menor o Igual, Diferente] que se
-aplicará en el filtro. La combinación de operadores y valores
-informados, permite establecer filtrados de mayor complejidad dándole al
-usuario una gran diversidad en la búsqueda de información.
-
 Ejemplos de filtros
+-------------------
 
 .. code:: php
 

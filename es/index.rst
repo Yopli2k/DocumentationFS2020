@@ -71,6 +71,7 @@ Generalidades
   :caption: Guía de Usuario
   :titlesonly:
 
+  UserGuide/AppSettings
   UserGuide/Users
 
 .. raw:: html

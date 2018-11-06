@@ -85,19 +85,21 @@ vista y con los que el usuario puede interactuar. La etiqueta *column* requiere 
 una de las etiquetas *<widget>* o *<button>* para su funcionamiento y se personaliza
 mediante las siguientes propiedades:
 
-:name: Identificador interno de la columna. Es obligatorio su uso. Como norma se recomienda
+:name: Identificador interno de la columna. **Es obligatorio su uso**. Como norma se recomienda
     el uso de identificadores en minúsculas y en inglés.
 
-:id: Identificador CSS que se aplica al objeto. Recordar que no se pueden duplicar dentro del
+:level: Sólo los usuarios con un nivel igual o superior verán la columna. Por defecto 0.
+
+:id: Identificador html que se aplica al objeto. Recordar que no se pueden duplicar dentro del
     código HTML por lo que es responsabilidad del desarrollador asegurarse de establecer un
     identificador único. Se recomienda no usar este atributo excepto por necesidad para
-    procesos posteriores con el objeto como desde JavaScript.
+    procesos posteriores con el objeto como desde JavaScript. **Opcional**
 
 :title: Etiqueta descriptiva del campo, en caso de no informarse se asume el valor de name.
 
 :titleurl: URL destino si el usuario hace click sobre el título de la columna.
 
-:description: Descripción larga del campo que ayuda la comprensión al usuario.
+:description: Descripción larga del campo que ayuda la comprensión al usuario. Se traduce automáticamente.
    En las vistas List se muestra como un hint sobre el título de la columna.
    En las vistas Edit se muestra como un label inferior a la zona de edición del campo.
 

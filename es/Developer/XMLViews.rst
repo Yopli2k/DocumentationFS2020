@@ -72,3 +72,40 @@ visuales a "pintar" en la pantalla. Cada grupo desempeña una funcionalidad dist
    mediante la interacción del usuario con un botón definido en la vista. La definición
    de los campos a incluir en los formularios es similar al usado para declarar los
    campos en la etiqueta *<columns>*. Más información sobre los `modals <XMLModals>`__.
+
+
+Otros conceptos
+===============
+
+Múltiples usos de la vista
+--------------------------
+En ocasiones podemos necesitar mostrar la misma vista o archivo xml pero con un filtrado
+de datos distinto.
+
+Ejemplo:
+    - Lista de partidas de asientos de tipo compras
+    - Lista de partidas de asientos de tipo ventas
+
+
+Para estos casos podemos incluir la vista xml añadiendo el separador '**-**' seguido de un
+**identificador único**.
+
+.. code:: php
+
+    $this->addListView('ListPartidaImpuesto-1', 'PartidaImpuesto', 'purchases', 'fas fa-sign-in-alt');
+    $this->addListView('ListPartidaImpuesto-2', 'PartidaImpuesto', 'sales', 'fas fa-sign-out-alt');
+
+
+Múltiples usos del modelo
+--------------------------
+También nos puede interesar, sobretodo si el modelo tiene muchos campos, separar los
+campos del modelo en varias vistas xml. En este caso debemos tener en cuenta que la
+vista principal debe tener todos los campos obligatorios o requeridos ya que las vistas
+secundarias no están disponibles cuando se está dando de alta un nuevo registro en el
+modelo.
+
+.. code:: php
+
+    // Los datos de baja y notas/observaciones del empleado se ponen en otra vista
+    $this->addEditView('EditEmployee', 'Employee', 'employee', 'fas fa-id-card');
+    $this->addEditView('EditEmployeeNote', 'Employee', 'notes', 'fas fa-sticky-note');

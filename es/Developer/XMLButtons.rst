@@ -41,7 +41,7 @@ Para la selección o aplicación del color se utilizan los colores para botones 
 
 .. sidebar:: Colores (Buttons)
 
-    .. image:: images/es/buttons-colors.png
+    .. image:: images/buttons-colors.png
 
 :primary: azul
 :secundary: gris
@@ -63,6 +63,7 @@ Podemos personalizarlos mediante los atributos:
 :id: identificador html para poder selecionarlo desde JavaScript.
 :icon: icono que se visualizará a la izquierda de la etiqueta.
 :label: texto o etiqueta que se visualizará en el botón.
+:level: Sólo los usuarios con un nivel igual o superior verán el botón. Por defecto 0.
 :color: indica el color del botón, según los colores de Bootstrap para botones.
 :hint: ayuda que se muestra al usuario al poner el puntero del ratón sobre el botón.
 :function: (Sólo para botones estadísticos) Establece el método del controlador PHP que calcula el contenido del botón.
