@@ -7,6 +7,10 @@
   :generator: FacturaScripts Documentacion
   :description: Nuevo sistema para diseño de formularios modales en vistas XML.
   :keywords: facturascripts, documentacion, diseño, formulario, modal, vista, xml, desarrollo
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Vistas Modales FacturaScripts
+  :lang: es
 
 
 ##################

@@ -5,6 +5,10 @@
   :generator: FacturaScripts Documentacion
   :description: Documentación de ayuda para el desarrollo de Facturascripts 2018
   :keywords: facturascripts, documentacion, desarrollo, plugin, adaptaciones, personalizaciones
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Desarrollo FacturaScripts
+  :lang: es
 
 
 ###################
@@ -70,9 +74,9 @@ Normas de aplicación
 Creación de Plugins
 ===================
 
-Un plugin es un conjunto de archivos que añaden nuevas funcionalidades la instalación de
-*FacturaScripts*. Las personalizaciones pueden ser muy básicas, como añadir nuevos campos
-a modelos ya existentes, como añadir nuevos procesos y tareas.
+Un plugin es un conjunto de archivos con una estructura concreta que añaden nuevas
+funcionalidades la instalación de *FacturaScripts*. Estas personalizaciones pueden ser muy básicas,
+como añadir nuevos campos a modelos ya existentes, o más elaboradas como añadir nuevos procesos y tareas.
 Para crear un plugin, debemos crear una carpeta con el nombre del plugin dentro de la carpeta *Plugins*,
 donde iremos incorporando los archivos necesarios y clases necesarias para la nueva
 personalización. La carpeta del plugin debe tener la siguiente estructura de directorios:
@@ -102,10 +106,9 @@ resulta imprescindible. El archivo debe contener los siguientes valores:
 
 :name: Nombre del plugin y de la carpeta que lo contiene.
 :description: Descripción del plugin. Debe ser suficientemente descriptiva para el usuario.
-:version: Número de versión del plugin. Se utiliza para el control de actualizaciones.
+:version: Número de versión del plugin. Debe ser un número entero o decimal. Se utiliza para el control de actualizaciones.
 :min_version: Indica la versión mínima de FacturaScripts necesaria para su instalación.
 :require: Permite indicar una lista de plugins (separadas por coma) de los que depende este plugin.
-
 
 Ejemplo: *plugin Community, versión 1 y requiere FS2018 con webportal*
 
@@ -114,7 +117,7 @@ Ejemplo: *plugin Community, versión 1 y requiere FS2018 con webportal*
     name = 'Community'
     description = 'Community management'
     version = 1
-    min_version = 2018
+    min_version = 2018.005
     require = 'webportal'
 
 
@@ -143,4 +146,25 @@ carga FacturaScripts, cuando se instala o cuando se actualiza el plugin.
             {
                 // Se ejecuta cada vez que se instala o actualiza el plugin
             }
+    }
+
+
+Usar otros frameworks
+---------------------
+
+Si lo necesita puede incluir otros frameworks en su plugin, mediante composer. La forma
+en que estos se carguen automáticamente es añadir **require** al *autoload.php* justo después
+del namespace en el *Init.php*.
+
+.. code:: php
+
+    namespace FacturaScripts\Plugins\MyNewPlugin;
+
+    require_once __DIR__ . '/vendor/autoload.php';
+
+    use FacturaScripts\Core\Base\InitClass;
+
+    class Init extends InitClass
+    {
+        [ ... ]
     }

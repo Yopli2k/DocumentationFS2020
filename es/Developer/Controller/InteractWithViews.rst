@@ -5,6 +5,10 @@
   :generator: FacturaScripts Documentacion
   :description: Documentación de ayuda para el desarrollo de Facturascripts 2018
   :keywords: facturascripts, documentacion, desarrollo, plugin, controlador, vista, ejemplos
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Interacturar con Vistas FacturaScripts
+  :lang: es
 
 
 ###########################

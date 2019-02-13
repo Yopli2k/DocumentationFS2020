@@ -5,6 +5,10 @@
   :generator: FacturaScripts Documentacion
   :description: Modelo de datos, solo lectura. Muestra los datos de multiples tablas
   :keywords: facturascripts, desarrollo, modelo, multiples, tablas
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Modelos FacturaScripts
+  :lang: es
 
 
 #########################

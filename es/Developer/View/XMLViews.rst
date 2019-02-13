@@ -7,6 +7,10 @@
   :generator: FacturaScripts Documentacion
   :description: Nuevo sistema para diseño de vistas mediante XML
   :keywords: facturascripts, documentacion, diseño, vista, xml, desarrollo
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Vistas XML FacturaScripts
+  :lang: es
 
 
 ##########

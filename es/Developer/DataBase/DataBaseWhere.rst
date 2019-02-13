@@ -7,6 +7,10 @@
   :generator: FacturaScripts Documentacion
   :description: Filtrado where de los datos. Uso de SQL, operadores y operaciones
   :keywords: facturascripts, documentacion, base de datos, where, filtro, condiciones
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Filtros Where FacturaScripts
+  :lang: es
 
 
 #############

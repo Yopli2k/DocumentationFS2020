@@ -5,6 +5,10 @@
   :generator: FacturaScripts Documentacion
   :description: Controlador multi panel, nuevo sistema de desarrollo simple
   :keywords: facturascripts, desarrollo, simple, sencillo, paneles, controlador
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: ListController FacturaScripts
+  :lang: es
 
 
 ##########################
@@ -54,16 +58,23 @@ visibilidad de *protected* de manera que los plugins pueden ir
 extendiendo nuestra clase y añadir nuevas vistas, o modificar las
 existentes.
 
-La manera de añadir una vista es mediante el método ***addView***
-incluido en el propio controlador. Para la correcta llamada al método
-debemos informar mediante cadenas de texto: el modelo (Nombre completo),
-nombre de la vista XML, el título para la pestaña que visualiza el
-controlador y su icono. Si se omite alguno de estos últimos parámetros,
-el controlador asignará un texto y/o un icono por defecto.
+La manera de añadir una vista es mediante el método **addView**
+incluido en el propio controlador. Una vez añadida la vista, debemos configurarla
+indicando los campos de búsqueda y la ordenación mediante los métodos **addSearchFields** y
+**addOrderBy**.
 
-Una vez añadida la vista, debemos configurarla indicando los campos de
-búsqueda y la ordenación mediante los métodos ***addSearchFields*** y
-***addOrderBy***.
+
+addView
+-------
+
+Este método añade una nueva vista o pestaña al controlador. Para la correcta llamada al método
+debemos informar mediante cadenas de texto:
+
+:viewName:  nombre identificador de la pestaña. Debe coincidir con el nombre del archivo XML que define la vista.
+:modelName:  nombre del modelo que utiliza la vista.
+:viewTitle:  título de la pestaña. Se debe indicar el identificador de la cadena a traducir.
+:icon:  identificador Font Awesome del icono. Si se omite el controlador utilizará un icono por defecto.
+
 
 addSearchFields
 ---------------
@@ -132,6 +143,36 @@ Ejemplo de adición de ordenación (siguiendo el ejemplo anterior) con ordenaci�
         /* Grupos */
         $this->addOrderBy('ListGrupoClientes', 'codgrupo', 'code');
         $this->addOrderBy('ListGrupoClientes', 'nombre', 'name', 1);
+
+
+Personalización con Settings
+----------------------------
+
+Todas las vistas usadas en los controladores extendidos disponen de la propiedad *settings*
+que nos permiten personalizando ciertos aspectos de la vista, además de pasar configuraciones propias
+a la plantilla TWIG y archivos JavaScripts que implementemos.
+
+Algunos valores utilizados por ListController:
+
+:active: Indica si la vista (pestaña/tab) está activa o apagada (*disabled*).
+:icon: Establece el icono para la vista.
+:insertModal: Permite establecer un formulario modal para la inserción de datos.
+:btnNew: Muestra/Oculta el botón de nuevo.
+:btnDelete: Muestra/Oculta el botón de eliminar.
+:btnPrint: Muestra/Oculta el botón de imprimir.
+
+.. code:: php
+
+    // Oculta los botones nuevo y eliminar
+    $this->setSettings('MyView', 'btnNew', false);
+    $this->setSettings('MyView', 'btnDelete', false);
+
+    // Establece el modal action1 como acción al pulsar el botón insertar
+    $this->setSettings('MyView', 'insertModal', 'action1');
+
+    // Este es un valor nuevo creado por el desarrollador para algún proposito especial
+    $this->setSettings('MyView', 'myconfig', value);
+
 
 Adición de filtros
 ==================

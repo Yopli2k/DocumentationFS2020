@@ -7,6 +7,10 @@
   :generator: FacturaScripts Documentacion
   :description: Nuevo sistema para diseño de columnas en vistas XML.
   :keywords: facturascripts, documentacion, diseño, columna, widget, vista, xml, desarrollo
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Vistas Columnas FacturaScripts
+  :lang: es
 
 
 ####################

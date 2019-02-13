@@ -126,8 +126,8 @@ Nombrado
    No usar carácteres especiales o espacios en ningún caso.
 
 
-Guía de uso
------------
+Otras recomendaciones
+---------------------
 
 - Evite especificar la resolución de la imagen o su alineación, para que el sitio web pueda manejar las imágenes de forma coherente,
   y proporcionar la mejor distribución en diferentes tamaños de pantalla.

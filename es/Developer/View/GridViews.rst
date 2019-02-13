@@ -5,6 +5,10 @@
   :generator: FacturaScripts Documentacion
   :description: Creacion de vistas con detalle en hoja de calculo (spreedsheet)
   :keywords: facturascripts, documentacion, desarrollo, vista, hoja de calculo
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: GridView FacturaScripts
+  :lang: es
 
 
 ################

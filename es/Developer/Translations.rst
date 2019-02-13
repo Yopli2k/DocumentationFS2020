@@ -5,8 +5,12 @@
   :generator: FacturaScripts Documentacion
   :description: Traducciones de cadenas y textos
   :keywords: facturascripts, multidioma, traduccion, i18n
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Traducciones FacturaScripts
+  :lang: es
 
-  
+
 ############
 Traducciones
 ############

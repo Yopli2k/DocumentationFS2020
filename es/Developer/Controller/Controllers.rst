@@ -5,6 +5,10 @@
   :generator: FacturaScripts Documentacion
   :description: Clase controladora de los procesos. Parte del modelo MVC.
   :keywords: facturascripts, documentacion, desarrollo, mvc, controlador, patron mvc
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Controladores FacturaScripts
+  :lang: es
 
 
 ###########
@@ -199,15 +203,37 @@ Obtener parámetros
 
 La comunicación entre la vista (o usuario) y el controlador se recoge mediante los métodos
 implementados en la clase base de *Controller* y gracias al componente http-foundation de
-Symfony.
+Symfony. Así todos los controladores de FacturaScripts tienen la propiedad **request** *($this->request)* con
+la que podemos acceder a los parámetros de la URL ($_GET), formularios ($_POST) o cookies ($_COOKIE).
+
+Disponemos de los métodos directos para obtener la información:
 
 :getFormData:  Retorna un array asociativo con la lista de parámetros enviados al controlador.
-:request->get:  Recoge el valor del parámetro con el nombre indicado. Se puede establecer, mediante un segundo parámetro, un valor por defecto por si no está definido el parámetro solicitado.
-:request->getClientIp:  Obtiene la IP del equipo que solicita la vista.
+:query:  Recoge el valor del parámetro de la URL ($_GET) con el nombre indicado. Se puede establecer, mediante un segundo parámetro, un valor por defecto por si no está definido el parámetro solicitado.
+:request:  Obtiene un valor de un formulario ($_POST) con el nombre indicado.  Se puede establecer, mediante un segundo parámetro, un valor por defecto por si no está definido el parámetro solicitado.
+:server:  Obtiene una lista con información sobre el entorno del servidor y su ejecución. Equivale a $_SERVER.
+:files:  Obtiene una lista con elementos subidos al script en curso. Equivale a $_FILES.
+:getClientIp:  Obtiene la IP del equipo que solicita la vista.
+
+Ejemplos:
+
+.. code:: php
+
+    // Recoger todos los parámetros
+    $data = $this->getFormData();
+    $idproject = $data['idproject'];
+
+    // Recoger valor de la URL
+    $idproject = $this->request->query->get('idproject');
+
+    // Recoger valor de formulario
+    $description = $this->request->request->get('description', 'Default description');
+
 
 .. important::
 
     El parámetro **action** indica al controlador la tarea solicitada.
+    El parámetro **code** indica el valor de la clave primaria del modelo que se está usando.
 
 
 Uso de Cookies
@@ -226,4 +252,4 @@ Para la escritura de una cookie es necesario declarar el uso del namespace *Symf
 
     $expire = time() + 3600; /// +1 hora
     $this->response->headers->setCookie(new Cookie('MyCook', 'value', $expire));
-    $this->request->cookies->get('MyCook');
+    $value = $this->request->cookies->get('MyCook');

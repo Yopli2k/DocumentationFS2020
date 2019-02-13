@@ -7,6 +7,10 @@
   :generator: FacturaScripts Documentacion
   :description: Diseño de vistas mediante plantilla TWIG
   :keywords: facturascripts, diseño, vista, twig, herencia, desarrollo
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Vistas FacturaScripts
+  :lang: es
 
 
 ######

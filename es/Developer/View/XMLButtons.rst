@@ -7,6 +7,10 @@
   :generator: FacturaScripts Documentacion
   :description: Nuevo sistema para diseño de botones en vistas XML.
   :keywords: facturascripts, documentacion, diseño, button, boton, vista, xml, desarrollo
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Vistas Botones FacturaScripts
+  :lang: es
 
 
 ###################

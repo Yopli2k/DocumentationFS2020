@@ -8,29 +8,42 @@
   :github_url: https://github.com/ArtexTrading/facturascripts-docs/blob/master/es/Overview.rst
 
 
-########
-Overview
-########
+########################
+Requisitos e Instalación
+########################
 
 Requerimientos
 ==============
 
 Para instalación y uso
-    1. **MySql 5.5** o **Postgresql 8.0** o versiones superiores
-    2. **Apache** u otro servidor web compatible con PHP.
+    1. **MySql 5.4** o **Postgresql 8.0** (recomendado versiones superiores).
+    2. **Apache 2.X** u otro servidor web compatible con PHP.
     3. **PHP 7.0.8** o superior.
 
-    Además de la extensión PHP de conexión a la base de datos instalada se necesitan las extensiones:
-      - bcmath
-      - curl
-      - simplexml
-      - openssl
-      - zip
+Además de la extensión PHP de conexión a la base de datos instalada se necesitan las extensiones:
+    - bcmath
+    - curl
+    - gd
+    - mbstring
+    - openssl
+    - simplexml
+    - zip
+
+Si se usa como servidor web Apache es necesario tener activado el módulo **mod_rewrite**.
+
 
 Para desarrollo
     1. Requerimientos de uso
     2. Entorno de desarrollo PHP: NetBeens, PHPStorm o similar
     3. Composer y NPM: Para la instalación de requerimientos.
+
+
+.. note::
+
+   Para entornos con bases de datos MySql es necesario tener activado el motor **innodb**.
+   Este Software no funciona sobre MyISAM.
+
+
 
 Instalación
 ===========
@@ -38,8 +51,8 @@ Instalación
 Instalación desde archivo ZIP
 -----------------------------
 
-Acceder al sitio web de `FacturaScripts 2018 <http://https://beta.facturascripts.com/descargar>`_,
-descargar la beta y descomprime el archivo en tu hosting o en la carpeta de Apache o XAMP de tu PC.
+Acceder al sitio web de `FacturaScripts 2018 <https://www.facturascripts.com/descargar>`_,
+descarga y descomprime el archivo en tu hosting o en la carpeta del servidor web de tu PC.
 A continuación abre el navegador y escribe la url oportuna, es decir, el dominio
 de tu web o http://localhost/facturascripts si lo has instalado en local,
 y complete el formulario de instalación.
@@ -48,10 +61,9 @@ Instalación desde github
 ------------------------
 
 Puede realizar la instalación descargando el archivo `ZIP <https://github.com/NeoRazorX/facturascripts/archive/master.zip>`_
-directamente del proyecto en github y realizar una instalación desde archivo ZIP.
-También puede realizar la instalación mediante una consola una vez tenga instaladas
-las herramientas git, composer y npm. Este tipo de instalación está más
-recomendada para desarrolladores.
+directamente del proyecto en github y realizar una instalación desde archivo ZIP, descomprimiendo el archivo.
+También puede realizar la instalación mediante consola. Para ello es necesario tener instalado
+las herramientas git, composer y npm. Este tipo de instalación está más recomendada para desarrolladores.
 
 .. code-block:: bash
 
@@ -59,6 +71,13 @@ recomendada para desarrolladores.
         cd facturascripts
         composer install
         npm install
+
+
+Configuración de Apache
+-----------------------
+Para el uso de urls amigables es necesario activar el módulo **mod_rewrite**, y configurar nuestro host
+definido en el Apache con la directiva **AllowOverride All** (normalmente está definida como AllowOverride None).
+Tras los cambios debemos reiniciar el servidor web.
 
 
 Licencia
@@ -85,9 +104,13 @@ Licenciado bajo `licencia MIT <http://opensource.org/licenses/MIT>`_.
 Contribuir
 ==========
 
-Este proyecto es software libre y todos los desarrolladores son bienvenidos.
-Puedes consultar la lista de tareas a realizar, la documentación y el chat para programadores
-en nuestra página web: https://www.facturascripts.com/foro/quieres-colaborar-en-el-desarrollo-de-facturascripts-964.html
+Este proyecto es software libre y todos son bienvenidos. Se puede colaborar de muchas maneras,
+ayudando en el desarrollo, en las traducciones, en la documentación, en probar las nuevas versiones ... Consulta las páginas:
+
+    - colaborar en `FacturaScripts <https://www.facturascripts.com/colabora>`__
+    - lista de tareas en `Trello <https://trello.com/b/cMmIBn4j/facturascripts>`__
+    - documentación en `FacturaScripts <https://www.facturascripts.com/doc>`__
+    - chat en `Slack <https://facturascripts.slack.com/messages>`__
 
 
 Directrices

@@ -5,6 +5,10 @@
   :generator: FacturaScripts Documentacion
   :description: Modelo de datos. Muestra los datos de una tabla
   :keywords: facturascripts, desarrollo, modelo, tabla
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Modelos FacturaScripts
+  :lang: es
 
 
 ##########################

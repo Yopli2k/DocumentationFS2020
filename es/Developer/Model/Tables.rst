@@ -5,6 +5,10 @@
   :generator: FacturaScripts Documentacion
   :description: Tablas de datos. Establece la estructura de una tabla en la base de datos
   :keywords: facturascripts, desarrollo, base de datos, tabla, mysql, postgresql
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Tablas FacturaScripts
+  :lang: es
 
 
 ###############

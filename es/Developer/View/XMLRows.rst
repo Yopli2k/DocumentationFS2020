@@ -7,6 +7,10 @@
   :generator: FacturaScripts Documentacion
   :description: Nuevo sistema para diseño de rows en vistas XML.
   :keywords: facturascripts, documentacion, diseño, rows, card, vista, xml, desarrollo
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Vistas Rows FacturaScripts
+  :lang: es
 
 
 ################

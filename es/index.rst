@@ -4,6 +4,10 @@
   :generator: FacturaScripts Documentacion
   :description: Documentación de usuario y ayuda para el desarrollo de Facturascripts 2018
   :keywords: facturascripts, documentacion, desarrollo, plugin
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: Documentación FacturaScripts 2018
+  :lang: es
 
 
 ##############
@@ -69,9 +73,11 @@ Generalidades
 
 .. toctree::
   :caption: Guía de Usuario
+  :includehidden:
   :titlesonly:
 
   UserGuide/AppSettings
+  UserGuide/FirstSteps
   UserGuide/Users
 
 .. raw:: html
@@ -100,22 +106,9 @@ Generalidades
 
   Developer/Development
   Developer/DataBase
-  Developer/DataBaseWhere
-  Developer/Tables
-  Developer/Models
-  Developer/ModelView
-  Developer/Views
-  Developer/XMLViews
-  Developer/XMLColumns
-  Developer/XMLButtons
-  Developer/XMLRows
-  Developer/XMLModals
-  Developer/Controllers
-  Developer/ExtendedControllers
-  Developer/ListController
-  Developer/EditController
-  Developer/PanelController
-  Developer/InteractWithViews
+  Developer/Model
+  Developer/View
+  Developer/Controller
   Developer/AppSettings
 
 .. raw:: html

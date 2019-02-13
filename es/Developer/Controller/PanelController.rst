@@ -5,6 +5,10 @@
   :generator: FacturaScripts Documentacion
   :description: Controlador multi panel, nuevo sistema de desarrollo simple
   :keywords: facturascripts, desarrollo, simple, sencillo, paneles, controlador
+  :robots: Index, Follow
+  :author: Jose Antonio Cuello (Artex Trading)
+  :subject: PanelController FacturaScripts
+  :lang: es
 
 
 ###########################
