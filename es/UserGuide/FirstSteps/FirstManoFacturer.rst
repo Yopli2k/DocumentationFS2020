@@ -16,9 +16,9 @@ Tu primer fabricante
 
 Para la creación de un fabricante nos vamos a la opción del menú (:guilabel:`Almacén->Fabricantes`).
 Si no se han instalado datos de prueba, la primera vez nos aparecerá la lista vacía. Para crear un nuevo fabricante
-hacemos hacer clic en el botón de insertar (botón con fondo verde y signo *+*) y rellenamos los campos del formulario.
+debemos hacer clic en el botón de insertar (botón con fondo verde y signo *+*) y rellenamos los campos del formulario.
 
 :Código: Se debe introducir un código para ese fabricante.
 :Nombre: Se debe introducir un nombre de fabricante.
 
-Con esto ya tenemos creado nuestro fabricante para posteriormente asignarlo a un artículo/producto si lo necesitamos.
+Con esto ya tenemos creado nuestro fabricante para posteriormente asignarlo a un producto si lo necesitamos.

@@ -20,7 +20,7 @@ vez pueden ser "padre" de otros "hijos".
 
 Para la creación de una familia nos vamos a la opción del menú (:guilabel:`Almacén->Familias`).
 Si no se han instalado datos de prueba, la primera vez nos aparecerá la lista vacía. Para crear una nueva familia
-hacemos hacer clic en el botón de insertar (botón con fondo verde y signo *+*) y rellenamos los campos del formulario.
+debemos hacer clic en el botón de insertar (botón con fondo verde y signo *+*) y rellenamos los campos del formulario.
 
 :Código: Será el identificador de la familia o subfamilia.
 :Descripción: Descripción de la familia o subfamilia para que el usuario la reconozca en pantalla y listados.

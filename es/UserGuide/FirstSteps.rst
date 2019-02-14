@@ -16,14 +16,20 @@ Primeros pasos
 ##############
 
 Es este apartado veremos como comenzar a usar nuestra nueva instalación de Facturascripts.
+Para la realización de los documentos de compra y de venta, así como la obtención de informes
+es necesario disponer de una información previa como: Agentes, Clientes, Familias, Productos, etc.
 
+En los siguientes subapartados vamos a guiar al usuario facilitando toda esta labor.
 
 .. toctree::
+  :caption: Apartados
   :titlesonly:
 
+  FirstSteps/FirstAgent
   FirstSteps/FirstCustomer
   FirstSteps/FirstTansportAgency
   FirstSteps/FirstManoFacturer
   FirstSteps/FirstFamily
+  FirstSteps/FirstAttribute
   FirstSteps/FirstProduct
   FirstSteps/FirstAccountingSeat
