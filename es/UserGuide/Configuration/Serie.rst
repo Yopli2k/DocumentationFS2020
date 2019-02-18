@@ -14,7 +14,17 @@
 Series
 ######
 
-.. note::
+Las series permiten agrupar los documentos de compra y de venta según distintos conceptos. Esto es
+útil por ejemplo para tener una serie específica para las modificaciones de facturas tal como
+exige la Hacienda Pública en España. Cada serie cuenta su propia numeración.
 
-  Esta opción está en desarrollo. Si estás interesado en colaborar contacta mediante
-  correo electrónico: informatica@artextrading.com
+La lista de series con las que trabajamos en todas las empresas podemos encontrarla en la
+opción del menú (:guilabel:`Contabilidad->Series`). Esta lista, si no se han instalado datos de prueba,
+nos aparecerá vacía. Para crear un nueva serie debemos hacer clic en el botón de insertar
+(botón con fondo verde y signo *+*) y rellenamos los campos del formulario.
+
+:Código: Identificador interno de la serie. Debe ser único
+:Descripción: Una descripción identificativa de la agrupación o de su uso
+:Sin Impuestos: Indica que esta serie se utiliza para los casos de régimen exento
+
+Al pulsar el botón de guardar, habremos creado la serie y estará disponible para su uso.

@@ -34,7 +34,7 @@ insertar (botón con fondo verde y signo *+*) y rellenamos los campos del formul
 
 **Información de Contacto**
 
-:direccion: Dirección de localización del agente.
+:Dirección: Dirección de localización del agente.
 :Cód. Postal: Distrito postal de la dirección del agente.
 :Ciudad: Identificador de la ciudad.
 :Provincia: Identificador de la provincia.

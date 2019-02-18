@@ -31,9 +31,9 @@ más importantes de FacturaScripts.
 
   Configuration/Taxes
   Configuration/VATRegime
-  Configuration/Serie
-  Configuration/Warehouse
   Configuration/Business
+  Configuration/Warehouse
+  Configuration/Serie
   Configuration/ForeignExchange
   Configuration/Country
   Configuration/DocumentState

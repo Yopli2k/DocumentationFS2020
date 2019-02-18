@@ -95,7 +95,7 @@ campos del formulario.
 
 **Otros Datos**
 
-:direccion: Dirección de localización del contacto
+:Dirección: Dirección de localización del contacto
 :Apartado: Información adicional
 :Cód. Postal: Distrito postal de la dirección del contacto
 :Ciudad: Identificador de la ciudad

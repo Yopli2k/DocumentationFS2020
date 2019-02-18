@@ -33,6 +33,7 @@ Hay que resaltar que en el cálculo del pocentaje a aplicar se tiene en cuenta l
 .. note::
     En la actualidad y de forma general *(existen zonas con distintos porcentajes)*,
     los porcentajes de IVA aplicables en España son:
+
         - Super Reducido: 4% - para productos de primera necesidad
         - Reducido: 10% - para productos y servicios especiales
         - General: 21% - para productos y servicios no incluidos en los apartados anteriores
@@ -50,6 +51,7 @@ Al seleccionar este régimen se suma al porcentaje del impuesto seleccionado el 
 .. note::
     En la actualidad y de forma general *(existen zonas con distintos porcentajes)*,
     los porcentajes de recargo de equivalencia aplicables en España son:
+
         - Super Reducido: 0,5% - para productos de primera necesidad
         - Reducido: 1,4% - para productos y servicios especiales
         - General: 5,2% - para productos y servicios no incluidos en los apartados anteriores
