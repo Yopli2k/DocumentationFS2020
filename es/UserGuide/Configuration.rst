@@ -34,7 +34,4 @@ más importantes de FacturaScripts.
   Configuration/Business
   Configuration/Warehouse
   Configuration/Serie
-  Configuration/ForeignExchange
-  Configuration/Country
   Configuration/DocumentState
-  Configuration/Cron
