@@ -77,8 +77,9 @@ Generalidades
   :titlesonly:
 
   UserGuide/AppSettings
-  UserGuide/FirstSteps
   UserGuide/Users
+  UserGuide/Configuration
+  UserGuide/FirstSteps
 
 .. raw:: html
 
