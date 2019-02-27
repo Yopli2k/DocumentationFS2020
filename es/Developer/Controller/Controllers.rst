@@ -1,5 +1,5 @@
 .. highlight:: rst
-.. title:: Facturascripts los controladores de acciones y procesos
+.. title:: Controladores de acciones y procesos
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion

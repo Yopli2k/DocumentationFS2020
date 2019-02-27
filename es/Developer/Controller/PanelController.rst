@@ -1,5 +1,5 @@
 .. highlight:: rst
-.. title:: Facturascripts Extended Controller (controlador avanzado)
+.. title:: Facturascripts PanelController
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
