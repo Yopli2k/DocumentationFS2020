@@ -26,3 +26,4 @@ datos existentes en la base de datos.
   Model/Tables
   Model/Models
   Model/ModelView
+  Model/ModelReport

@@ -30,4 +30,5 @@ definir la estructura en un archivo con formato XML.
   Controller/ListController
   Controller/EditController
   Controller/PanelController
+  Controller/ReportController
   Controller/InteractWithViews

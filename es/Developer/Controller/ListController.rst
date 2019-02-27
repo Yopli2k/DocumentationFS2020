@@ -1,5 +1,5 @@
 .. highlight:: rst
-.. title:: Facturascripts Extended Controller (controlador avanzado)
+.. title:: Facturascripts ListController
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
@@ -63,6 +63,7 @@ incluido en el propio controlador. Una vez añadida la vista, debemos configurar
 indicando los campos de búsqueda y la ordenación mediante los métodos **addSearchFields** y
 **addOrderBy**.
 
+.. _addView:
 
 addView
 -------
@@ -173,6 +174,8 @@ Algunos valores utilizados por ListController:
     // Este es un valor nuevo creado por el desarrollador para algún proposito especial
     $this->setSettings('MyView', 'myconfig', value);
 
+
+.. _addFilter:
 
 Adición de filtros
 ==================
