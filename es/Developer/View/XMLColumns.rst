@@ -211,7 +211,7 @@ con uno de los siguientes valores:
 
 :checkbox: Valores booleanos que se visualizan mediante el icono de un check (true) o un guión (false) respectivamente.
 
-:datepicker: Campos de tipo fecha, que incorporan un desplegable para elegir la misma.
+:date: Campos de tipo fecha, que incorporan un desplegable para elegir la misma.
 
 :color: Para la selección de colores.
 

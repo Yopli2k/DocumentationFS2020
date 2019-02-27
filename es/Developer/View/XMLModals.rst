@@ -48,11 +48,11 @@ Ejemplo:
                 </column>
 
                 <column name="create-date" numcolumns="6">
-                    <widget type="datepicker" fieldname="fechaalta" readonly="true" />
+                    <widget type="date" fieldname="fechaalta" readonly="true" />
                 </column>
 
                 <column name="blocked-date" numcolumns="6">
-                    <widget type="datepicker" fieldname="fechabaja" />
+                    <widget type="date" fieldname="fechabaja" />
                 </column>
 
                 <column name="blocked">
