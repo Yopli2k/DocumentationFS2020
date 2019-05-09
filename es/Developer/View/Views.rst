@@ -111,6 +111,7 @@ Uso de TWIG
 
 Puede encontrar toda la documentación en la `página oficial de TWIG <https://twig.symfony.com/doc/2.x>`_.
 
+
 Acceso a métodos y variables
 ----------------------------
 
@@ -145,3 +146,11 @@ Bucles FOR
       {% else %}
         <li><em>no user found</em></li>
       {% endfor %}
+
+
+Personalizar CSS y JS
+=====================
+
+Aunque la vista carga de manera automática el archivo JavaScript con el mismo nombre que el controlador
+es posible indicar archivos personalizados tanto para hojas de estilo como programación en
+JavaScript. Ver la clase `AssetManager <AssetManager>`__ para más información.

@@ -157,7 +157,7 @@ Algunos valores utilizados por ListController:
 
 :active: Indica si la vista (pestaña/tab) está activa o apagada (*disabled*).
 :icon: Establece el icono para la vista.
-:insertModal: Permite establecer un formulario modal para la inserción de datos.
+:modalInsert: Permite establecer un formulario modal para la inserción de datos.
 :btnNew: Muestra/Oculta el botón de nuevo.
 :btnDelete: Muestra/Oculta el botón de eliminar.
 :btnPrint: Muestra/Oculta el botón de imprimir.
@@ -169,7 +169,7 @@ Algunos valores utilizados por ListController:
     $this->setSettings('MyView', 'btnDelete', false);
 
     // Establece el modal action1 como acción al pulsar el botón insertar
-    $this->setSettings('MyView', 'insertModal', 'action1');
+    $this->setSettings('MyView', 'modalInsert', 'action1');
 
     // Este es un valor nuevo creado por el desarrollador para algún proposito especial
     $this->setSettings('MyView', 'myconfig', value);

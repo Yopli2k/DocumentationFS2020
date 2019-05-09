@@ -68,7 +68,7 @@ Ejemplo: *archivo MyNewPlugin.php*
             $pageData = parent::getPageData();
             $pageData['title'] = 'MyNewController';
             $pageData['menu'] = 'admin';
-            $pageData['icon'] = 'fa-page';
+            $pageData['icon'] = 'fas fa-page';
             return $pageData;
         }
 
@@ -105,7 +105,7 @@ Los valores que se pueden configurar son:
        {
            $pagedata = parent::getPageData();
            $pagedata['title'] = 'Agentes';
-           $pagedata['icon'] = 'fa-user-circle-o';
+           $pagedata['icon'] = 'fas fa-user-circle-o';
            $pagedata['menu'] = 'admin';
            return $pagedata;
        }

@@ -1,10 +1,10 @@
 .. highlight:: rst
-.. title:: Facturascripts, Clase AppSettings, las preferencias de la aplicacion
+.. title:: Facturascripts, Clase AppSettings, las preferencias de la aplicación
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Documentación de ayuda para el desarrollo de Facturascripts 2018
-  :keywords: facturascripts, documentacion, desarrollo, appsettings, preferencias
+  :description: Preferencias de la Aplicación
+  :keywords: facturascripts, documentacion, desarrollo, appsettings, preferencias, aplicacion
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
   :subject: AppSettings FacturaScripts
@@ -45,7 +45,7 @@ a EditSettings. La carga de las distintas pestañas que se visualizan en EditSet
 realiza de manera automática no necesitando controladores adicionales para gestionar
 el tratamiento de los settings de nuestro plugin.
 
-.. code::
+.. code:: php
 
    default -> SettingsDefault.xml
    email -> SettingsEmail.xml

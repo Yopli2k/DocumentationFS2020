@@ -99,7 +99,7 @@ EditController view example:
 .. code:: xml
 
         <columns>
-            <group name="data" numcolumns="8" title="Identificación internacional" icon="fa-globe">
+            <group name="data" numcolumns="8" title="Identificación internacional" icon="fas fa-globe">
                 <column name="code" display="left" numcolumns="4" order="100">
                     <widget type="text" fieldname="codigo" onclick="EditMyModel" />
                 </column>
@@ -337,11 +337,11 @@ Example:
 .. code:: xml
 
         <column name="action1" order="100">
-            <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Run the controller with action=process1" />
+            <button type="action" label="Action" color="info" action="process1" icon="fas fa-book" hint="Run the controller with action=process1" />
         </column>
 
         <column name="action2" order="100">
-            <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
+            <button type="modal" label="Modal" color="primary" action="test" icon="fas fa-users" />
         </column>
 
 
@@ -428,8 +428,8 @@ Example:
 
         <rows>
             <row type="statistics">
-                <button icon="fa-files-o" label="Pending delivery notes:" calculateby="function_name" onclick="#url"></option>
-                <button icon="fa-files-o" label="Pending collection:" calculateby="function_name" onclick="#url"></option>
+                <button icon="fas fa-files-o" label="Pending delivery notes:" calculateby="function_name" onclick="#url"></option>
+                <button icon="fas fa-files-o" label="Pending collection:" calculateby="function_name" onclick="#url"></option>
             </row>
         </rows>
 
@@ -449,8 +449,8 @@ Example:
 
         <rows>
             <row type="actions">
-                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
-                <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Ejecuta el controlador con action=process1" />
+                <button type="modal" label="Modal" color="primary" action="test" icon="fas fa-users" />
+                <button type="action" label="Action" color="info" action="process1" icon="fas fa-book" hint="Ejecuta el controlador con action=process1" />
             </row>
         </rows>
 
@@ -480,8 +480,8 @@ Example: (Top of the view)
 
         <row type="header">
             <group name="footer1" footer="specials-actions" label="This is a sample of buttons on a 'bootstrap card'">
-                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
-                <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Run the controller with action=process1" />
+                <button type="modal" label="Modal" color="primary" action="test" icon="fas fa-users" />
+                <button type="action" label="Action" color="info" action="process1" icon="fas fa-book" hint="Run the controller with action=process1" />
             </group>
         </row>
 
@@ -491,8 +491,8 @@ Example: (Bottom of the view)
 
         <row type="footer">
             <group name="footer1" footer="specials-actions" label="This is a sample of buttons on a 'bootstrap card'">
-                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
-                <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Run the controller with action=process1" />
+                <button type="modal" label="Modal" color="primary" action="test" icon="fas fa-users" />
+                <button type="action" label="Action" color="info" action="process1" icon="fas fa-book" hint="Run the controller with action=process1" />
             </group>
         </row>
 
@@ -523,7 +523,7 @@ Example:
 .. code:: xml
 
         <modals>
-            <group name="test" title="other-data" icon="fa-users">
+            <group name="test" title="other-data" icon="fas fa-users">
                 <column name="name" numcolumns="12" description="desc-custommer-name">
                     <widget type="text" fieldname="nombre" required="true" hint="desc-custommer-name-2" />
                 </column>

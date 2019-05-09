@@ -101,8 +101,8 @@ Licenciado bajo `licencia MIT <http://opensource.org/licenses/MIT>`_.
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
-Contribuir
-==========
+Contribuir al proyecto
+======================
 
 Este proyecto es software libre y todos son bienvenidos. Se puede colaborar de muchas maneras,
 ayudando en el desarrollo, en las traducciones, en la documentación, en probar las nuevas versiones ... Consulta las páginas:
@@ -173,3 +173,16 @@ Registro de cambios
 
     Esto facilita que cualquier usuario entienda facilmente todos los cambios que le ofrece la actualización,
     y así tener más claro si le resulta urgente o no actualizar.
+
+
+Colaborar en esta documentación
+===============================
+
+Esta documentación está realizada con documentos en formato RST (*ReStructured Text*) y compilados
+con la utilidad Sphinx. Para la visualización se utiliza el tema Read the Docs.
+Aunque actualmente está alojada como un proyecto privado de GitLab cualquier ayuda
+o colaboración es bienvenida.
+
+Si deseas colaborar o has encontrado alguna errata, por favor comunica via mail
+con informatica@artextrading.com indicándonos tu cuenta de GitLab o datos de contacto
+para que podamos añadirte al proyecto.

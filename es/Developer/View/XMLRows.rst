@@ -165,8 +165,8 @@ Ejemplo:
 
         <rows>
             <row type="statistics">
-                <button icon="fa-files-o" label="Alb. Pdtes:" function="nombre_function" link="#url"></option>
-                <button icon="fa-files-o" label="Pdte Cobro:" function="nombre_function" link="#url"></option>
+                <button icon="fas fa-files-o" label="Alb. Pdtes:" function="nombre_function" link="#url"></option>
+                <button icon="fas fa-files-o" label="Pdte Cobro:" function="nombre_function" link="#url"></option>
             </row>
         </rows>
 
@@ -215,9 +215,9 @@ Ejemplo:
 
         <rows>
             <row type="actions">
-                <button type="action" label="vat-register" color="info" action="register" hint="hint-vat-register" icon="fa-book" />
-                <button type="action" label="clone" color="info" action="clone" hint="clone-account-entry" icon="fa-clone" />
-                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
+                <button type="action" label="vat-register" color="info" action="register" hint="hint-vat-register" icon="fas fa-book" />
+                <button type="action" label="clone" color="info" action="clone" hint="clone-account-entry" icon="fas fa-clone" />
+                <button type="modal" label="Modal" color="primary" action="test" icon="fas fa-users" />
             </row>
         </rows>
 
@@ -254,8 +254,8 @@ Ejemplos:
 
         <row type="header">
             <group name="footer1" footer="specials-actions" label="Esto es una muestra de botones en un 'bootstrap card'">
-                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
-                <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Ejecuta el controlador con action=process1" />
+                <button type="modal" label="Modal" color="primary" action="test" icon="fas fa-users" />
+                <button type="action" label="Action" color="info" action="process1" icon="fas fa-book" hint="Ejecuta el controlador con action=process1" />
             </group>
         </row>
 
@@ -266,10 +266,10 @@ Ejemplos:
 
         <row type="footer">
             <group name="actions">
-                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
+                <button type="modal" label="Modal" color="primary" action="test" icon="fas fa-users" />
                 <button type="action" label="create-accounting-entry"
                         color="danger" action="create-accounting-entry"
-                        hint="hint-create-accounting-entry" icon="fa-balance-scale" />
+                        hint="hint-create-accounting-entry" icon="fas fa-balance-scale" />
             </group>
 
             <group name="help" class="collapse show" html="Block/Info.html.twig"></group>
@@ -279,7 +279,7 @@ Ejemplos:
 
         <row type="footer">
             <group name="footer1" footer="specials-actions" label="Esto es una muestra de botones en un 'bootstrap card'">
-                <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
-                <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Ejecuta el controlador con action=process1" />
+                <button type="modal" label="Modal" color="primary" action="test" icon="fas fa-users" />
+                <button type="action" label="Action" color="info" action="process1" icon="fas fa-book" hint="Ejecuta el controlador con action=process1" />
             </group>
         </row>

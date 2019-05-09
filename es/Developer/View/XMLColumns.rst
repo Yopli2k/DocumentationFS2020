@@ -62,7 +62,7 @@ Ejemplo de vista para EditController:
 .. code:: xml
 
       <columns>
-          <group name="data" numcolumns="8" title="Identificación internacional" icon="fa-globe">
+          <group name="data" numcolumns="8" title="Identificación internacional" icon="fas fa-globe">
               <column name="code" display="left" numcolumns="4" order="100">
                   <widget type="text" fieldname="codigo" onclick="EditMyModel" />
               </column>

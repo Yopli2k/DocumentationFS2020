@@ -101,8 +101,8 @@ Examples:
 
         <rows>
             <row type="statistics">
-                <option icon="fa-files-o" label="Alb. Pdtes:" calculateby="nombre_function" onclick="#url"></option>
-                <option icon="fa-files-o" label="Pdte Cobro:" calculateby="nombre_function" onclick="#url"></option>
+                <option icon="fas fa-files-o" label="Alb. Pdtes:" calculateby="nombre_function" onclick="#url"></option>
+                <option icon="fas fa-files-o" label="Pdte Cobro:" calculateby="nombre_function" onclick="#url"></option>
             </row>
 
             <row type="footer">

@@ -94,9 +94,9 @@ Ejemplo:
 .. code:: xml
 
       <column name="action1" order="100">
-          <button type="action" label="Action" color="info" action="process1" icon="fa-book" hint="Ejecuta el controlador con action=process1" />
+          <button type="action" label="Action" color="info" action="process1" icon="fas fa-book" hint="Ejecuta el controlador con action=process1" />
       </column>
 
       <column name="action2" order="100">
-          <button type="modal" label="Modal" color="primary" action="test" icon="fa-users" />
+          <button type="modal" label="Modal" color="primary" action="test" icon="fas fa-users" />
       </column>

@@ -110,7 +110,8 @@ Generalidades
   Developer/Model
   Developer/View
   Developer/Controller
-  Developer/AppSettings
+  Developer/Class
+  Developer/File
 
 .. raw:: html
 

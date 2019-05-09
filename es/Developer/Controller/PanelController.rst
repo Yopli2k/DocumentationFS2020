@@ -15,14 +15,23 @@
 Controlador PanelController
 ###########################
 
-Este controlador, al igual que el controlador *ListController* es un
-**controlador universal** para multiples vistas aunque en este caso se
-permite el uso de distintos tipos de vistas: *ListView*, *EditView*,
-*EditListView* and *GridView*.
+Este controlador, al igual que el controlador `ListController <ListController>`__ es un
+**controlador universal** para multiples vistas/pestañas aunque en este caso se
+permite el uso de distintos tipos de vistas:
 
-El controlador divide la pantalla en dos zonas, una a la izquierda (zona
+- **ListView**: muestra la información a modo de listado.
+
+- **EditView**: visualiza una ficha con la información para su edición.
+
+- **EditListView**: muestra una lista de fichas para la edición múltiple.
+
+- **GridView**: visualiza la información a modo de hoja de cálculo.
+
+- **HTMLView**: muestra una plantilla html de libre diseño.
+
+El controlador divide la pantalla en dos zonas, por defecto, una a la izquierda (zona
 de navegación) y otra la derecha donde se visualizan las vistas con los
-datos.
+datos. La zona de navegación puede configurarse para ocupar el lado izquierdo, arriba o abajo.
 
 Para el uso de este controlador es necesario crear las vistas en formato
 XML, tal y como se describe en el documento
@@ -32,7 +41,7 @@ Cómo usar el controlador
 ========================
 
 Para utilizar *PanelController* debemos crearnos una nueva clase PHP que
-herede o extienda de PanelController, debiendo implementar los
+herede o extienda de la clase PanelController, debiendo implementar los
 siguientes métodos:
 
 -  **createViews**: Encargado de crear y añadir las vistas que deseamos
@@ -54,7 +63,7 @@ createViews
 -----------
 
 Dentro de este método, en nuestra nueva clase, debemos ir creando las
-distintas vistas que se visualizarán, debiendo usar distintos métodos
+distintas vistas/pestañas que se visualizarán, debiendo usar distintos métodos
 según el tipo de vista que estamos añadiendo. Debemos indicar mediante
 cadenas de texto, al añadir una vista, el modelo (Nombre completo) y el
 nombre de la vista XML, y opcionalmente el título y el icono para el
@@ -62,23 +71,37 @@ grupo de navegación.
 
 -  **addEditView**: Añade una vista para editar datos de un único
    registro de un modelo.
+
 -  **addEditListView**: Añade una vista para editar multiples registros
    de un modelo.
+
 -  **addListView**: Añade una vista para visualizar en modo lista
    multiples registros de un modelo.
+
 -  **addGridView**: Añade una vista que permite editar los datos en un grid
    de datos de filas y columnas al estilo de una hoja de cálculo.
 
 .. code:: php
 
-        $this->addEditView('FacturaScripts\Core\Model\Cliente', 'EditCliente', 'Cliente');
-        $this->addEditListView('FacturaScripts\Core\Model\DireccionCliente', 'EditDireccionCliente', 'Direcciones', 'fa-road');
-        $this->addListView('FacturaScripts\Core\Model\Cliente', 'ListCliente', 'Mismo Grupo');
-        $this->addGridView('EditAsiento', '\FacturaScripts\Dinamic\Model\Partida', 'EditPartida', 'accounting-items');
+        $this->addEditView('EditCliente', 'Cliente', 'Cliente');
+        $this->addEditListView('EditDireccionCliente', 'DireccionCliente', 'Direcciones', 'fas fa-road');
+        $this->addListView('ListCliente', 'Cliente', 'Mismo Grupo', 'fas fa-person');
 
-Este método tiene una visibilidad de *protected* de manera que los
-plugins pueden ir extendiendo nuestra clase y añadir nuevas vistas, o
-modificar las existentes.
+Existe la posibilidad de añadir varias vistas/pestañas para un mismo modelo y usando la misma vista XML.
+Para ello, al añadir la vista debemos un índice numérico empezando por 1 y separando el nombre de la vista del índice
+con un guión *('-')*.
+
+Ejemplo.
+
+.. code:: php
+
+        $this->addListView('ListPartidaImpuesto-1', 'PartidaImpuesto', 'purchases', 'fas fa-sign-in-alt');
+        $this->addListView('ListPartidaImpuesto-2', 'PartidaImpuesto', 'sales', 'fas fa-sign-out-alt');
+
+
+Este método tiene una visibilidad de *protected* de manera que los plugins pueden ir extendiendo
+nuestra clase y añadir nuevas vistas, o modificar las existentes.
+
 
 loadData
 --------
@@ -128,24 +151,9 @@ Este método permite poner las pestaña a la izquierda (left), abajo
 Las pestañas cuando están colocadas a la izquierda, se mostrara la información
 de la pestaña seleccionada. En estos caso no es necesario especificar el método.
 
-Ejemplo sin especificar el método.
-
-.. code:: php
-
-    $this->addEditView('FacturaScripts\Core\Model\Asiento', 'EditAsiento', 'accounting-entries', 'fa-balance-scale');
-    $this->addListView('FacturaScripts\Core\Model\Partida', 'ListPartida', 'accounting-items', 'fa-book');
-
-Ejemplo con el método.
-
-.. code:: php
-
-    $this->addEditView('FacturaScripts\Core\Model\Asiento', 'EditAsiento', 'accounting-entries', 'fa-balance-scale');
-    $this->addListView('FacturaScripts\Core\Model\Partida', 'ListPartida', 'accounting-items', 'fa-book');
-    $this->setTabsPosition('left');
-
-Las pestañas cuando están colocadas abajo, muestra ventana principal y debajo
-de esta mostrara la información de la pestaña seleccionada.
-seleccionada.
+Cuando están colocadas abajo, se muestra ventana principal (primera vista que se añade)
+y debajo de esta mostrara la información de la pestaña seleccionada. Si sólo hay una vista/pestaña
+(a demás de la vista principal) se muestra directamente la vista sin el diseño de pestañas.
 
 Ejemplo.
 
@@ -155,8 +163,7 @@ Ejemplo.
     $this->addListView('FacturaScripts\Core\Model\Partida', 'ListPartida', 'accounting-items', 'fa-book');
     $this->setTabsPosition('bottom');
 
-Las pestañas cuando están colocadas arriba, mostrara la información de
-la pestaña seleccionada.
+Cuando están colocadas arriba, se mostrará la información de la pestaña seleccionada.
 
 Ejemplo.
 

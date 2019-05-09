@@ -39,6 +39,8 @@ mediante los `métodos mágicos <http://php.net/manual/es/language.oop5.magic.ph
 previa, en cargándose del proceso la clase *ModelView*. Sólo si deseamos tener campos calculados debemos
 sobrescribir los métodos *clear* y *loadFromData* donde asignaremos sus valores.
 
+Ejemplo de campos calculados
+
 .. code:: php
 
     protected function clear()
@@ -140,4 +142,26 @@ de este método. Debemos devolver una cadena de texto con el valor a aplicar.
         return 'GROUP BY asientos.codejercicio, subcuentas.codcuentaesp,'
                       . 'cuentasesp.descripcion, subcuentas.codimpuesto,'
                       . 'partidas.iva, partidas.recargo';
+    }
+
+
+Edición y borrado de datos
+==========================
+Como se ha dicho, este modelo no permite la edición ni borrado directamente puesto que usa
+distintas tablas en el proceso de visualización de datos, pero se ha incluido un método
+que permite establecer un modelo como *principal* sobre el que se realizarán los procesos
+de edición y borrado.
+
+Para establecer el modelo principal se debe llamar al método **setMasterModel** desde el constructor
+indicándole una instancia del modelo.
+
+Ejemplo:
+
+.. code:: php
+
+    public function __construct($data = array())
+    {
+        parent::__construct($data);
+
+        $this->setMasterModel(new Cliente());
     }

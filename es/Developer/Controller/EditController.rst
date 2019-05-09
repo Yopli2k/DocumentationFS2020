@@ -24,37 +24,76 @@ la aplicación y plugins creando un entorno uniforme para el usuario lo
 que acelera el aprendizaje y adaptación a **Facturascripts**.
 
 Para el uso de este controlador es necesario crear las vistas en formato
-XML, tal y como se describe en el documento
-`XMLViews <XMLViews>`__,
+XML, tal y como se describe en el documento `XMLViews <XMLViews>`__,
 incluido en la documentación de **Facturascripts**.
 
 Cómo usar el controlador
 ========================
 
 Para utilizar *EditController* debemos crearnos una nueva clase PHP que
-herede o extienda de EditController, estableciendo en el constructor de
-nuestra nueva clase el modelo sobre el que trabajaremos y debiendo
-implementar el siguiente método:
+herede o extienda de EditController, debiendo crear los métodos:
+
+-  **getModelClassName**: Devuelve el nombre del modelo a editar. El controlador
+   buscará automáticamente el archivo XML con nombre *Edit{Nombre del Modelo}* en
+   la carpeta XMLView.
 
 -  **getPageData**: Establece los datos generales (título, icono, menú, etc)
    para la vista principal (la primera que añadimos en *createViews*).
    Este método se vió en el apartado :ref:`Controlador <getpagedata>` y
    es obligatorio en todos los controladores.
 
+El controlador *EditController* hereda directamente del controlador *PanelController*
+por lo que es posible añadir más vistas/pestañas. Para ello usaremos los métodos **createViews**
+y **loadData** tal como se describe en la documentación del `PanelController <PanelController>`__.
+
+Ejemplo con una pestaña adicional
+
 .. code:: php
 
-        public function __construct(&$cache, &$i18n, &$miniLog, $className)
-        {
-            parent::__construct($cache, $i18n, $miniLog, $className);
+    protected function createViews()
+    {
+        parent::createViews();
+        $this->addListView('ListProducto', 'Producto', 'products', 'fas fa-cubes');
+    }
 
-            // Establecemos el modelo de datos
-            $this->modelName = 'FacturaScripts\Core\Model\Familia';
+    protected function loadData($viewName, $view)
+    {
+        switch ($viewName) {
+            case 'ListProducto':
+                $codfabricante = $this->getViewModelValue('EditFabricante', 'codfabricante');
+                $where = [new DataBaseWhere('codfabricante', $codfabricante)];
+                $view->loadData('', $where);
+                break;
+
+            default:
+                parent::loadData($viewName, $view);
+                break;
         }
+    }
 
-Indicar que el nombre de la vista XML que se cargará será la denominada
-igual que la nueva clase que hemos creado. También existen métodos
-generales que podemos sobreescribir para personalizar la pantalla, (ver
-más abajo).
+Establecer Sólo Lectura
+=======================
+Es posible establecer las vistas *Edit* como sólo lectura desde el controlador. Esto cambia el
+template TWig que se usará para renderizar la vista de modo que no se incluirán los botones de
+borrado y guardado de datos, además de visualizar los datos sin posibilidad de edición.
+
+Para activar o desactivar esta opción debemos llamar al método **setReadOnly** de la vista.
+
+.. code:: php
+
+    protected function createViews()
+    {
+        /// Add Views
+        parent::createViews();
+        $this->addListView('ListEmployeePayRollSalary', 'EmployeePayRollSalary', 'payroll-salary');
+
+        /// Configure views
+        $this->views['EditEmployeePayRoll']->setReadOnly(true);
+        $this->setSettings('EditEmployeePayRoll', 'btnNew', false);
+
+        /// Set tabs views configuration
+        $this->setTabsPosition('bottom');
+    }
 
 
 Personalizar cabecera y pie
@@ -84,8 +123,8 @@ Ejemplos:
 
         <rows>
             <row type="statistics">
-                <option icon="fa-files-o" label="Alb. Pdtes:" calculateby="nombre_function" onclick="#url"></option>
-                <option icon="fa-files-o" label="Pdte Cobro:" calculateby="nombre_function" onclick="#url"></option>
+                <option icon="fas fa-files-o" label="Alb. Pdtes:" calculateby="nombre_function" onclick="#url"></option>
+                <option icon="fas fa-files-o" label="Pdte Cobro:" calculateby="nombre_function" onclick="#url"></option>
             </row>
 
             <row type="footer">

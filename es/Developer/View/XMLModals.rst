@@ -42,7 +42,7 @@ Ejemplo:
 .. code:: xml
 
         <modals>
-            <group name="test" title="other-data" icon="fa-users">
+            <group name="test" title="other-data" icon="fas fa-users">
                 <column name="name" numcolumns="12" description="desc-custommer-name">
                     <widget type="text" fieldname="nombre" required="true" hint="desc-custommer-name-2" />
                 </column>

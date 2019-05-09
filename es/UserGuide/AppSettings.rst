@@ -42,11 +42,16 @@ Por defecto
 
 Email
 ^^^^^
-Permite establecer la configuración para el envío de mail o notificaciones, así el buzón para
+Permite establecer la configuración para el envío de mail o notificaciones, así como el buzón para
 notificaciones administrativas.
 
-:Correo administrativo: Buzón de correo y contraseña para notificaciones administrativas.
-:Servidor de correo: Conjunto de datos necesarios para configurar la conexión con el servidor de correo y poder enviar los correos.
+:Email: Buzón de correo y contraseña para notificaciones administrativas.
+:Contraseña: Código de acceso para el buzón administrativo.
+:Usuario: Cuenta de acceso al servidor de correo.
+:Host: Dirección del servidor de correo.
+:Puerto: Indica el puerto de conexión al servidor.
+:Encriptación: Tipo de encriptación de la comunicación con el servidor.
+:Controlador: Librería que se usará para la conexión con el servidor.
 
 
 Log

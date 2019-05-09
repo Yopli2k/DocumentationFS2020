@@ -143,7 +143,7 @@ Existen algunos valores ya utilizados por los propios controladores extendidos:
 
 :active: Indica si la vista (pestaña/tab) está activa o apagada (*disabled*).
 :icon: Establece el icono para la vista.
-:insertModal: En los ListController, permite establecer un formulario modal para la inserción de datos.
+:modalInsert: En los ListController, permite establecer un formulario modal para la inserción de datos.
 :btnNew: Muestra/Oculta el botón de nuevo.
 :btnDelete: Muestra/Oculta el botón de eliminar.
 :btnPrint: Muestra/Oculta el botón de imprimir.
