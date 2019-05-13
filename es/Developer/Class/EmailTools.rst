@@ -97,7 +97,7 @@ parámetro *data*, que es un array que contiene la configuración a utilizar en 
 :template-object: (array) Lista de objetos que se "pasarán" a la plantilla. Estos objetos estarán disponibles en la plantilla Twig. Ejemplo: [ 'fsc' => $this, 'company' => $company ].
 
 send *(manualmente)*
--------------------
+--------------------
 
 Este método nos permite realizar el envío de manera manual, configurando nosotros cada uno de
 los pasos en la creación y envío del correo. Los pasos a seguir son:
@@ -108,7 +108,7 @@ los pasos en la creación y envío del correo. Los pasos a seguir son:
     3.1 Establecer el asunto del mail
     3.2 Asignar la lista de correos a donde enviar el mail
     3.3 Asignar, si lo hay, los archivos adjuntos
-    3.4 Generar el mensaje del correo en base a una plantilla. Si no se indica plantilla se usa la estandar de *FacturaScripts.
+    3.4 Generar el mensaje del correo en base a una plantilla. Si no se indica plantilla se usa la estandar de *FacturaScripts*.
 4. Enviar el mail
 5. Si hay archivos adjuntos, eliminar los archivos temporales
 

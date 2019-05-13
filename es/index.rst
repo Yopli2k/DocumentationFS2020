@@ -67,9 +67,10 @@ Generalidades
    <hr>
    &nbsp;
 
-   <table style="width:100%;">
-     <tr>
-       <td style="width:50%;">
+.. sidebar:: Descripción
+
+   Aprende o resuelve tus dudas sobre el manejo del ERP FS2018.
+   Guías paso a paso sobre el uso correcto de todas las funciones de los apartados de la aplicación.
 
 .. toctree::
   :caption: Guía de Usuario
@@ -83,22 +84,16 @@ Generalidades
 
 .. raw:: html
 
-      </td>
-      <td>
-        <em>
-          Aprende o resuelve tus dudas sobre el manejo del ERP FS2018.
-          Guías paso a paso sobre el uso correcto de todas las funciones de los apartados de la aplicación.
-        </em>
-      </td>
-      </tr>
-    </table>
-
-     <hr>
+    <hr>
      &nbsp;
 
-  <table style="width:100%;">
-    <tr>
-      <td style="width:50%;">
+
+.. sidebar:: Descripción
+
+    Aprende los conceptos básicos y todas las novedades incluidas en esta versión,
+    para poder desarrollar sin problemas. Crea tus propios Plugins y personalizaciones,
+    ajustando a tus requisitos el aplicativo y mejorando la experiencia de uso.
+
 
 .. toctree::
   :caption: Guía para el Desarrollo
@@ -112,15 +107,3 @@ Generalidades
   Developer/Controller
   Developer/Class
   Developer/File
-
-.. raw:: html
-
-      </td>
-      <td>
-        <em>
-          Aprende los conceptos básicos y todas las novedades incluidas en esta versión, para poder desarrollar sin problemas.
-          Crea tus propios Plugins y personalizaciones, ajustando a tus requisitos el aplicativo y mejorando la experiencia de uso.
-        </em>
-      </td>
-    </tr>
-  </table>

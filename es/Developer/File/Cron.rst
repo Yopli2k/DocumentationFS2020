@@ -63,7 +63,8 @@ Desde una terminal
 
 Llamar al archivo index.php añadiendo el parámetro -cron en la llamada.
 
-.. code::
+.. code-block:: bash
+
     cd /ruta/instalacion/facturascripts
     php index.php -cron
 

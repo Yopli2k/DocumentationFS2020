@@ -35,3 +35,4 @@ más importantes de FacturaScripts.
   Configuration/Warehouse
   Configuration/Serie
   Configuration/DocumentState
+  Configuration/DocumentSequence

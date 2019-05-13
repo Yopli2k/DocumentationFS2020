@@ -253,3 +253,16 @@ Para la escritura de una cookie es necesario declarar el uso del namespace *Symf
     $expire = time() + 3600; /// +1 hora
     $this->response->headers->setCookie(new Cookie('MyCook', 'value', $expire));
     $value = $this->request->cookies->get('MyCook');
+
+
+Redireccionar al usuario
+------------------------
+
+Desde el controlador puede realizar un redireccionamiento a una página concreta de manera automática.
+Para ello utilizamos el método **redirect**.
+
+Ejemplo: *Redireccionar al controlador ListController (página con la lista de productos).*
+
+.. code:: php
+
+    $this->redirect('ListProducto');

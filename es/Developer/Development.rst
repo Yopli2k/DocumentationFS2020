@@ -104,7 +104,7 @@ Archivo facturascripts.ini
 Este archivo es el encargado de la declaración y configuración del plugin, por lo porque
 resulta imprescindible. El archivo debe contener los siguientes valores:
 
-:name: Nombre del plugin y de la carpeta que lo contiene.
+:name: Nombre del plugin y de la carpeta que lo contiene. **Deben coincidir el nombre con la carpeta**.
 :description: Descripción del plugin. Debe ser suficientemente descriptiva para el usuario.
 :version: Número de versión del plugin. Debe ser un número entero o decimal. Se utiliza para el control de actualizaciones.
 :min_version: Indica la versión mínima de FacturaScripts necesaria para su instalación.
