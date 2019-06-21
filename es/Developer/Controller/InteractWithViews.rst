@@ -56,24 +56,39 @@ obteniendo un objeto de la clase :guilabel:`ColumnItem`.
     $column2->widget->maxLenght = 50;
 
 
-Apagar y encender columnas
-==========================
+Apagar, encender y ocultar columnas
+===================================
 
-Aunque podemos activar y desactivar columnas mediante la propiedad *readOnly* del widget
-de la columna en cuestión, existe un método que nos permite realizarlo de manera más sencilla
-y sin necesidad de buscar la columna sino directamente desde la vista. Para ello usaremos
-el método *disableColumn* informando del *name* de la columna en el archivo xml y de si
-deseamos que esté o no en *disabled*.
+En ocasiones es necesario establecer el estado de una o varias columnas en función
+del estado del modelo, distintos datos o personalizaciones. Esto es posible desde el
+controlador, una vez que se han cargado los datos (evento *loadData*).
+
+Aunque podemos activar, desactivar y/o ocultar una columna accediendo directamente a las propiedades del widget
+de la columna en cuestión, la vista tiene un método que nos permite realizarlo de manera más sencilla
+y sin necesidad de buscar manualmente la columna a tratar. Para ello usaremos el método *disableColumn*
+informando del *name* de la columna en el archivo xml.
+
+Este método dispone de dos parámetros adicionales:
+
+:disabled: Por defecto true. Indica si se desea ocultar la columna.
+:readonly: Por defacto false. Indica si se puede editar el valor de la columna.
+
+           - *true*: Permite editar.
+
+           - *false*: No permite editar
+
+           - *dinamic*: Sólo permite editar cuando el campo no tiene un valor informado
 
 
 .. code:: php
 
-    // Disable mediante Widget (menos recomendado)
-    $column = $this->views['Nombre_de_Vista']->columnForField('codcliente');
-    $column->widget->readOnly = true;
+    // Si no disponemos de acceso a la vista
+    // Ocultar columna code
+    $this->views['Nombre_de_Vista']->disableColumn('code');
 
-    // Disable mediante Vista (método directo)
-    $this->views['Nombre_de_Vista']->disableColumn('codcliente', true);
+    // Si disponemos de acceso a la vista. P.E. en el método loadData
+    // Establecer readOnly la columna code
+    $view->disableColumn('code', false, true);
 
 
 Añadir botones de acción

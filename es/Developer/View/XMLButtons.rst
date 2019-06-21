@@ -70,6 +70,7 @@ Podemos personalizarlos mediante los atributos:
 :level: Sólo los usuarios con un nivel igual o superior verán el botón. Por defecto 0.
 :color: indica el color del botón, según los colores de Bootstrap para botones.
 :hint: ayuda que se muestra al usuario al poner el puntero del ratón sobre el botón.
+:confirm: si se indica con valor true, se mostrará al usuario una ventana solicitando confirmación para ejecutar la acción.
 :function: (Sólo para botones estadísticos) Establece el método del controlador PHP que calcula el contenido del botón.
 :action: esta propiedad varía según el tipo.
 
