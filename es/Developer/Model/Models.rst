@@ -26,11 +26,20 @@ como se describe en el apartado `Tablas de datos <Tables>`__, mientras que el mo
 o la clase php que lo define debe ir en la carpeta **Model** con el mismo nombre de
 la tabla pero en singular y respetando la nomenclatura `UpperCamelCase <https://es.wikipedia.org/wiki/CamelCase>`_ para nombres de clases.
 
+.. important:: **namespace**
+    Es importante recordar que nuestro *plugin* utiliza el espacio de nombres *FacturaScripts\Plugins\MyPlugin*, si cambiamos este espacio de nombres dejará de funcionar.
+    El espacio de nombre se debe corresponder con la carpeta donde está el archivo dentro de la instalación. A este espacio de nombre
+    debemos añadir la ruta para los modelos, *FacturaScripts\Plugins\MiPlugin\Model*.
+
+
 En la versión *Facturascripts 2018* se ha reestructurado el uso de los modelos,
 heredando de la clase ModelClass y complementandose en un Trait (Rasgos)
 denominado *ModelTrait* agrupando así las operaciones más comunes
 y generales de los modelos, simplificando tanto el código como el tratamiento de
 los mismos, delegando a estos sólo las características específicas de cada uno.
+Es imprescindible que esta línea esté solamente en el modelo final. Si va a heredar
+de otra clase que no sea ModelClass, no coloque el trait en esa clase. Siempre debe ir
+en la última clase, en el modelo definitivo.
 
 Así a la hora de declarar el modelo debemos:
     - crear una nueva clase que hereda de *ModelClass*
@@ -66,7 +75,7 @@ Así a la hora de declarar el modelo debemos:
     }
 
 
-.. Note::
+.. note::
     **Buenas prácticas para los nombres**
         El nombre de la clase del modelo debe ser siempre en singular y el de la tabla en plural.
 
@@ -93,6 +102,26 @@ cadena de texto: **tableName** y **primaryColumn**.
     {
         return 'codagente';
     }
+
+
+Herencia de modelos
+===================
+Puede heredar y personalizar cualquier modelo existente. Para ello debe utilizar un alias para el modelo del que hereda
+y así evitar colisiones con los nombre.
+
+Ejemplo:
+
+.. code:: php
+
+    <?php
+      namespace FacturaScripts\Plugins\MyNewPlugin\Model;
+
+      use FacturaScripts\Core\Model\Cliente as ParentModel;
+
+      class Cliente extends ParentModel
+      {
+        [ ... ]
+      }
 
 
 Lectura de datos

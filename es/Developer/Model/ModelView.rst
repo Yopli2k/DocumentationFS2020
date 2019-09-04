@@ -31,8 +31,11 @@ Para crear un modelo de sólo visualización debemos crearnos una clase que exti
 *Base/ModelView* en vez de la clase de los modelos de datos, implementándose automáticamente
 los métodos necesarios por la vista para la obtención de los datos como *count* y *all*.
 Para que esta obtención automática de datos funcione es necesario implementar los métodos
-*getTables*, *getFields* y *getSQLFrom* que informan la de estructura que queremos obtener.
+**getTables**, **getFields** y **getSQLFrom** que informan la de estructura que queremos obtener.
 (Se detallan en las siguientes secciones)
+
+Nuestro modelo de sólo visionado es una clase que debe ir en un archivo con el mismo nombre
+y dentro de la carpeta **Model/ModelView** del plugin.
 
 La gestión de propiedades del modelo (los "campos" que se quieren visualizar) se realiza
 mediante los `métodos mágicos <http://php.net/manual/es/language.oop5.magic.php>`_ de PHP por lo que no requieren de declaración

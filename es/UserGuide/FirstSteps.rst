@@ -32,4 +32,4 @@ En los siguientes subapartados vamos a guiar al usuario facilitando toda esta la
   FirstSteps/FirstFamily
   FirstSteps/FirstAttribute
   FirstSteps/FirstProduct
-  FirstSteps/FirstAccountingSeat
+  FirstSteps/FirstAccountingEntry

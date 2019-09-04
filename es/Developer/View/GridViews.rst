@@ -36,8 +36,9 @@ de enlazar la vista padre con su detalle este método difiere de los otros méto
 añadir vistas. En este caso debemos informar con un array la vista padre y la hija. El array
 debe contener las claves *name* y *model* junto con sus valores.
 
-En caso de utilizar un *EditController*, clase que hereda de *PanelController* es necesario no llamar
-al método padre en *createViews*.
+El tratamiento de las dos vistas (padre y detalle) se realiza de manera conjunta por lo que en
+caso de utilizar un *EditController*, clase que hereda de *PanelController*, como base de nuestro
+controlador *no debemos llamar* al método padre en **createViews** (esto crearía dos veces la vista padre).
 
 .. code:: php
 

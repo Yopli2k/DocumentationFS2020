@@ -71,12 +71,21 @@ Relación de Operadores
 
 Para establecer el operador se comprueba el primer carácter del valor de la etiqueta *option*.
 
-:>: Se aplicará si el valor del campo del modelo es mayor que el valor indicado.
-:<: Se aplicará si el valor del campo del modelo es menor que el valor indicado.
-:!: Se aplicara si el valor del campo del modelo es diferente que el valor indicado.
+-  Si el valor empieza por ``gt:``: Se aplicará si el valor del campo del modelo es *mayor* que el valor indicado después del operador.
 
-En cualquier otro caso se realizará una comprobación de igualdad, es decir que el
-valor del campo del modelo es igual al valor indicado.
+-  Si el valor empieza por ``gte:``: Se aplicará si el valor del campo del modelo es *mayor o igual* que el valor indicado después del operador.
+
+-  Si el valor empieza por ``lt:``: Se aplicará si el valor del campo del modelo es *menor* que el valor indicado después del operador.
+
+-  Si el valor empieza por ``lte:``: Se aplicará si el valor del campo del modelo es *menor o igual* que el valor indicado después del operador.
+
+-  Si el valor empieza por ``neq:``: Se aplicara si el valor del campo del modelo es *diferente* que el valor indicado después del operador.
+
+-  Si el valor es ``null:``: Se aplicará el operador *es nulo* al valor del campo del modelo.
+
+-  Si el valor es ``notnull:``: Se aplicará el operador *no es nulo* al valor del campo del modelo.
+
+-  En cualquier otro caso se realizará una comprobación de igualdad, es decir que el valor del campo del modelo es igual al valor indicado.
 
 
 Declaración de las condiciones
@@ -193,14 +202,17 @@ A modo de resumen de las propiedades:
 
     - **js**: al hacer clic ejecutará la función javascript indicada en el atributo ``action``.
 
+    - **link**: al hacer clic se redirecciona a la página indicada en la propiedad ``action``.
+
 
 :id: identificador html para poder selecionarlo desde JavaScript.
 :icon: icono que se visualizará a la izquierda de la etiqueta.
 :label: texto o etiqueta que se visualizará en el botón.
 :color: indica el color del botón, según las relación de colores antes indicada.
 :hint: ayuda que se muestra al usuario al poner el puntero del ratón sobre el botón.
-:action: indica la acción que se envía al controlador o a la función JavaScript.
-
+:action: indica la acción que se envía al controlador, la función JavaScript o nombre del modal a mostrar.
+:level: nivel de seguridad aplicable. Por defecto 0. Solamente los usuarios con un nivel de seguridad igual o superior podrán ver este botón.
+:confirm: si está a *true* mostrará al usuario una ventana solicitando confirmación antes de ejecutar la acción.
 
 .. important::
 

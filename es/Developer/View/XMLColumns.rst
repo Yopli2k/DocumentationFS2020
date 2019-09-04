@@ -136,18 +136,37 @@ Cada widget dispone de una lista de atributos para su inicialización y personal
 y aunque en su mayoría son comunes cuanto más específicas/complejas son las tareas a realizar
 por el widget, este puede necesitar atributos exclusivos de esa clase de widget.
 
-Para las vistas de tipo *List*, se puede aplicar la clusula html *style* a aplicar a la columna
-mediante la declaración de una lista de etiquetas **<option>** (dentro de la etiqueta *<widget>*),
-donde cada atributo de la etiqueta *<option>* se corresponde con su equivalente CSS que se desea
-aplicar y el valor de la etiqueta es el valor cuando se aplicará el formato.
-Para decidir si se aplica el formato o no se aplicará los siguientes criterios al valor
-introducido en la etiqueta **<option>**:
+Al igual que los objetos rows se pueden añadir opciones de coloreado al contenido del widget
+utilizando los colores para tablas de bootstrap. Para ello añadiremos la etiqueta **<option>**.
 
--  Si el valor empieza por ``>``: Se aplicará si el valor del campo del modelo es mayor que el valor indicado después del operador.
+.. sidebar:: Colores (Rows)
 
--  Si el valor empieza por ``<``: Se aplicará si el valor del campo del modelo es menor que el valor indicado después del operador.
+    .. image:: images/rows-colors.png
 
--  Si el valor empieza por ``!``: Se aplicara si el valor del campo del modelo es diferente que el valor indicado después del operador.
+:primary: azul
+:secundary: gris
+:success: verde
+:danger: rojo
+:warning: amarillo
+:info: verde-azul
+:light: gris claro (muy claro)
+:dark: gris oscuro
+
+Para decidir si se aplica el formato o no se aplicará los siguientes criterios al valor introducido en la etiqueta **<option>**:
+
+-  Si el valor empieza por ``gt:``: Se aplicará si el valor del campo del modelo es *mayor* que el valor indicado después del operador.
+
+-  Si el valor empieza por ``gte:``: Se aplicará si el valor del campo del modelo es *mayor o igual* que el valor indicado después del operador.
+
+-  Si el valor empieza por ``lt:``: Se aplicará si el valor del campo del modelo es *menor* que el valor indicado después del operador.
+
+-  Si el valor empieza por ``lte:``: Se aplicará si el valor del campo del modelo es *menor o igual* que el valor indicado después del operador.
+
+-  Si el valor empieza por ``neq:``: Se aplicara si el valor del campo del modelo es *diferente* que el valor indicado después del operador.
+
+-  Si el valor es ``null:``: Se aplicará el operador *es nulo* al valor del campo del modelo.
+
+-  Si el valor es ``notnull:``: Se aplicará el operador *no es nulo* al valor del campo del modelo.
 
 -  En cualquier otro caso se realizará una comprobación de igualdad, es decir que el valor del campo del modelo es igual al valor indicado.
 
@@ -159,7 +178,7 @@ Ejemplos:
 .. code:: xml
 
       <widget type="checkbox" fieldname="pendiente">
-          <option color="red">0</option>
+          <option color="danger">0</option>
       </widget>
 
 *Pintar de color rojo y negrita cuando el valor del campo* ``estado`` *es* ``ABIERTO``
@@ -168,8 +187,8 @@ Ejemplos:
 .. code:: xml
 
       <widget type="text" fieldname="estado">
-          <option color="red" font-weight="bold">ABIERTO</option>
-          <option color="blue">CERRADO</option>
+          <option color="danger">ABIERTO</option>
+          <option color="primary">CERRADO</option>
       </widget>
 
 *Pintar de color rojo cuando el valor del campo* ``cantidad`` *es menor de 0*
@@ -177,15 +196,15 @@ Ejemplos:
 .. code:: xml
 
       <widget type="number" fieldname="cantidad">
-          <option color="red">&lt;0</option>
+          <option color="danger">lt:0</option>
       </widget>
 
-*Pintar de color rojo cuando el valor del campo* ``importe`` *es mayor de treinta mil*
+*Pintar de color verde cuando el valor del campo* ``importe`` *es mayor de treinta mil*
 
 .. code:: xml
 
       <widget type="money" fieldname="importe">
-          <option color="red">&gt;30000</option>
+          <option color="success">gt:30000</option>
       </widget>
 
 
@@ -197,7 +216,9 @@ con uno de los siguientes valores:
 
 :text, textarea: Campos de texto o áreas de texto multilínea.
 
-:number: Campos de tipo numérico con o sin decimales. Dispone de los atributos:
+:password: Permite mostrar y editar contraseñas. Muestra puntos en lugar de los caracteres de la contraseña.
+
+:number: Campos de tipo numérico con o sin decimales. Dispone de los atributos (opcionales):
 
     * **decimal**: para configurar la precisión a visualizar.
 
@@ -213,9 +234,9 @@ con uno de los siguientes valores:
 
 :date: Campos de tipo fecha, que incorporan un desplegable para elegir la misma.
 
-:color: Para la selección de colores.
-
 :file: Permite seleccionar y subir un archivo de nuestro equipo local al servidor.
+
+:link: Añade un enlace que nos llevará a la URL que se especifique en el campo fieldname.
 
 :autocomplete: Visualiza una lista de valores a modo de "ayuda" cuando el usuario introduce un valor.
     Lista de valores se pueden cargar de manera dinámica de un modelo o mediante una lista fija de valores
@@ -255,6 +276,20 @@ con uno de los siguientes valores:
 **Ejemplos:**
 
 .. code:: xml
+
+      <!--- TEXT / TEXT AREA -->
+      <column name="code" numcolumns="2" order="100">
+          <widget type="text" fieldname="codcliente" icon="fas fa-user" />
+      </column>
+
+      <column name='observations' order='100' numcolumns='12'>
+          <widget type='textarea' fieldname='observaciones' />
+      </column>
+
+      <!--- NUMBER -->
+      <column name="quantity" order="150" display="right">
+          <widget type="number" fieldname="cantidad" min="1" max="999" step="1" decimal="0" />
+      </column>
 
       <!--- AUTOCOMPLETE -->
       <widget type="autocomplete" fieldname="codsubcuenta" required="true">

@@ -32,7 +32,7 @@ Podemos declarar todos los formularios modales que necesitemos, declarando disti
 del grupo *modals*, y respetando la unicidad de sus identificadores. Para mostrar cualquiera de los formularios
 modales declarados, tendremos que definir un botón de tipo modal en la vista principal,
 en un *row* de tipo ``actions`` o ``footer``, donde el atributo ``action`` del *button* sea igual al identificador
-del formulario modal.
+del formulario modal. Más información sobre los botones de acción en :ref:`Rows Actions <Rows-actions>`.
 
 Si no se indica el tamaño usado por la ventana modal será el estandar de bootstrap. Si se desea una ventana
 con un tamaño menor o mayor podemos incluir en la definición del grupo el atributo **class**:

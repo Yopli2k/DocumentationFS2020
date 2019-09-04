@@ -78,6 +78,8 @@ grupo de navegación.
 -  **addListView**: Añade una vista para visualizar en modo lista
    multiples registros de un modelo.
 
+-  **addHtmlView**: Añade una vista de libre diseño HTML por parte del desarrollador.
+
 -  **addGridView**: Añade una vista que permite editar los datos en un grid
    de datos de filas y columnas al estilo de una hoja de cálculo.
 
@@ -103,6 +105,26 @@ Este método tiene una visibilidad de *protected* de manera que los plugins pued
 nuestra clase y añadir nuevas vistas, o modificar las existentes.
 
 
+Sólo lectura
+------------
+
+Es posible establecer la vista que hemos añadido como sólo lectura. Esto cambia el template TWig que
+se usará para renderizar la vista de modo que no se incluirán los botones de borrado y guardado de datos,
+además de visualizar los datos sin posibilidad de edición.
+
+Para activar o desactivar esta opción debemos llamar al método **setReadOnly()** de la vista.
+
+Ejemplo.
+
+.. code:: php
+
+    protected function createViews()
+    {
+      $this->addEditView('EditInfoProject', 'WebProject', 'project', 'fas fa-info');
+      $this->views['EditInfoProject']->setReadOnly(true);
+    }
+
+
 loadData
 --------
 
@@ -114,6 +136,13 @@ el tipo de vista, por lo que es responsabilidad del programador realizar
 la carga de datos correctamente. Aunque esto pueda suponer una
 dificultad añadida, también nos permite un mayor control sobre los datos
 que a leer del modelo.
+
+Tenga en cuenta que se usa **code** como parámetro para indicar el valor de la clave primaria
+del registro del modelo de la vista principal (la primera vista añadida). Para el
+resto de vistas se recomienda usar el método **getViewModelValue** para obtener el valor principal
+porque en el caso de que se acabe de crear el registro principal, el parámetro code todavía no estará
+disponible para su uso.
+
 
 Ejemplo de carga de datos para distintos tipos de vistas.
 
@@ -127,13 +156,13 @@ Ejemplo de carga de datos para distintos tipos de vistas.
 
             case 'EditDireccionCliente':
                 // creamos un filtro where para recoger los registros pertenecientes al código informado
-                $where = [new DataBase\DataBaseWhere('codcliente', $this->getClientFieldValue('codcliente'))];
+                $where = [new DataBase\DataBaseWhere('codcliente', $this->getViewModelValue('codcliente'))];
                 $view->loadData($where);
                 break;
 
             case 'ListCliente':
                 // cargamos datos sólo si existe un grupo informado
-                $codgroup = $this->getClientFieldValue('codgrupo');
+                $codgroup = $this->getViewModelValue('codgrupo');
 
                 if (!empty($codgroup)) {
                     $where = [new DataBase\DataBaseWhere('codgrupo', $codgroup)];
@@ -141,6 +170,7 @@ Ejemplo de carga de datos para distintos tipos de vistas.
                 }
                 break;
         }
+
 
 setTabsPosition
 ---------------
