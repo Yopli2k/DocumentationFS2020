@@ -46,7 +46,7 @@ menú (:guilabel:`Administrador->Secuencias de documentos`).
 :Título: Título opcional para el documento. Por ejemplo: *Factura Proforma*.
 
 
-Ejemplos: *Patrones de ejemplo*
+**Ejemplos**:
 
 .. code::
 
@@ -55,3 +55,10 @@ Ejemplos: *Patrones de ejemplo*
 
     Serie + el número relleno con ceros:
     {SERIE}{0NUM} -> Ejemplo: A000047
+
+
+Comenzar por un número
+======================
+
+Si deseamos comenzar las facturas de venta por un número concreto, solamente debemos crear la secuencia
+para factura de cliente (o modificar la existente) indicando el número deseado en el campo *número* de la ficha de la secuencia.

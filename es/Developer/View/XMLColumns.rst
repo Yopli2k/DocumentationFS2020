@@ -238,26 +238,15 @@ con uno de los siguientes valores:
 
 :link: Añade un enlace que nos llevará a la URL que se especifique en el campo fieldname.
 
-:autocomplete: Visualiza una lista de valores a modo de "ayuda" cuando el usuario introduce un valor.
-    Lista de valores se pueden cargar de manera dinámica de un modelo o mediante una lista fija de valores
-    indicados en el archivo XML de la vista. Para definir los valores se utilizarán etiquetas **<values>**
-    descritas dentro del grupo *<widget>*.
-
-    * Para la carga de valores fijos se indicará para cada etiqueta *<values>* el atributo *title* y asignándole un valor.
-
-    * Para la carga dinámica de los valores se utilizará una sóla etiqueta *<values>* indicando los atributos:
-
-        -  *source*: Indica el nombre de la tabla origen de los datos
-        -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
-        -  *fieldtitle*: Indica el campo que contiene el valor que se visualizará en pantalla
-
 :select: Permite al usuario seleccionar una opción de entre una lista de valores preestablecidos.
-    Los valores podrán ser fijos indicando la lista en el XML de la vista o dinámicos, ya sea
+    Los valores podrán ser fijos indicados en el XML de la vista o en el controlador, o dinámicos, ya sea
     calculados en base al contenido de los registros de una tabla de la base de datos o mediante la
-    definición de un rango de valores. Para definir los valores se utilizarán etiquetas *<values>*
-    descritas dentro del grupo *<widget>*.
+    definición de un rango de valores. Para definir los valores de la lista se utilizarán etiquetas
+    *<values>* descritas dentro del grupo *<widget>*.
 
-    * Para la carga de valores fijos se indicará para cada etiqueta *<values>* el atributo *title* y asignándole un valor.
+    * Para la carga de valores fijos desde la vista XML se indicará para cada etiqueta *<values>* el atributo *title* y asignándole un valor.
+
+    * Para la carga de valores fijos desde el controlador debemos crear un array con las claves 'value' y 'title' que asignaremos al widget de la columna.
 
     * Para el caso de valores de una tabla se utilizará una sóla etiqueta *<values>* indicando los atributos:
 
@@ -272,6 +261,23 @@ con uno de los siguientes valores:
         -  *end*: Indica el valor final (numérico o alfabético)
         -  *step*: Indica el valor del incremento (numérico)
 
+:autocomplete: Visualiza una lista de valores a modo de "ayuda" cuando el usuario introduce un valor.
+    Lista de valores se pueden cargar de manera dinámica de un modelo o mediante una lista fija de valores
+    indicados en el archivo XML de la vista. La principal diferencia con el widget select es que el usuario
+    no selecciona las opciones, sino que escribe y le autocompleta los posibles valores. Se puede crear una
+    lista de valores fijos o dinámicos creando un enlace AJAX con el controlador el cual procesa, y retorna
+    un JSON con los valores según lo escrito por el usuario, mediante el método **autocompleteAction**.
+    Es posible sobreescribir el método para una mayor personalización. Para definir los valores se utilizarán
+    etiquetas **<values>** descritas dentro del grupo *<widget>*.
+
+    * Para la carga de valores fijos se indicará para cada etiqueta *<values>* el atributo *title* y asignándole un valor.
+
+    * Para la carga dinámica de los valores se utilizará una sóla etiqueta *<values>* indicando los atributos:
+
+        -  *source*: Indica el nombre de la tabla origen de los datos
+        -  *fieldcode*: Indica el campo que contiene el valor a grabar en el campo de la columna
+        -  *fieldtitle*: *(Opcional)* Indica el campo que contiene el valor que se visualizará en pantalla. Si no se informa se usa *fieldcode*.
+        -  *strict*: *(Opcional)* *(Default: true)* Para permitir valores no existentes en la lista (strict = false).
 
 **Ejemplos:**
 
@@ -302,7 +308,7 @@ con uno de los siguientes valores:
           <values source="articulos" fieldcode="referencia" fieldtitle="descripcion"></values>
       </widget>
 
-      <!--- SELECT -->
+      <!--- SELECT (dentro de la vista XML) -->
       <widget type="select" fieldname="documentacion">
           <values title="Pasaporte">PASAPORTE</values>
           <values title="D.N.I.">DNI</values>
@@ -316,6 +322,21 @@ con uno de los siguientes valores:
       <widget type="select" fieldname="codgrupo">
           <values start="0" end="6" step="1"></values>
       </widget>
+
+.. code:: php
+
+      // SELECT (dentro del controlador)
+      $customValues = [
+          ['value' => '1', 'title' => 'UNO'],
+          ['value' => '2', 'title' => 'DOS'],
+          ['value' => '3', 'title' => 'TRES'],
+          ['value' => '14', 'title' => 'CATORCE'],
+      ];
+
+      $columnToModify = $this->views[VIEW_NAME]->columnForName(COLUMN_NAME_IN_XMLVIEW);
+      if($columnToModify) {
+          $columnToModify->widget->setValuesFromArray($customValues);
+      }
 
 
 Otros atributos
@@ -335,7 +356,7 @@ Para las vistas de edición (*Edit* y *EditList*) disponemos de los siguientes a
 
 :icon: Si se indica se visualizará el icono a la izquierda del campo.
 
-:hint: Texto explicativo que se visualiza al colocar el ratón sobre el.
+:translate: En los widgets que muestran lista de valores, indica si se deben traducir las cadenas.
 
 
 group

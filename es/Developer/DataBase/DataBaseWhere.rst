@@ -38,9 +38,9 @@ Al crear la instancia debemos informar de los parámetros:
 -  **value** : Valor por el cual se filtra. Permite usar carácter comodín *%* (ver operador LIKE).
 
 -  **operator** : (opcional)('=' por defecto) operador aritmético a aplicar.
-      **['=', '<', '>', '<=', '>=', '<>', 'IN', 'IS', 'IS NOT', 'LIKE', 'REGEXP']**
+      **['=', '<', '>', '<=', '>=', '!=', 'IN', 'IS', 'IS NOT', 'LIKE', 'XLIKE', 'REGEXP']**
 
--  **operation** : (opcional)('AND' por defecto) Indica el operador lógico a aplicar. **['AND', 'OR']**
+-  **operation** : (opcional)('AND' por defecto) Indica el operador lógico a aplicar. **['AND', 'OR']**. Esta operación se aplica al propio elemento, no al siguiente.
 
 
 Ejemplos:
@@ -56,10 +56,10 @@ Ejemplos:
       new DataBaseWhere('fecha', '31-12-2018', '<='),
     ];
 
-    /// where codcliente = '181432' and estado <> 'Pagado'
+    /// where codcliente = '181432' and estado != 'Pagado'
     $where = [];
     $where[] = new DataBaseWhere('codcliente', '181432');
-    $where[] = new DataBaseWhere('estado', 'Pagado', '<>');
+    $where[] = new DataBaseWhere('estado', 'Pagado', '!=');
 
     /// where name = 'MyView' and nick is null and date is null
     $where = [
@@ -77,20 +77,36 @@ Ejemplos:
 Operador LIKE
 -------------
 
-Este operador permite un uso avanzado, como el uso del carácter comodín **%** para indicar si
-el valor a buscar está *contenido en*, *comienza por* o *termina en*. Si no se incluye ningún comodín
-en el valor a buscar se entiende que se busca un valor *contenido en*.
-
-También es posible buscar por más de un valor. Para ello debemos informar en el parámetro *value*
-varios valores separados por espacio, y cada valor puede de manera opcional incluir comodines.
+Este operador permite buscar si una cadena se encuentra dentro de otra cadena. Permite un uso avanzado
+con el uso del carácter comodín **%** para indicar si el valor a buscar está *contenido en*, *comienza por*
+o *termina en*. Si no se incluye ningún comodín en el valor a buscar se entiende que se busca un valor *contenido en*.
 
 Ejemplos:
 
 .. code:: php
 
-    /// where ((nombre LIKE '%sanchez%' OR nombre LIKE '%martinez')
-    ///     OR (nombrecomercial LIKE '%sanchez%' OR nombrecomercial LIKE '%martinez'))
-    $where = [new DataBaseWhere('nombre|nombrecomercial', 'sanchez martinez', 'LIKE')];
+    /// where nombre LIKE '%sanchez%' (contiene)
+    $where = [new DataBaseWhere('nombre', 'sanchez', 'LIKE')];
+
+    /// where nombre LIKE 'sanchez%' (comienza por)
+    $where = [new DataBaseWhere('nombre', 'sanchez%', 'LIKE')];
+
+    /// where nombre LIKE '%sanchez' (termina por)
+    $where = [new DataBaseWhere('nombre', '%sanchez', 'LIKE')];
+
+
+Operador XLIKE
+--------------
+
+Esta es una variación del operador LIKE, pero con soporte para buscar por múltiples palabras.
+Para ello debemos informar en el parámetro *value* varios valores separados por espacio, y cada valor puede
+de manera opcional incluir comodines.
+
+.. code:: php
+
+    /// where (nombre LIKE '%sanchez%' AND nombre LIKE '%martinez')
+    ///     OR (nombrecomercial LIKE '%sanchez%' AND nombrecomercial LIKE '%martinez'))
+    $where = [new DataBaseWhere('nombre|nombrecomercial', 'sanchez %martinez', 'XLIKE')];
 
 
 Obtener sentencia WHERE
