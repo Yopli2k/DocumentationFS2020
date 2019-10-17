@@ -136,11 +136,13 @@ identificado y tiene permisos para la ejecución de dicho controlador. Como norm
 en *Facturascripts 2018* el método de trabajo dentro del *privateCore* es:
 
 #. Recepción de los parámetros enviados por la vista, normalmente por post.
-#. Ejecutar las tareas previas a la carga de datos. (método *execPreviousAction*)
-#. Cargar los datos de los modelos. (método *loadData*)
-#. Ejecutar las tareas posteriores a la carga de datos. (método *execAfterAction*)
+#. Ejecutar las tareas previas a la carga de datos. (método **execPreviousAction**)
+#. Cargar los datos de los modelos. (método **loadData**)
+#. Ejecutar las tareas posteriores a la carga de datos. (método **execAfterAction**)
 
 .. warning::
+    Los médodos indicados pertenecen a los *ExtendedController*. Para controladores personalizados, el desarrollador
+    deberá crear los suyos propios o implementar los procesos antes indicados.    
     Los cambios realizados en los datos de un modelo tras la carga de datos no se verán reflejados en la vista
 
 Esta manera de trabajar simplifica el entendimiento y seguimiento del código del controlador,
