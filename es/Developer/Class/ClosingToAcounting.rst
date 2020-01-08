@@ -3,7 +3,7 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Documentación Cierre Contable, Regularization, Closing, Opening
+  :description: Documentación Cierre Contable: Regularización, Cierre y Apertura
   :keywords: facturascripts, cierre contable, regularizacion, cierre, apertura
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)

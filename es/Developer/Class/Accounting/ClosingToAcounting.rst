@@ -3,7 +3,7 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Cierre de ejercicio. Contabilizacion de cierre contable
+  :description: Documentación técnica de la Contabilización del Cierre de ejercicio
   :keywords: facturascripts, documentacion, ejercicio, cierre, cierre contable, asientos
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
