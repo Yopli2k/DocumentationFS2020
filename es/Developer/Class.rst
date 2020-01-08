@@ -29,3 +29,4 @@ y código específico en JavaScript u hojas de estilo.
   Class/AssetManager
   Class/EmailTools
   Class/EventManager
+  Class/ClosingToAcounting
