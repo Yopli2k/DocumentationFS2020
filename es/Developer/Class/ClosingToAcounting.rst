@@ -1,5 +1,5 @@
 .. highlight:: rst
-.. title:: Facturascripts Cierre contable
+.. title:: Cierre contable
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion

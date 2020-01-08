@@ -1,5 +1,5 @@
 .. highlight:: rst
-.. title:: Facturascripts, Clase ClosingToAcounting, cierre de ejercicio
+.. title:: Contabilización del cierre
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
@@ -47,14 +47,14 @@ La ejecución de cada uno de los procesos sigue el siguiente patrón:
 3. Se crea una línea de "cierre" de todos los saldos del canal, en caso de que sea necesaria.
 4. Se actualiza el importe final del asiento contable.
 
-.. info::
+.. note::
     Como se ha comentado anteriormente, existen métodos protected para cada uno de los pasos, y es recomendable, para un mayor detalle
     consultar las clases de reguralización, cierre y/o apertura.
 
-
-.. seealso::
     Documentación de la regularización `AccountingClosingRegularization <AccountingClosingRegularization>`__.
+
     Documentación del cierre contable `AccountingClosingClosing <AccountingClosingClosing>`__.
+
     Documentación de la apertura `AccountingClosingOpening <AccountingClosingOpening>`__.
 
 
