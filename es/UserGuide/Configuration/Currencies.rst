@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Configurar divisas en FacturaScripts 2018.
+  :description: Configurar divisas en FacturaScripts 2020.
   :keywords: facturascripts, configurar, divisas
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Configurar Divisas FacturaScripts 2018
+  :subject: Configurar Divisas FacturaScripts 2020
   :lang: es
 
 #######

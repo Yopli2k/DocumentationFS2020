@@ -37,7 +37,7 @@ Las columnas o campos se configura mediante las etiquetas:
 :name: (obligatorio) Indica el nombre del campo. Recomendaciones:
         - Utilizaremos siempre todo en minúsculas.
         - Evitaremos nombre de campos cortos o abreviados, como id, clte, imp.
-        - FS2018 se reserva el uso de campos como code, active, action.
+        - FS2020 se reserva el uso de campos como code, active, action.
 
 :type: (obligatorio) Indica el tipo de dato que almacena la tabla.
 

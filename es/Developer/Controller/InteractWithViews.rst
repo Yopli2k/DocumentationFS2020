@@ -3,7 +3,7 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Documentación de ayuda para el desarrollo de Facturascripts 2018
+  :description: Documentación de ayuda para el desarrollo de FacturaScripts 2020
   :keywords: facturascripts, documentacion, desarrollo, plugin, controlador, vista, ejemplos
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
@@ -93,11 +93,22 @@ Este método dispone de dos parámetros adicionales:
 
 Añadir botones de acción
 ========================
-También puede añadir botones de acción en el área asignada para ese efecto (:ref:`Rows Actions <Rows-actions>`)
-simplemente usando el método **addButton()**.
+También puede añadir botones de acción en el área asignada para ese efecto (:ref:`Rows Actions <Rows-actions>`
+o :ref:`Rows Header/Footer <Rows-header-footer>`) simplemente usando el método **addButton**.
+
+El método recibe el identificador de la vista y un array con la configuración del botón a añadir. Las opciones son:
+
+:row: (opcional) Identificador del row donde queremos añadir el botón. Si no se indica se añadirá al grupo de acciones.
+:action: Nombre de la acción que se desea ejecutar. Será el valor que tendrá el campo action que recibirá el controlador.
+:color: Color que deseamos para el botón.
+:icon: Identificador del icono a utilizar para el botón.
+:label: Identificador de la etiqueta a utilizar. Se traducirá al idioma del usuario.
+:type: Tipo de botón. Establece el comportamiento al hacer clic. Ver `Vistas XML: Buttons <XMLButtons>`__.
+
 
 .. code:: php
 
+    // Botón para enlazar a otro controlador
     $newButton = [
     	'action' => 'EditProducto',
     	'icon' => 'fas fa-plus',
@@ -105,6 +116,16 @@ simplemente usando el método **addButton()**.
     	'type' => 'link',
     ];
     $this->addButton('ListProducto', $newButton);
+
+    // Botón para añadir un modal a un footer
+    $this->addButton('EditEjercicio', [
+        'row' => 'footer-actions',
+        'action' => 'import-accounting',
+        'color' => 'warning',
+        'icon' => 'fas fa-file-import',
+        'label' => 'import-accounting-plan',
+        'type' => 'modal',
+    ]);
 
 
 Cargar datos en Input select

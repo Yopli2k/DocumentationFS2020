@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Configurar Formas de Pago en FacturaScripts 2018.
+  :description: Configurar Formas de Pago en FacturaScripts 2020.
   :keywords: facturascripts, configurar, pagos, forma de pago
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Configurar Formas de Pago FacturaScripts 2018
+  :subject: Configurar Formas de Pago FacturaScripts 2020
   :lang: es
 
 ##############

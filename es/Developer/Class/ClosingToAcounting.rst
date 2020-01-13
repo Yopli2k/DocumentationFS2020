@@ -15,7 +15,7 @@
 Cierre Contable
 ###############
 
-En *FacturaScripts 2018* se ha potenciado el proceso de cierre contable para facilitar
+En *FacturaScripts 2020* se ha potenciado el proceso de cierre contable para facilitar
 la personalización de cada uno de los procesos creando métodos **protected** en la mayor
 parte de los "pasos" y agrupandolos en clases separadas. Esto permite poder heredar sólo
 de los "pasos" que el desarrollador necesita personalizar para el país o cliente concreto

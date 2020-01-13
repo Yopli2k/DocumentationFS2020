@@ -32,7 +32,7 @@ la tabla pero en singular y respetando la nomenclatura `UpperCamelCase <https://
     debemos añadir la ruta para los modelos, *FacturaScripts\Plugins\MiPlugin\Model*.
 
 
-En la versión *Facturascripts 2018* se ha reestructurado el uso de los modelos,
+En la versión *FacturaScripts 2020* se ha reestructurado el uso de los modelos,
 heredando de la clase ModelClass y complementandose en un Trait (Rasgos)
 denominado *ModelTrait* agrupando así las operaciones más comunes
 y generales de los modelos, simplificando tanto el código como el tratamiento de
@@ -80,7 +80,7 @@ Así a la hora de declarar el modelo debemos:
         El nombre de la clase del modelo debe ser siempre en singular y el de la tabla en plural.
 
     **Nombres de columna conflictivos**
-        FS2018 utiliza algunos nombres reservados. Evite usar en sus columnas nombres como: *active*, *action* y *code*.
+        FS2020 utiliza algunos nombres reservados. Evite usar en sus columnas nombres como: *active*, *action* y *code*.
 
 
 Métodos obligatorios
@@ -142,7 +142,7 @@ Cuando se realiza la consulta, o ejecución del método all, podemos informar de
 parámetros que nos ayudan a filtrar los datos a recibir de la tabla de la base de datos:
 
 -  **where** : Permite filtrar los datos a recoger. Se utiliza el sistema de filtrado
-   mediante la clase DataBaseWhere incluida en la gestión de base de datos de Facturascripts 2018.
+   mediante la clase DataBaseWhere incluida en la gestión de base de datos de FacturaScripts 2020.
 
 -  **order** : Permite indicar los datos de ordenación de los registros a recoger.
    Es un array de uno o más elementos *(key => valor)* donde la key es la cláusula SQL
@@ -300,7 +300,7 @@ Model Trait
 ===========
 
 Desde su versión 5.4.0, PHP implementa una metodología de reutilización de código
-llamada Traits (Rasgos). En *Facturascripts 2018* hacemos uso de esta metodología
+llamada Traits (Rasgos). En *FacturaScripts 2020* hacemos uso de esta metodología
 para unificar múltiples procesos de los modelos que de otra manera se repetirían
 en cada modelo creado. Esto simplifica el código de los modelos y permite mantener
 el código unificado en una sola clase: **ModelTrait**

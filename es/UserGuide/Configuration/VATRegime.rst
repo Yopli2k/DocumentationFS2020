@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Configurar régimen del Impueto en FacturaScripts 2018.
+  :description: Configurar régimen del Impueto en FacturaScripts 2020.
   :keywords: facturascripts, configurar, impuestos, IVA
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Configurar Régimen Impuesto FacturaScripts 2018
+  :subject: Configurar Régimen Impuesto FacturaScripts 2020
   :lang: es
 
 ####################

@@ -8,7 +8,7 @@ Style Guide
 
 This page covers the conventions for writing and using the syntax of
 marked reStructuredText (RST) and more specifically for the creation and maintenance
-of the documentation of the 2018 Facturascripts project.
+of the documentation of the 2020 Facturascripts project.
 
 Conventions
 ===========

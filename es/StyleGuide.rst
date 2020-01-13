@@ -14,7 +14,7 @@ Guía de Estilo
 
 Esta página cubre las convenciones para la escritura y el uso de la sintaxis de
 marcado reStructuredText (RST) y más concretamente para la creación y mantenimiento
-de la documentación del proyecto Facturascripts 2018.
+de la documentación del proyecto FacturaScripts 2020.
 
 
 Convenciones

@@ -21,7 +21,7 @@ Es la parte encargada del visionado en pantalla de todos los elementos con los q
 el usuario va interactuar. Es decir, la información de los modelos, los mensajes para
 el usuario, botones para las acciones, formularios modales, etc.
 
-*Facturascripts 2018* utiliza el motor de plantillas `TWIG <https://twig.symfony.com>`_, un motor realmente
+*FacturaScripts 2020* utiliza el motor de plantillas `TWIG <https://twig.symfony.com>`_, un motor realmente
 muy potente que nos permite el uso tanto de código HTML como de variables, bucles, bloques,
 macros y el uso de datos declarados en el controlador.
 
@@ -70,8 +70,8 @@ fsc
 ---
 
 Para acceder a la información del controlador usaremos la variable *fsc* que es un "acceso" al objeto
-instanciado del controlador. Esto significa que podemos acceder a todos los métodos y variables
-declarados como *public*. Puede encontrar más información en el apartado `Controladores <Controllers>`.
+instanciado del controlador. Esto significa que podemos acceder a todos sus métodos y variables
+declarados como *public*. Puede encontrar más información en el apartado `Controladores <Controllers>`__.
 
 
 i18n

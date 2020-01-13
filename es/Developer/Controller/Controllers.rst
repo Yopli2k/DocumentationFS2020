@@ -133,7 +133,7 @@ privateCore
 
 Se ejecuta este método de entrada al controlador cuando el usuario está correctamente
 identificado y tiene permisos para la ejecución de dicho controlador. Como norma establecida
-en *Facturascripts 2018* el método de trabajo dentro del *privateCore* es:
+en *FacturaScripts 2020* el método de trabajo dentro del *privateCore* es:
 
 #. Recepción de los parámetros enviados por la vista, normalmente por post.
 #. Ejecutar las tareas previas a la carga de datos. (método **execPreviousAction**)
@@ -142,7 +142,7 @@ en *Facturascripts 2018* el método de trabajo dentro del *privateCore* es:
 
 .. warning::
     Los médodos indicados pertenecen a los *ExtendedController*. Para controladores personalizados, el desarrollador
-    deberá crear los suyos propios o implementar los procesos antes indicados.    
+    deberá crear los suyos propios o implementar los procesos antes indicados.
     Los cambios realizados en los datos de un modelo tras la carga de datos no se verán reflejados en la vista
 
 Esta manera de trabajar simplifica el entendimiento y seguimiento del código del controlador,
@@ -173,7 +173,7 @@ El usuario y sus permisos
 Podemos acceder a los datos del usuario identificado mediante la propiedad *user* y a sus
 permisos con la propiedad *permissions*.
 
-La propiedad *user* es una instancia del modelo User, permitiéndonos saber:
+La propiedad **user** es una instancia del modelo **User**, permitiéndonos saber:
 
 :nick: Nombre o alias del usuario
 :email: Cuenta de correo para comunicaciones
@@ -182,7 +182,7 @@ La propiedad *user* es una instancia del modelo User, permitiéndonos saber:
 :homepage: Indica la página de inicio preferida por el usuario
 :langcode: Indica el idioma seleccionado por el usuario
 
-La propiedad *permissions* es una instancia de la clase ControllerPermissions con las propiedades:
+La propiedad **permissions** es una instancia de la clase *ControllerPermissions* con las propiedades:
 
 :allowAccess: Indica si el usuario tiene permiso para leer/acceder al controlador
 :allowDelete: Indica si el usuario tiene permiso para eliminar información desde el controlador
@@ -195,6 +195,11 @@ La propiedad *permissions* es una instancia de la clase ControllerPermissions co
     if ($this->permissions->allowDelete) {
       [ ... ]
     }
+
+
+.. warning::
+    Sólo se puede consultar los datos del usuario y sus permisos desde un controlador.
+    No es posible realizar estas consultas desde los Modelos.
 
 
 Comunicación con la vista

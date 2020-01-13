@@ -25,7 +25,7 @@ Vistas XML
 Tipos y estructura
 ==================
 
-Las vistas, en *Facturascripts 2018* están clasificadas según su representación
+Las vistas, en *FacturaScripts 2020* están clasificadas según su representación
 en pantalla tanto en la forma de visualizar como en número de registros de datos.
 Así existen distintos tipos de vistas para listar y editar la información, cada una
 de ellas personalizable y con elementos propios del tipo de vista.

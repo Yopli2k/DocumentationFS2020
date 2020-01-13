@@ -3,7 +3,7 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Documentación de ayuda para el desarrollo de Facturascripts 2018
+  :description: Documentación de ayuda para el desarrollo de FacturaScripts 2020
   :keywords: facturascripts, documentacion, desarrollo, plugin, adaptaciones, personalizaciones
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
@@ -15,7 +15,7 @@
 Conceptos Generales
 ###################
 
-En *Facturascripts 2018* se ha realizado un gran esfuerzo para simplificar todo
+En *FacturaScripts 2020* se ha realizado un gran esfuerzo para simplificar todo
 el proceso personalización de la aplicación. Las tareas de creación de nuevas opciones
 y desarrollos son realmente sencillas y no requieren de grandes conocimientos en
 programación ni diseño HTML gracias a los controladores extendidos.
@@ -110,14 +110,14 @@ resulta imprescindible. El archivo debe contener los siguientes valores:
 :min_version: Indica la versión mínima de FacturaScripts necesaria para su instalación.
 :require: Permite indicar una lista de plugins (separadas por coma) de los que depende este plugin.
 
-Ejemplo: *plugin Community, versión 1 y requiere FS2018 con webportal*
+Ejemplo: *plugin Community, versión 1 y requiere FS2020 con webportal*
 
 .. code:: ini
 
     name = 'Community'
     description = 'Community management'
     version = 1
-    min_version = 2018.005
+    min_version = 2020.001
     require = 'webportal'
 
 

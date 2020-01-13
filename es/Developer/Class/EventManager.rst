@@ -15,6 +15,12 @@
 EventManager
 ############
 
+.. warning::
+    *OBSOLETO*: El gestor de eventos de FacturaScripts ha sido sustituido por extensiones.
+    El desarrollo existente con este sistema será eliminado o dejado de soportar en futuras
+    versiones de FacturaScripts.
+
+
 *FacturaScripts* incluye un sencillo gestor de eventos que lo dota de un mayor nivel de personalización
 en el tratamiento de procesos con la información.
 

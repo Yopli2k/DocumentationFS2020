@@ -15,7 +15,7 @@
 Archivos especiales
 ###################
 
-Existen algunos archivos incluidos en *FacturaScripts 2018* que nos permiten crear, configurar
+Existen algunos archivos incluidos en *FacturaScripts 2020* que nos permiten crear, configurar
 y personalizar procesos especiales y/o automáticos. Estos archivos requieren de una estructura
 específica que se facilita a continuación.
 

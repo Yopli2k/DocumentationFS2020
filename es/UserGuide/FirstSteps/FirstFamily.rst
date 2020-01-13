@@ -3,18 +3,18 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Primeros pasos. Como crear familias y subfamilias de productos en FacturaScripts 2018.
+  :description: Primeros pasos. Como crear familias y subfamilias de productos en FacturaScripts 2020.
   :keywords: facturascripts, configurar, dar de alta, familia, subfamilia, producto
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Primera Familia FacturaScripts 2018
+  :subject: Primera Familia FacturaScripts 2020
   :lang: es
 
 ##################
 Tu primera familia
 ##################
 
-En FacturaScripts 2018 se continua con el sistema clásico de familia y subfamilia en forma
+En FacturaScripts 2020 se continua con el sistema clásico de familia y subfamilia en forma
 de árbol, es decir un "padre" (*familia*) tiene varios "hijos" (*subfamilias*). Estas subfamilias a su
 vez pueden ser "padre" de otros "hijos".
 

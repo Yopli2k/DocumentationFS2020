@@ -15,7 +15,7 @@
 Base de Datos
 #############
 
-Es este apartado veremos en detalle como usar las clases existentes en Facturascripts 2018
+Es este apartado veremos en detalle como usar las clases existentes en FacturaScripts 2020
 para la conexión, lectura y escritura de datos en el motor de bases de datos. Estas tareas
 están unificadas y simplificadas dentro del Core para un desarrollo más sencillo y uniforme
 tanto en la aplicación como en los posibles plugins que el usuario utilice.

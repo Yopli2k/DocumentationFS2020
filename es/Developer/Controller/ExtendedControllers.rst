@@ -3,7 +3,7 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Los controladores extendidos, la novedad de FS 2018. Desarrollo fácil y rápido.
+  :description: Los controladores extendidos, la novedad de FS 2020. Desarrollo fácil y rápido.
   :keywords: facturascripts, documentacion, desarrollo, controlador, novedad, desarrollo facil, desarrollo rapido
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
@@ -15,7 +15,7 @@
 Controladores Extendidos
 ########################
 
-En *Facturascripts 2018* se ha realizado un esfuerzo por simplificar las tareas *comunes*
+En *FacturaScripts 2020* se ha realizado un esfuerzo por simplificar las tareas *comunes*
 a la hora del desarrollo de nuevas personalizaciones. Así se ha creado un conjunto de
 clases y protocolos de trabajo que se han denominado **ExtendedControllers**.
 Utilizando esta librería es muy sencillo y rápido crear nuevas opciones, manteniendo el estilo y ventajas
@@ -32,7 +32,7 @@ Entre muchas características incluidas están:
   - integración con el sistema de traducción
 
 
-La filosofía de diseño de interfaces de usuario en *Facturascripts 2018* es: **primero listar**,
+La filosofía de diseño de interfaces de usuario en *FacturaScripts 2020* es: **primero listar**,
 **depués editar**. Así el usuario primero debe ver un listado con la información sobre la
 que puede interactuar (buscar y/o filtrar) y al seleccionar un registro el usuario podrá
 editar ese registro de datos.
@@ -56,6 +56,8 @@ Debemos recordar que cada uno de estos controladores ya incluyen los métodos *e
 *execAfterAction* encargados de controlar y ejecutar las acciones solicitadas por el usuario
 mediante la vista. Podemos sobrescribir los métodos para añadir nuevas acciones a controlar.
 
+
+.. _execPreviousAction:
 
 execPreviousAction
 ------------------
@@ -98,6 +100,8 @@ Ejemplo: *Adición de nuevas acciones*
               return parent::execPreviousAction($action);
       }
 
+
+.. _execAfterAction:
 
 execAfterAction
 ---------------

@@ -2,11 +2,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Documentación de usuario y ayuda para el desarrollo de Facturascripts 2018
+  :description: Documentación de usuario y ayuda para el desarrollo de FacturaScripts 2020
   :keywords: facturascripts, documentacion, desarrollo, plugin
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Documentación FacturaScripts 2018
+  :subject: Documentación FacturaScripts 2020
   :lang: es
 
 
@@ -69,7 +69,7 @@ Generalidades
 
 .. sidebar:: Descripción
 
-   Aprende o resuelve tus dudas sobre el manejo del ERP FS2018.
+   Aprende o resuelve tus dudas sobre el manejo del ERP FS2020.
    Guías paso a paso sobre el uso correcto de todas las funciones de los apartados de la aplicación.
 
 .. toctree::
@@ -81,6 +81,7 @@ Generalidades
   UserGuide/Users
   UserGuide/Configuration
   UserGuide/FirstSteps
+  UserGuide/Accounting
 
 .. raw:: html
 

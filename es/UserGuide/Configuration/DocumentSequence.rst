@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Configurar las secuencias de documentos en FacturaScripts 2018.
+  :description: Configurar las secuencias de documentos en FacturaScripts 2020.
   :keywords: facturascripts, configurar, secuencia, documento, numero de secuencia
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Configurar Secuencias de Documentos FacturaScripts 2018
+  :subject: Configurar Secuencias de Documentos FacturaScripts 2020
   :lang: es
 
 

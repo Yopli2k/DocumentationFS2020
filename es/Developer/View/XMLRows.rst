@@ -196,7 +196,8 @@ A modo de resumen de las propiedades:
 :type: indica el tipo de botón o acción.
 
     - **action**: al hacer clic se recargará la página ejecutando el action indicado en el atributo ``action``.
-        Este action deberá estar implementado en el controlador.
+        Este action deberá estar implementado en el controlador, ya sea en el método
+        :ref:`execPreviousAction <execPreviousAction>` o :ref:`execAfterAction <execAfterAction>`.
 
     - **modal**: al hacer clic mostrará el modal con el nombre indicado en el atributo ``action``.
 
@@ -234,7 +235,7 @@ Ejemplo:
         </rows>
 
 
-.. Rows-header-footer:
+.. _Rows-header-footer:
 
 header y footer
 ===============

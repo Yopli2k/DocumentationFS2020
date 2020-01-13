@@ -5,7 +5,7 @@
 Views
 #####
 
-The views, in *Facturascripts 2018* are classified according to their representation
+The views, in *Facturascripts 2020* are classified according to their representation
 on screen both in the form of visualization and in the number of data records.
 
 -  **List**: Views that show a list of data in rows and columns format

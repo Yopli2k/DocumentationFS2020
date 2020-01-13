@@ -3,18 +3,18 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Primeros pasos. Como crear atributos de productos en FacturaScripts 2018.
+  :description: Primeros pasos. Como crear atributos de productos en FacturaScripts 2020.
   :keywords: facturascripts, configurar, dar de alta, atributo, producto, talla, color
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Primer Atributo FacturaScripts 2018
+  :subject: Primer Atributo FacturaScripts 2020
   :lang: es
 
 ##################
 Tu primer atributo
 ##################
 
-FacturaScripts 2018 incorpora un sistema de atributos de productos que permite crear variantes de
+FacturaScripts 2020 incorpora un sistema de atributos de productos que permite crear variantes de
 un mismo producto de hasta una combinación de dos atributos distintos. Esto hace innecesario
 estar creando multiples referencias para un mismo producto.
 

@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Configurar empresas en FacturaScripts 2018.
+  :description: Configurar empresas en FacturaScripts 2020.
   :keywords: facturascripts, configurar, empresas, multiempresa
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Configurar Empresas FacturaScripts 2018
+  :subject: Configurar Empresas FacturaScripts 2020
   :lang: es
 
 ########

@@ -19,7 +19,7 @@ Filtros Where
 
 A menudo al seleccionar, al modificar o al borrar información de la base de datos
 necesitamos filtrar los registros con los que queremos trabajar. Este tipo de filtrado
-en SQL se realiza mediante la cláusula *WHERE*. En *Facturascripts 2018* se ha implementado
+en SQL se realiza mediante la cláusula *WHERE*. En *FacturaScripts 2020* se ha implementado
 una clase que nos facilita la creación de estas condiciones de filtrado de una manera
 sencilla mediante un *array* de condiciones. De todo ello se encarga la clase **DataBaseWhere**.
 
@@ -50,10 +50,10 @@ Ejemplos:
     /// where codagente = 'Agente01'
     $where = [new DataBaseWhere('codagente', 'Agente01')];
 
-    /// where fecha >= '01-01-2018' and fecha <= '31-12-2018'
+    /// where fecha >= '01-01-2020' and fecha <= '31-12-2020'
     $where = [
-      new DataBaseWhere('fecha', '01-01-2018', '>='),
-      new DataBaseWhere('fecha', '31-12-2018', '<='),
+      new DataBaseWhere('fecha', '01-01-2020', '>='),
+      new DataBaseWhere('fecha', '31-12-2020', '<='),
     ];
 
     /// where codcliente = '181432' and estado != 'Pagado'
@@ -67,9 +67,9 @@ Ejemplos:
         new DataBaseWhere('nick|date', 'null', 'IS')
     ];
 
-    /// where codejercicio = '2018' and codcuentaesp in ('IVAREX','IVAREP','IVARRE')
+    /// where codejercicio = '2020' and codcuentaesp in ('IVAREX','IVAREP','IVARRE')
     $where = [
-        new DataBaseWhere('codejercicio', '2018'),
+        new DataBaseWhere('codejercicio', '2020'),
         new DataBaseWhere('codcuentaesp', 'IVAREX,IVAREP,IVARRE', 'IN')
     ];
 

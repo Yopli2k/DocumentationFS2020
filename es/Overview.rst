@@ -52,7 +52,7 @@ Instalación
 Instalación desde archivo ZIP
 -----------------------------
 
-Acceder al sitio web de `FacturaScripts 2018 <https://www.facturascripts.com/descargar>`_,
+Acceder al sitio web de `FacturaScripts 2020 <https://www.facturascripts.com/descargar>`_,
 descarga y descomprime el archivo en tu hosting o en la carpeta del servidor web de tu PC.
 A continuación abre el navegador y escribe la url oportuna, es decir, el dominio
 de tu web o http://localhost/facturascripts si lo has instalado en local,
@@ -60,6 +60,10 @@ y complete el formulario de instalación.
 
 Instalación desde github
 ------------------------
+
+.. note::
+    Este método de instalación es para desarrollo. Si usted no es programador, use el método de instalación desde ZIP.
+
 
 Puede realizar la instalación descargando el archivo `ZIP <https://github.com/NeoRazorX/facturascripts/archive/master.zip>`_
 directamente del proyecto en github y realizar una instalación desde archivo ZIP, descomprimiendo el archivo.
@@ -86,7 +90,7 @@ Licencia
 
 Licenciado bajo `licencia MIT <http://opensource.org/licenses/MIT>`_.
 
-    Copyright (C) 2013-2018  Carlos Garcia Gomez  <carlos@facturascripts.com>
+    Copyright (C) 2013-2020  Carlos Garcia Gomez  <carlos@facturascripts.com>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as

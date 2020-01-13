@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Primeros pasos. Como crear un fabricante en FacturaScripts 2018.
+  :description: Primeros pasos. Como crear un fabricante en FacturaScripts 2020.
   :keywords: facturascripts, configurar, dar de alta, fabricante
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Primer Fabricante FacturaScripts 2018
+  :subject: Primer Fabricante FacturaScripts 2020
   :lang: es
 
 ####################

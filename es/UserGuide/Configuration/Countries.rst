@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Configurar países y provincias en FacturaScripts 2018.
+  :description: Configurar países y provincias en FacturaScripts 2020.
   :keywords: facturascripts, configurar, pais, provincia
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Configurar Países y Provincias FacturaScripts 2018
+  :subject: Configurar Países y Provincias FacturaScripts 2020
   :lang: es
 
 ###################

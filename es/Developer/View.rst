@@ -16,7 +16,7 @@ Vistas y Vistas XML
 ###################
 
 Es este apartado veremos en detalle como crear vistas personalizadas y vistas del tipo XML.
-Este nuevo tipo de vista es introducido en FacturaScripts 2018 para simplificar y potenciar
+Este nuevo tipo de vista es introducido en FacturaScripts 2020 para simplificar y potenciar
 el desarrollo, permitiendo rápidamente crear y personalizar vistas. Su uso es tan sencillo como
 definir la estructura en un archivo con formato XML.
 

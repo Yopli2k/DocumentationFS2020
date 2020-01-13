@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Configurar almacenes en FacturaScripts 2018.
+  :description: Configurar almacenes en FacturaScripts 2020.
   :keywords: facturascripts, configurar, almacenes
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Configurar Almacenes FacturaScripts 2018
+  :subject: Configurar Almacenes FacturaScripts 2020
   :lang: es
 
 #########

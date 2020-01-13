@@ -49,7 +49,7 @@ Así para poder usar el modelo debemos:
         El nombre de la clase del modelo debe ser siempre en singular y UpperCamelCase.
 
     **Nombres de columna conflictivos**
-        FS2018 utiliza algunos nombres reservados. Evite usar en sus columnas nombres como: *active*, *action* y *code*.
+        FS2020 utiliza algunos nombres reservados. Evite usar en sus columnas nombres como: *active*, *action* y *code*.
 
 
 Método obligatorio: all

@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Primeros pasos. Como crear clientes en FacturaScripts 2018.
+  :description: Primeros pasos. Como crear clientes en FacturaScripts 2020.
   :keywords: facturascripts, configurar, dar de alta, clientes
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Primer Cliente FacturaScripts 2018
+  :subject: Primer Cliente FacturaScripts 2020
   :lang: es
 
 #################

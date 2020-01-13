@@ -15,7 +15,7 @@
 Clases Específicas
 ##################
 
-*FacturaScripts 2018* buscando simplificar y potenciar el desarrollo, lleva incluidas una serie
+*FacturaScripts 2020* buscando simplificar y potenciar el desarrollo, lleva incluidas una serie
 de clases que facilitan y amplían distintas labores como acceder a los datos de configuración,
 crear y gestionar eventos con la información, personalizar nuestras vistas con nuevas funciones
 y código específico en JavaScript u hojas de estilo.

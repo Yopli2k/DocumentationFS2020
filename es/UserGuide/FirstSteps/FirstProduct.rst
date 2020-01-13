@@ -3,11 +3,11 @@
 .. meta::
   :http-equiv=Content-Type: text/html; charset=UTF-8
   :generator: FacturaScripts Documentacion
-  :description: Primeros pasos. Como crear productos y variantes en FacturaScripts 2018.
+  :description: Primeros pasos. Como crear productos y variantes en FacturaScripts 2020.
   :keywords: facturascripts, configurar, dar de alta, producto, variante, stock
   :robots: Index, Follow
   :author: Jose Antonio Cuello (Artex Trading)
-  :subject: Primer Producto FacturaScripts 2018
+  :subject: Primer Producto FacturaScripts 2020
   :lang: es
 
 ##################
@@ -45,7 +45,7 @@ en niveles superiores según el órden Artículo, Familia, Empresa.
 Variantes
 =========
 
-En FacturaScripts 2018 los productos son *plantillas* generales de los productos que realmente
+En FacturaScripts 2020 los productos son *plantillas* generales de los productos que realmente
 compramos o vendemos. Lo que realmente usamos en los documentos de compra y venta son las variantes.
 Esto quiere decir que **todo producto debe tener al menos una variante**. Las variantes nos
 permiten tener, en caso de necesitarlo, distintas versiones de un mismo producto según carasterísticas

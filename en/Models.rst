@@ -12,7 +12,7 @@ of reading, writing and deleting the data contained in said table.
 The structure of the table is defined in an XML file located in the *Table* folder
 and with the name that the model returns in the public method *tableName*.
 
-In the version *Facturascripts 2018* the use of the models has been restructured,
+In the version *Facturascripts 2020* the use of the models has been restructured,
 inheriting from the ModelClass class and complementing it in a Trait (Traits)
 called *ModelTrait* thus grouping the most common operations
 and general models, simplifying both the code and the treatment of
@@ -81,7 +81,7 @@ When the query is made, or execution of the all method, we can report different
 parameters that help us to filter the data to receive from the table of the database:
 
 -  **where** : It allows filtering the data to be collected. The filtering system is used
-    using the DataBaseWhere class included in the database management of Facturascripts 2018.
+    using the DataBaseWhere class included in the database management of Facturascripts 2020.
 
 -  **order** : It allows to indicate the sorting data of the records to be collected.
     It is an array of one or more elements *(key => value)* where the key is the SQL clause
@@ -238,7 +238,7 @@ Model Trait
 ***********
 
 From version 5.4.0, PHP implements a code reuse methodology
-called Traits. In *Facturascripts 2018* we make use of this methodology
+called Traits. In *Facturascripts 2020* we make use of this methodology
 to unify multiple processes of models that would otherwise be repeated
 in each model created. This simplifies the code of the models and allows to maintain
 the unified code in a single class: **ModelTrait**
