@@ -97,7 +97,7 @@ Los valores que se pueden configurar son:
 :icon: Icono de la fuente de texto *fontawesome*
 :menu: Nombre del menú donde se introducirá el controlador
 :submenu: (opcional) Segundo nivel del menú donde se introduciría el controlador
-:orden: Podemos alterar el orden natural del sistema de menú para colocar nuestro controlador más arriba o abajo
+:ordernum: Podemos alterar el orden natural del sistema de menú para colocar nuestro controlador más arriba o abajo
 
 .. code:: php
 
