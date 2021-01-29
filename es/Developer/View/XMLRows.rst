@@ -65,6 +65,9 @@ Para la aplicación del *option* se tiene que declarar cuatro elementos:
     - El valor con el que se compara el campo
     - El color a aplicar en caso de cumplirse la condición
 
+Es posible informar un texto identificativo para el usuario sobre cada una de las opciones
+incluyendo el atributo **title**. El valor del atributo podrá ser una etiqueta incluida en el
+sistema de traducciones.
 
 Relación de Operadores
 ----------------------
